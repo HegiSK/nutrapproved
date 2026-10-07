@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Know your supplements!</title>
+<style>
+  :root {
+    --bg: #f1f5f1;
+    --card: #ffffff;
+    --border: #d5e0d6;
+    --green-900: #1f4d2e;
+    --green-700: #2f7a45;
+    --green-500: #4fa36a;
+    --green-100: #e3f1e6;
+    --text: #111111;
+    --muted: #5f655f;
+    --radius: 4px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.55 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Header */
+  .hero { background: var(--green-900); color: #fff; padding: 36px 24px 30px; text-align: center; }
+  .hero h1 { margin: 0 0 6px; font-size: 38px; letter-spacing: .01em; }
+  .hero p { margin: 0; color: #b9d8c2; }
+
+  /* Main bar */
+  .nav { background: var(--green-700); position: sticky; top: 0; z-index: 10; }
+  .nav .inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; padding: 0 16px; }
+  .nav a { color: #fff; padding: 13px 20px; font-weight: 600; font-size: 14px; letter-spacing: .03em; }
+  .nav a:hover, .nav a.active { background: var(--green-900); }
+
+  main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+  .layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 16px; align-items: start; }
+  .stack { display: grid; gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px 20px;
+  }
+  .card > h2 {
+    margin: 0 0 12px; font-size: 13px; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--green-700);
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .card > h2 a { font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--muted); }
+  .card > h2 a:hover { color: var(--green-700); }
+
+  /* Search strip */
+  .search { display: flex; gap: 8px; margin-bottom: 16px; }
+  .search input {
+    flex: 1; padding: 12px 14px; font: inherit; border: 1px solid var(--border);
+    border-radius: var(--radius); background: #fff;
+  }
+  .search input:focus { outline: 2px solid var(--green-500); border-color: var(--green-500); }
+  .search button {
+    padding: 0 22px; font: inherit; font-weight: 600; color: #fff; background: var(--green-700);
+    border: 0; border-radius: var(--radius); cursor: pointer;
+  }
+  .search button:hover { background: var(--green-900); }
+
+  /* Posts */
+  .post { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid #eef2ee; }
+  .post:first-of-type { padding-top: 0; }
+  .post:last-child { border: 0; padding-bottom: 0; }
+  .thumb { background: var(--green-100); border-radius: var(--radius); height: 72px; display: grid; place-items: center; color: var(--green-700); font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+  .meta { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+  .tag { display: inline-block; background: var(--green-100); color: var(--green-900); border-radius: var(--radius); padding: 1px 7px; margin-right: 6px; font-weight: 600; }
+  .post h3 { margin: 0 0 3px; font-size: 16px; line-height: 1.3; }
+  .post h3 a:hover { color: var(--green-700); }
+  .post p { margin: 0; font-size: 13.5px; color: #444; }
+
+  /* News */
+  .news li { list-style: none; padding: 10px 0; border-bottom: 1px solid #eef2ee; }
+  .news li:last-child { border: 0; padding-bottom: 0; }
+  .news li:first-child { padding-top: 0; }
+  .news ul { margin: 0; padding: 0; }
+  .news a { font-weight: 600; font-size: 14.5px; display: block; line-height: 1.35; }
+  .news a:hover { color: var(--green-700); }
+
+  /* Video */
+  .video-main {
+    position: relative; aspect-ratio: 16 / 9; background: var(--green-900); border-radius: var(--radius);
+    display: grid; place-items: center; color: #fff; margin-bottom: 10px;
+  }
+  .video-main iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: var(--radius); }
+  .play { width: 54px; height: 38px; background: #fff; border-radius: var(--radius); display: grid; place-items: center; }
+  .play::after { content: ""; border-left: 14px solid var(--green-700); border-top: 8px solid transparent; border-bottom: 8px solid transparent; margin-left: 3px; }
+  .video-title { font-weight: 600; font-size: 14.5px; margin: 0 0 12px; }
+  .video-list { display: grid; gap: 8px; }
+  .video-item { display: grid; grid-template-columns: 80px 1fr; gap: 10px; align-items: center; font-size: 13.5px; line-height: 1.3; }
+  .video-item .t { background: var(--green-500); border-radius: var(--radius); height: 45px; display: grid; place-items: center; }
+  .video-item .t::after { content: ""; border-left: 9px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+  .video-item:hover b { color: var(--green-700); }
+
+  .note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 10px 16px 30px; }
+
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+    .post { grid-template-columns: 72px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>Know your supplements!</h1>
+  <p>Independent, evidence-based scoring of ingredients and products</p>
+</header>
+
+<nav class="nav">
+  <div class="inner">
+    <a href="#" class="active">Home</a>
+    <a href="#about">About us</a>
+    <a href="#search">Search elements</a>
+    <a href="#verified">Verified products</a>
+    <a href="#services">Services</a>
+  </div>
+</nav>
+
+<main>
+  <form class="search" id="search" onsubmit="return false">
+    <input type="search" placeholder="Search an ingredient, e.g. magnesium bisglycinate, piperine, creatine…" aria-label="Search ingredients">
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="layout">
+    <!-- LEFT: blog -->
+    <section class="card">
+      <h2>Blog <a href="#">All posts →</a></h2>
+
+      <article class="post">
+        <div class="thumb">IMG</div>
+        <div>
+          <div class="meta"><span class="tag">Minerals</span>6 Oct 2026</div>
+          <h3><a href="supplement-review.html">Magnesium bisglycinate vs citrate vs oxide: which one to pick?</a></h3>
+          <p>A comparison of absorption, tolerability and price across the most common magnesium forms.</p>
+        </div>
+      </article>
+      <article class="post">
+        <div class="thumb">IMG</div>
+        <div>
+          <div class="meta"><span class="tag">Guide</span>1 Oct 2026</div>
+          <h3><a href="#">How to read a supplement label: elemental amount vs compound weight</a></h3>
+          <p>Why "500 mg magnesium" on the front rarely means 500 mg of actual magnesium.</p>
+        </div>
+      </article>
+      <article class="post">
+        <div class="thumb">IMG</div>
+        <div>
+          <div class="meta"><span class="tag">Sleep</span>24 Sep 2026</div>
+          <h3><a href="#">What the research says about supplements for sleep</a></h3>
+          <p>Magnesium, glycine, theanine and melatonin: where the evidence is strong and where it is thin.</p>
+        </div>
+      </article>
+      <article class="post">
+        <div class="thumb">IMG</div>
+        <div>
+          <div class="meta"><span class="tag">Quality</span>15 Sep 2026</div>
+          <h3><a href="#">Third-party testing explained: what "verified" means on our site</a></h3>
+          <p>Our criteria for lab testing, label accuracy and contaminant screening.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- RIGHT: news + video -->
+    <div class="stack">
+      <section class="card news">
+        <h2>News <a href="#">More →</a></h2>
+        <ul>
+          <li><div class="meta">5 Oct 2026</div><a href="#">New review links higher magnesium intake to better sleep quality</a></li>
+          <li><div class="meta">2 Oct 2026</div><a href="#">Regulators tighten labelling rules for botanical extracts</a></li>
+          <li><div class="meta">28 Sep 2026</div><a href="#">Recall: three protein powders pulled over heavy metal levels</a></li>
+          <li><div class="meta">20 Sep 2026</div><a href="#">Study: chelated minerals show mixed results versus standard salts</a></li>
+        </ul>
+        <p class="note">Sample headlines for layout purposes.</p>
+      </section>
+
+      <section class="card">
+        <h2>Videos <a href="#">YouTube channel →</a></h2>
+        <!-- Replace the placeholder below with:
+             <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+        <div class="video-main"><div class="play"></div></div>
+        <p class="video-title">Magnesium forms explained in 5 minutes</p>
+        <div class="video-list">
+          <a href="#" class="video-item"><div class="t"></div><b>Piperine: does black pepper really boost absorption?</b></a>
+          <a href="#" class="video-item"><div class="t"></div><b>How we score supplements</b></a>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 Know your supplements! · For information only, not medical advice.</footer>
+</body>
+</html>
