@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supplement Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Supplement Finder</h1>
+    <div class="searchbox">
+      <input id="q" type="search" placeholder="Search by name, ingredient, brand or goal…" autocomplete="off" aria-label="Search supplements">
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="filters" aria-label="Filters">
+      <div class="filters-head">
+        <h2>Filters</h2>
+        <button id="clear-all" class="link" type="button">Clear all</button>
+      </div>
+
+      <section class="group">
+        <h3>Dietary &amp; availability</h3>
+        <label class="check"><input type="checkbox" data-flag="vegan"> Vegan</label>
+        <label class="check"><input type="checkbox" data-flag="gluten_free"> Gluten-free</label>
+        <label class="check"><input type="checkbox" data-flag="in_stock"> In stock only</label>
+      </section>
+
+      <section class="group">
+        <h3>Price</h3>
+        <div class="price-row">
+          <input id="min-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Min" aria-label="Minimum price">
+          <span>–</span>
+          <input id="max-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Max" aria-label="Maximum price">
+        </div>
+      </section>
+
+      <div id="facets"></div>
+    </aside>
+
+    <section class="results" aria-live="polite">
+      <div class="results-head">
+        <p id="count" class="count"></p>
+        <label class="sort">Sort
+          <select id="sort">
+            <option value="relevance">Relevance</option>
+            <option value="price_asc">Price: low to high</option>
+            <option value="price_desc">Price: high to low</option>
+            <option value="name_asc">Name A–Z</option>
+          </select>
+        </label>
+      </div>
+      <div id="chips" class="chips"></div>
+      <div id="error" class="error" hidden></div>
+      <div id="grid" class="grid"></div>
+      <div class="more"><button id="load-more" type="button" hidden>Load more</button></div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Product placeholder">
+  <rect width="200" height="200" fill="#eef3ee"/>
+  <g transform="rotate(-35 100 100)">
+    <rect x="55" y="80" width="90" height="40" rx="20" fill="#cfe0cf"/>
+    <path d="M100 80h25a20 20 0 0 1 0 40h-25z" fill="#6fa070"/>
+  </g>
+</svg>

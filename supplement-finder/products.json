@@ -1,0 +1,459 @@
+[
+  {
+    "id": "1",
+    "name": "Magnesium Glycinate 400mg",
+    "brand": "Northfield Nutrition",
+    "form": "capsule",
+    "category": "Minerals",
+    "ingredients": [
+      "Magnesium glycinate"
+    ],
+    "goals": [
+      "sleep",
+      "relaxation"
+    ],
+    "price": 18.99,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "2 capsules",
+    "servings_per_container": 45,
+    "description": "Magnesium (as glycinate) 400 mg per serving. Vegetable capsule.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "2",
+    "name": "Vitamin D3 2000 IU",
+    "brand": "Northfield Nutrition",
+    "form": "softgel",
+    "category": "Vitamins",
+    "ingredients": [
+      "Vitamin D3",
+      "Olive oil"
+    ],
+    "goals": [
+      "bones",
+      "immunity"
+    ],
+    "price": 9.5,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 softgel",
+    "servings_per_container": 120,
+    "description": "Vitamin D3 (cholecalciferol) 2000 IU per softgel in olive oil.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "3",
+    "name": "Vitamin C 1000mg",
+    "brand": "Brightleaf",
+    "form": "tablet",
+    "category": "Vitamins",
+    "ingredients": [
+      "Vitamin C",
+      "Rose hips"
+    ],
+    "goals": [
+      "immunity"
+    ],
+    "price": 12.9,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 tablet",
+    "servings_per_container": 100,
+    "description": "Vitamin C (ascorbic acid) 1000 mg with rose hip extract.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "4",
+    "name": "Omega-3 Fish Oil 1000mg",
+    "brand": "Bluewave Labs",
+    "form": "softgel",
+    "category": "Fatty Acids",
+    "ingredients": [
+      "EPA",
+      "DHA",
+      "Fish oil"
+    ],
+    "goals": [
+      "heart",
+      "brain"
+    ],
+    "price": 24.5,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "2 softgels",
+    "servings_per_container": 60,
+    "description": "Provides 360 mg EPA and 240 mg DHA per serving.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "5",
+    "name": "Algae Omega-3 Vegan",
+    "brand": "Bluewave Labs",
+    "form": "softgel",
+    "category": "Fatty Acids",
+    "ingredients": [
+      "EPA",
+      "DHA",
+      "Algal oil"
+    ],
+    "goals": [
+      "heart",
+      "brain"
+    ],
+    "price": 29.9,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "2 softgels",
+    "servings_per_container": 60,
+    "description": "Plant-based omega-3 from algal oil. Provides EPA and DHA.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "6",
+    "name": "Zinc Picolinate 25mg",
+    "brand": "Northfield Nutrition",
+    "form": "capsule",
+    "category": "Minerals",
+    "ingredients": [
+      "Zinc picolinate"
+    ],
+    "goals": [
+      "immunity",
+      "skin"
+    ],
+    "price": 8.75,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 capsule",
+    "servings_per_container": 120,
+    "description": "Zinc (as picolinate) 25 mg per capsule.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "7",
+    "name": "Probiotic 20 Billion CFU",
+    "brand": "GutWell",
+    "form": "capsule",
+    "category": "Probiotics",
+    "ingredients": [
+      "Lactobacillus acidophilus",
+      "Bifidobacterium lactis",
+      "Inulin"
+    ],
+    "goals": [
+      "digestion"
+    ],
+    "price": 26.0,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 capsule",
+    "servings_per_container": 30,
+    "description": "Ten-strain blend, 20 billion CFU at time of manufacture.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "8",
+    "name": "Vitamin B12 Methylcobalamin 1000mcg",
+    "brand": "Brightleaf",
+    "form": "gummy",
+    "category": "Vitamins",
+    "ingredients": [
+      "Vitamin B12",
+      "Pectin"
+    ],
+    "goals": [
+      "energy"
+    ],
+    "price": 14.25,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 gummy",
+    "servings_per_container": 60,
+    "description": "Vitamin B12 (methylcobalamin) 1000 mcg. Apple-pectin gummy, strawberry flavour.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "9",
+    "name": "Iron Bisglycinate 25mg",
+    "brand": "Northfield Nutrition",
+    "form": "capsule",
+    "category": "Minerals",
+    "ingredients": [
+      "Iron bisglycinate"
+    ],
+    "goals": [
+      "energy"
+    ],
+    "price": 11.4,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": false,
+    "serving_size": "1 capsule",
+    "servings_per_container": 90,
+    "description": "Iron (as bisglycinate chelate) 25 mg per capsule.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "10",
+    "name": "Whey Protein Isolate Vanilla",
+    "brand": "PeakForm",
+    "form": "powder",
+    "category": "Protein",
+    "ingredients": [
+      "Whey protein isolate",
+      "Natural vanilla flavour"
+    ],
+    "goals": [
+      "muscle",
+      "recovery"
+    ],
+    "price": 39.99,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 scoop (30 g)",
+    "servings_per_container": 33,
+    "description": "25 g protein per scoop. Contains milk.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "11",
+    "name": "Pea Protein Chocolate",
+    "brand": "PeakForm",
+    "form": "powder",
+    "category": "Protein",
+    "ingredients": [
+      "Pea protein",
+      "Cocoa",
+      "Stevia"
+    ],
+    "goals": [
+      "muscle",
+      "recovery"
+    ],
+    "price": 34.99,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 scoop (32 g)",
+    "servings_per_container": 30,
+    "description": "21 g plant protein per scoop. Sweetened with stevia.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "12",
+    "name": "Creatine Monohydrate",
+    "brand": "PeakForm",
+    "form": "powder",
+    "category": "Sports Nutrition",
+    "ingredients": [
+      "Creatine monohydrate"
+    ],
+    "goals": [
+      "muscle",
+      "performance"
+    ],
+    "price": 21.0,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 scoop (5 g)",
+    "servings_per_container": 100,
+    "description": "Unflavoured creatine monohydrate, 5 g per serving.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "13",
+    "name": "Ashwagandha Root Extract 600mg",
+    "brand": "Herbaria",
+    "form": "capsule",
+    "category": "Herbal",
+    "ingredients": [
+      "Ashwagandha root extract"
+    ],
+    "goals": [
+      "stress",
+      "sleep"
+    ],
+    "price": 19.95,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "2 capsules",
+    "servings_per_container": 45,
+    "description": "Standardized root extract, 600 mg per serving.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "14",
+    "name": "Turmeric Curcumin with Black Pepper",
+    "brand": "Herbaria",
+    "form": "capsule",
+    "category": "Herbal",
+    "ingredients": [
+      "Turmeric extract",
+      "Curcumin",
+      "Black pepper extract"
+    ],
+    "goals": [
+      "joints"
+    ],
+    "price": 22.5,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "2 capsules",
+    "servings_per_container": 45,
+    "description": "Curcuminoids 95% with piperine from black pepper extract.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "15",
+    "name": "Collagen Peptides Unflavoured",
+    "brand": "Brightleaf",
+    "form": "powder",
+    "category": "Protein",
+    "ingredients": [
+      "Hydrolyzed collagen"
+    ],
+    "goals": [
+      "skin",
+      "joints"
+    ],
+    "price": 32.0,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 scoop (10 g)",
+    "servings_per_container": 30,
+    "description": "Hydrolyzed bovine collagen peptides. Dissolves in hot or cold drinks.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "16",
+    "name": "Melatonin 1mg",
+    "brand": "Northfield Nutrition",
+    "form": "tablet",
+    "category": "Sleep",
+    "ingredients": [
+      "Melatonin"
+    ],
+    "goals": [
+      "sleep"
+    ],
+    "price": 7.9,
+    "vegan": true,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 tablet",
+    "servings_per_container": 120,
+    "description": "Melatonin 1 mg per tablet. Not available in all regions.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "17",
+    "name": "Elderberry Syrup",
+    "brand": "Herbaria",
+    "form": "liquid",
+    "category": "Herbal",
+    "ingredients": [
+      "Elderberry extract",
+      "Honey",
+      "Vitamin C",
+      "Zinc"
+    ],
+    "goals": [
+      "immunity"
+    ],
+    "price": 16.8,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "1 tablespoon (15 ml)",
+    "servings_per_container": 24,
+    "description": "Elderberry syrup with added vitamin C and zinc. Contains honey.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "18",
+    "name": "Calcium + Vitamin D3 + K2",
+    "brand": "Northfield Nutrition",
+    "form": "tablet",
+    "category": "Minerals",
+    "ingredients": [
+      "Calcium carbonate",
+      "Vitamin D3",
+      "Vitamin K2"
+    ],
+    "goals": [
+      "bones"
+    ],
+    "price": 15.6,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": true,
+    "serving_size": "2 tablets",
+    "servings_per_container": 45,
+    "description": "Calcium 600 mg, vitamin D3 1000 IU and vitamin K2 per serving.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "19",
+    "name": "Multivitamin Women",
+    "brand": "Brightleaf",
+    "form": "tablet",
+    "category": "Multivitamins",
+    "ingredients": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D3",
+      "Iron",
+      "Folate",
+      "Biotin"
+    ],
+    "goals": [
+      "general"
+    ],
+    "price": 17.99,
+    "vegan": true,
+    "gluten_free": false,
+    "in_stock": true,
+    "serving_size": "1 tablet",
+    "servings_per_container": 90,
+    "description": "Daily multivitamin with 23 vitamins and minerals. Contains wheat.",
+    "image_url": "images/placeholder.svg"
+  },
+  {
+    "id": "20",
+    "name": "Multivitamin Gummies Kids",
+    "brand": "GutWell",
+    "form": "gummy",
+    "category": "Multivitamins",
+    "ingredients": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D3",
+      "Zinc"
+    ],
+    "goals": [
+      "general"
+    ],
+    "price": 13.5,
+    "vegan": false,
+    "gluten_free": true,
+    "in_stock": false,
+    "serving_size": "2 gummies",
+    "servings_per_container": 30,
+    "description": "Fruit-flavoured multivitamin gummies. Contains gelatin.",
+    "image_url": "images/placeholder.svg"
+  }
+]
