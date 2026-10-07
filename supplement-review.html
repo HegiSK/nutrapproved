@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supplement Review – Magnesium Bisglycinate</title>
+<style>
+  :root {
+    --bg: #f1f5f1;
+    --card: #ffffff;
+    --border: #d5e0d6;
+    --green-900: #1f4d2e;
+    --green-700: #2f7a45;
+    --green-500: #4fa36a;
+    --green-100: #e3f1e6;
+    --red: #a85a4a;
+    --text: #111111;
+    --muted: #5f655f;
+    --radius: 4px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.55 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  header {
+    background: var(--green-900); color: #fff; padding: 14px 24px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  header strong { letter-spacing: .04em; }
+  header span { color: #b9d8c2; font-size: 13px; }
+  main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+  h1 { margin: 0 0 4px; font-size: 28px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stack { display: grid; gap: 16px; align-content: start; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 18px 20px;
+  }
+  .card h2 {
+    margin: 0 0 10px; font-size: 13px; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--green-700);
+  }
+  .card p { margin: 0 0 10px; color: #333; }
+  .full { grid-column: 1 / -1; }
+
+  .structure {
+    background: var(--green-100); border-radius: var(--radius);
+    padding: 8px; margin: 12px 0;
+  }
+  .structure svg { display: block; width: 100%; height: auto; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0; font-size: 14px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+
+  ul { margin: 0; padding: 0; list-style: none; }
+  li { padding: 6px 0 6px 22px; position: relative; border-bottom: 1px solid #eef2ee; }
+  li:last-child { border: 0; }
+  li::before { position: absolute; left: 0; font-weight: 700; }
+  .pos li::before { content: "+"; color: var(--green-700); }
+  .neg li::before { content: "–"; color: var(--red); }
+  .neg h2 { color: var(--red); }
+
+  .score-wrap { display: grid; grid-template-columns: 1fr 150px; gap: 24px; align-items: center; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr 44px; gap: 12px; align-items: center; margin: 10px 0; font-size: 14px; }
+  .track { height: 14px; background: #e6ece6; border-radius: var(--radius); overflow: hidden; }
+  .fill { height: 100%; background: var(--green-500); }
+  .bar-row b { text-align: right; }
+  .total {
+    background: var(--green-900); color: #fff; border-radius: var(--radius);
+    text-align: center; padding: 18px 8px;
+  }
+  .total .num { font-size: 44px; font-weight: 700; line-height: 1; }
+  .total .of { color: #b9d8c2; font-size: 13px; }
+  .total .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #b9d8c2; margin-bottom: 6px; }
+
+  .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .product { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; }
+  .product .tag {
+    display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+    background: var(--green-100); color: var(--green-900); border-radius: var(--radius); padding: 2px 8px; margin-bottom: 8px;
+  }
+  .product h3 { margin: 0 0 4px; font-size: 16px; }
+  .product p { font-size: 13.5px; color: var(--muted); margin: 0 0 8px; }
+  .product .price { font-weight: 700; color: var(--green-900); }
+
+  ol { margin: 0; padding-left: 20px; font-size: 13.5px; color: #333; }
+  ol li { padding: 4px 0; border: 0; }
+  ol li::before { content: none; }
+  .warn { background: var(--green-100); border-left: 3px solid var(--green-700); border-radius: var(--radius); padding: 8px 12px; font-size: 13.5px; }
+  .foods { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .foods th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 600; padding: 0 8px 6px 0; border-bottom: 1px solid var(--border); }
+  .foods td { padding: 7px 8px 7px 0; border-bottom: 1px solid #eef2ee; vertical-align: top; }
+  .foods tr:last-child td { border: 0; }
+  .foods td:last-child, .foods th:last-child { text-align: right; padding-right: 0; font-weight: 700; color: var(--green-900); }
+  .foods th:last-child { font-weight: 600; color: var(--muted); }
+  .foods small { display: block; color: var(--muted); font-size: 12px; }
+  .note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+  @media (max-width: 800px) {
+    .grid, .products, .score-wrap { grid-template-columns: 1fr; }
+    .bar-row { grid-template-columns: 110px 1fr 40px; }
+  }
+</style>
+</head>
+<body>
+<header><strong>SUPPLEMENT SCORE</strong><span>Evidence-based supplement reviews</span></header>
+
+<main>
+  <h1>Magnesium Bisglycinate</h1>
+  <p class="sub">Chelated magnesium · Minerals · Sleep, stress &amp; muscle function</p>
+
+  <div class="grid">
+    <!-- LEFT: description -->
+    <section class="card">
+      <h2>About the ingredient</h2>
+      <p>Magnesium bisglycinate (magnesium glycinate) is a chelate in which one magnesium ion is bound to two molecules of the amino acid glycine. The chelated form is absorbed well and is generally gentle on the gut, unlike magnesium oxide or citrate.</p>
+      <p>Magnesium supports hundreds of enzymatic reactions, including muscle and nerve function, energy metabolism and sleep regulation. Glycine itself has a calming effect on the nervous system.</p>
+
+      <div class="structure">
+        <svg viewBox="0 0 400 220" role="img" aria-label="Structure of magnesium bisglycinate: Mg2+ chelated by two glycinate ligands" font-family="Helvetica, Arial, sans-serif">
+          <g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round">
+            <!-- left ligand -->
+            <line x1="188" y1="102" x2="140" y2="62" stroke-dasharray="5 4" stroke="#2f7a45"/>
+            <line x1="124" y1="64" x2="95" y2="105"/>
+            <line x1="95" y1="105" x2="125" y2="150"/>
+            <line x1="125" y1="150" x2="160" y2="150"/>
+            <line x1="176" y1="146" x2="190" y2="112" stroke-dasharray="5 4" stroke="#2f7a45"/>
+            <line x1="122" y1="153" x2="106" y2="184"/>
+            <line x1="129" y1="147" x2="113" y2="178"/>
+            <!-- right ligand -->
+            <line x1="212" y1="102" x2="260" y2="62" stroke-dasharray="5 4" stroke="#2f7a45"/>
+            <line x1="276" y1="64" x2="305" y2="105"/>
+            <line x1="305" y1="105" x2="275" y2="150"/>
+            <line x1="275" y1="150" x2="240" y2="150"/>
+            <line x1="224" y1="146" x2="210" y2="112" stroke-dasharray="5 4" stroke="#2f7a45"/>
+            <line x1="278" y1="153" x2="294" y2="184"/>
+            <line x1="271" y1="147" x2="287" y2="178"/>
+          </g>
+          <!-- Mg -->
+          <circle cx="200" cy="100" r="17" fill="#2f7a45"/>
+          <text x="200" y="105" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Mg²⁺</text>
+          <g font-size="15" font-weight="700" text-anchor="middle" fill="#111">
+            <text x="132" y="62">N</text><text x="268" y="62">N</text>
+            <text x="168" y="155" fill="#a85a4a">O</text><text x="232" y="155" fill="#a85a4a">O</text>
+            <text x="100" y="198" fill="#a85a4a">O</text><text x="300" y="198" fill="#a85a4a">O</text>
+          </g>
+          <g font-size="11" fill="#5f655f" text-anchor="middle">
+            <text x="122" y="44">H₂</text><text x="278" y="44">H₂</text>
+            <text x="78" y="107">CH₂</text><text x="322" y="107">CH₂</text>
+            <text x="113" y="168">C</text><text x="287" y="168">C</text>
+          </g>
+        </svg>
+      </div>
+
+      <dl>
+        <dt>Formula</dt><dd>C₄H₈MgN₂O₄</dd>
+        <dt>Molar mass</dt><dd>172.4 g/mol</dd>
+        <dt>Elemental Mg</dt><dd>≈ 14 % by weight</dd>
+        <dt>Typical dose</dt><dd>200–400 mg elemental Mg / day</dd>
+        <dt>Best taken</dt><dd>Evening, with or without food</dd>
+      </dl>
+    </section>
+
+    <!-- RIGHT: pros / cons -->
+    <div class="stack">
+      <section class="card pos">
+        <h2>Positives</h2>
+        <ul>
+          <li>High bioavailability compared with magnesium oxide</li>
+          <li>Gentle on the stomach, with a low laxative effect</li>
+          <li>May improve sleep quality and reduce subjective stress</li>
+          <li>Helps with muscle cramps and recovery when intake is low</li>
+          <li>Glycine adds a mild calming effect</li>
+        </ul>
+      </section>
+      <section class="card neg">
+        <h2>Negatives</h2>
+        <ul>
+          <li>More expensive per mg of elemental magnesium than oxide or citrate</li>
+          <li>Low elemental Mg per capsule, so several capsules per dose</li>
+          <li>Direct clinical evidence for the glycinate form is still limited</li>
+          <li>Caution in kidney disease and with some medications (antibiotics, bisphosphonates)</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Top dietary magnesium sources</h2>
+        <p class="warn">These foods contain natural magnesium, <strong>not magnesium bisglycinate</strong>. They are an alternative or complement to the supplement, not a source of this ingredient.</p>
+        <table class="foods">
+          <thead><tr><th>Food</th><th>Natural form of Mg</th><th>Elemental Mg per serving</th></tr></thead>
+          <tbody>
+            <tr><td>Pumpkin seeds<small>28 g (1 oz)</small></td><td>Phytate-bound</td><td>≈ 150 mg</td></tr>
+            <tr><td>Chia seeds<small>28 g (1 oz)</small></td><td>Phytate- and fibre-bound</td><td>≈ 110 mg</td></tr>
+            <tr><td>Almonds<small>28 g (1 oz)</small></td><td>Phytate-bound</td><td>≈ 80 mg</td></tr>
+            <tr><td>Spinach, cooked<small>½ cup (90 g)</small></td><td>Chlorophyll core and bound</td><td>≈ 75 mg</td></tr>
+            <tr><td>Dark chocolate 70–85%<small>28 g (1 oz)</small></td><td>Bound to cocoa solids</td><td>≈ 65 mg</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Approximate values based on NIH ODS data. Bisglycinate is a glycine chelate made for supplements and is not found in foods. Magnesium in plant foods is mostly bound to phytate and fibre, so absorption is typically lower.</p>
+      </section>
+    </div>
+
+    <!-- SCORING -->
+    <section class="card full">
+      <h2>Score breakdown</h2>
+      <div class="score-wrap">
+        <div>
+          <div class="bar-row"><span>Scientific evidence</span><div class="track"><div class="fill" style="width:70%"></div></div><b>7.0</b></div>
+          <div class="bar-row"><span>Pricing</span><div class="track"><div class="fill" style="width:60%"></div></div><b>6.0</b></div>
+          <div class="bar-row"><span>Overall benefits</span><div class="track"><div class="fill" style="width:85%"></div></div><b>8.5</b></div>
+          <div class="bar-row"><span>Safety &amp; tolerability</span><div class="track"><div class="fill" style="width:90%"></div></div><b>9.0</b></div>
+        </div>
+        <div class="total">
+          <div class="lbl">Total score</div>
+          <div class="num">7.6</div>
+          <div class="of">out of 10</div>
+        </div>
+      </div>
+      <p class="note">Scores are illustrative sample values for this layout, not a validated rating.</p>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="card full">
+      <h2>Our recommendations</h2>
+      <div class="products">
+        <div class="product">
+          <span class="tag">Best overall</span>
+          <h3>Product name A</h3>
+          <p>Pure bisglycinate chelate, 100 mg elemental Mg per capsule, third-party tested.</p>
+          <span class="price">≈ €18 / 90 caps</span>
+        </div>
+        <div class="product">
+          <span class="tag">Best value</span>
+          <h3>Product name B</h3>
+          <p>Powder form, 200 mg elemental Mg per scoop, no fillers.</p>
+          <span class="price">≈ €14 / 60 servings</span>
+        </div>
+        <div class="product">
+          <span class="tag">Best for sleep</span>
+          <h3>Product name C</h3>
+          <p>Bisglycinate combined with L-theanine and vitamin B6.</p>
+          <span class="price">≈ €24 / 60 caps</span>
+        </div>
+      </div>
+      <p class="note">Placeholder products and prices. Replace with real listings and affiliate links.</p>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="card full">
+      <h2>References</h2>
+      <ol>
+        <li>Schuette SA, Lashner BA, Janghorbani M. Bioavailability of magnesium diglycinate vs magnesium oxide in patients with ileal resection. <em>JPEN</em>. 1994;18(5):430–435.</li>
+        <li>Abbasi B, et al. The effect of magnesium supplementation on primary insomnia in elderly: a double-blind placebo-controlled clinical trial. <em>J Res Med Sci</em>. 2012;17(12):1161–1169.</li>
+        <li>Boyle NB, Lawton C, Dye L. The effects of magnesium supplementation on subjective anxiety and stress: a systematic review. <em>Nutrients</em>. 2017;9(5):429.</li>
+        <li>NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov</li>
+      </ol>
+    </section>
+  </div>
+</main>
+</body>
+</html>
