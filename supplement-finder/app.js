@@ -230,6 +230,9 @@ async function start() {
     els.min.placeholder = `Min $${Math.floor(Math.min(...prices))}`;
     els.max.placeholder = `Max $${Math.ceil(Math.max(...prices))}`;
   }
+  // Deep link from the landing page: ?q=magnesium preloads the search.
+  const initialQ = new URLSearchParams(location.search).get('q')?.trim();
+  if (initialQ) { state.q = initialQ; els.q.value = initialQ; }
   render();
 }
 start();
