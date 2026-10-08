@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Know your supplements!</title>
+<title data-i18n="meta.title.home">Know your supplements!</title>
+<script src="i18n.js"></script>
 <link rel="stylesheet" href="site.css">
 <style>
   main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
@@ -79,61 +80,61 @@
 <body>
 
 <header class="hero">
-  <h1>Know your supplements!</h1>
-  <p>Independent, evidence-based scoring of ingredients and products</p>
+  <h1 data-i18n="hero.title">Know your supplements!</h1>
+  <p data-i18n="hero.sub">Independent, evidence-based scoring of ingredients and products</p>
 </header>
 
 <nav class="nav">
   <div class="inner">
-    <a href="#" class="active">Home</a>
-    <a href="#about">About us</a>
-    <a href="supplement-finder/index.html">Search elements</a>
-    <a href="#verified">Verified products</a>
-    <a href="#services">Services</a>
+    <a href="#" class="active" data-i18n="nav.home">Home</a>
+    <a href="#about" data-i18n="nav.about">About us</a>
+    <a href="supplement-finder/index.html" data-i18n="nav.search">Search elements</a>
+    <a href="#verified" data-i18n="nav.verified">Verified products</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
   </div>
 </nav>
 
 <main>
   <form class="search" id="search" action="supplement-finder/index.html" method="get">
-    <input type="search" name="q" placeholder="Search an ingredient, e.g. magnesium bisglycinate, piperine, creatine…" aria-label="Search ingredients">
-    <button type="submit">Search</button>
+    <input type="search" name="q" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.aria" placeholder="Search an ingredient, e.g. magnesium bisglycinate, piperine, creatine…" aria-label="Search ingredients">
+    <button type="submit" data-i18n="search.button">Search</button>
   </form>
 
   <div class="layout">
     <!-- LEFT: blog -->
     <section class="card">
-      <h2>Blog <a href="#">All posts →</a></h2>
+      <h2><span data-i18n="blog.title">Blog</span> <a href="#" data-i18n="blog.all">All posts →</a></h2>
 
       <article class="post">
         <div class="thumb">IMG</div>
         <div>
-          <div class="meta"><span class="tag">Minerals</span>6 Oct 2026</div>
-          <h3><a href="supplement-review.html">Magnesium bisglycinate vs citrate vs oxide: which one to pick?</a></h3>
-          <p>A comparison of absorption, tolerability and price across the most common magnesium forms.</p>
+          <div class="meta"><span class="tag" data-i18n="post1.tag">Minerals</span><span data-i18n="post1.date">6 Oct 2026</span></div>
+          <h3><a href="supplement-review.html" data-i18n="post1.title">Magnesium bisglycinate vs citrate vs oxide: which one to pick?</a></h3>
+          <p data-i18n="post1.text">A comparison of absorption, tolerability and price across the most common magnesium forms.</p>
         </div>
       </article>
       <article class="post">
         <div class="thumb">IMG</div>
         <div>
-          <div class="meta"><span class="tag">Guide</span>1 Oct 2026</div>
-          <h3><a href="#">How to read a supplement label: elemental amount vs compound weight</a></h3>
-          <p>Why "500 mg magnesium" on the front rarely means 500 mg of actual magnesium.</p>
+          <div class="meta"><span class="tag" data-i18n="post2.tag">Guide</span><span data-i18n="post2.date">1 Oct 2026</span></div>
+          <h3><a href="#" data-i18n="post2.title">How to read a supplement label: elemental amount vs compound weight</a></h3>
+          <p data-i18n="post2.text">Why "500 mg magnesium" on the front rarely means 500 mg of actual magnesium.</p>
         </div>
       </article>
       <article class="post">
         <div class="thumb">IMG</div>
         <div>
-          <div class="meta"><span class="tag">Sleep</span>24 Sep 2026</div>
-          <h3><a href="#">What the research says about supplements for sleep</a></h3>
-          <p>Magnesium, glycine, theanine and melatonin: where the evidence is strong and where it is thin.</p>
+          <div class="meta"><span class="tag" data-i18n="post3.tag">Sleep</span><span data-i18n="post3.date">24 Sep 2026</span></div>
+          <h3><a href="#" data-i18n="post3.title">What the research says about supplements for sleep</a></h3>
+          <p data-i18n="post3.text">Magnesium, glycine, theanine and melatonin: where the evidence is strong and where it is thin.</p>
         </div>
       </article>
       <article class="post">
         <div class="thumb">IMG</div>
         <div>
-          <div class="meta"><span class="tag">Quality</span>15 Sep 2026</div>
-          <h3><a href="#">Third-party testing explained: what "verified" means on our site</a></h3>
-          <p>Our criteria for lab testing, label accuracy and contaminant screening.</p>
+          <div class="meta"><span class="tag" data-i18n="post4.tag">Quality</span><span data-i18n="post4.date">15 Sep 2026</span></div>
+          <h3><a href="#" data-i18n="post4.title">Third-party testing explained: what "verified" means on our site</a></h3>
+          <p data-i18n="post4.text">Our criteria for lab testing, label accuracy and contaminant screening.</p>
         </div>
       </article>
     </section>
@@ -141,31 +142,31 @@
     <!-- RIGHT: news + video -->
     <div class="stack">
       <section class="card news">
-        <h2>News <a href="#">More →</a></h2>
+        <h2><span data-i18n="news.title">News</span> <a href="#" data-i18n="news.more">More →</a></h2>
         <ul>
-          <li><div class="meta">5 Oct 2026</div><a href="#">New review links higher magnesium intake to better sleep quality</a></li>
-          <li><div class="meta">2 Oct 2026</div><a href="#">Regulators tighten labelling rules for botanical extracts</a></li>
-          <li><div class="meta">28 Sep 2026</div><a href="#">Recall: three protein powders pulled over heavy metal levels</a></li>
-          <li><div class="meta">20 Sep 2026</div><a href="#">Study: chelated minerals show mixed results versus standard salts</a></li>
+          <li><div class="meta" data-i18n="news1.date">5 Oct 2026</div><a href="#" data-i18n="news1.title">New review links higher magnesium intake to better sleep quality</a></li>
+          <li><div class="meta" data-i18n="news2.date">2 Oct 2026</div><a href="#" data-i18n="news2.title">Regulators tighten labelling rules for botanical extracts</a></li>
+          <li><div class="meta" data-i18n="news3.date">28 Sep 2026</div><a href="#" data-i18n="news3.title">Recall: three protein powders pulled over heavy metal levels</a></li>
+          <li><div class="meta" data-i18n="news4.date">20 Sep 2026</div><a href="#" data-i18n="news4.title">Study: chelated minerals show mixed results versus standard salts</a></li>
         </ul>
-        <p class="note">Sample headlines for layout purposes.</p>
+        <p class="note" data-i18n="news.note">Sample headlines for layout purposes.</p>
       </section>
 
       <section class="card">
-        <h2>Videos <a href="#">YouTube channel →</a></h2>
+        <h2><span data-i18n="videos.title">Videos</span> <a href="#" data-i18n="videos.channel">YouTube channel →</a></h2>
         <!-- Replace the placeholder below with:
              <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
         <div class="video-main"><div class="play"></div></div>
-        <p class="video-title">Magnesium forms explained in 5 minutes</p>
+        <p class="video-title" data-i18n="video.main">Magnesium forms explained in 5 minutes</p>
         <div class="video-list">
-          <a href="#" class="video-item"><div class="t"></div><b>Piperine: does black pepper really boost absorption?</b></a>
-          <a href="#" class="video-item"><div class="t"></div><b>How we score supplements</b></a>
+          <a href="#" class="video-item"><div class="t"></div><b data-i18n="video.2">Piperine: does black pepper really boost absorption?</b></a>
+          <a href="#" class="video-item"><div class="t"></div><b data-i18n="video.3">How we score supplements</b></a>
         </div>
       </section>
     </div>
   </div>
 </main>
 
-<footer>© 2026 Know your supplements! · For information only, not medical advice.</footer>
+<footer data-i18n="footer">© 2026 Know your supplements! · For information only, not medical advice.</footer>
 </body>
 </html>

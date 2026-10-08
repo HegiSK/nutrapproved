@@ -3,50 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Supplement Finder</title>
+  <title data-i18n="meta.title.finder">Supplement Finder</title>
+  <script src="../i18n.js"></script>
   <link rel="stylesheet" href="../site.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
-    <h1>Know your supplements!</h1>
-    <p>Independent, evidence-based scoring of ingredients and products</p>
+    <h1 data-i18n="hero.title">Know your supplements!</h1>
+    <p data-i18n="hero.sub">Independent, evidence-based scoring of ingredients and products</p>
   </header>
 
   <nav class="nav">
     <div class="inner">
-      <a href="../index.html">Home</a>
-      <a href="../index.html#about">About us</a>
-      <a href="index.html" class="active">Search elements</a>
-      <a href="../index.html#verified">Verified products</a>
-      <a href="../index.html#services">Services</a>
+      <a href="../index.html" data-i18n="nav.home">Home</a>
+      <a href="../index.html#about" data-i18n="nav.about">About us</a>
+      <a href="index.html" class="active" data-i18n="nav.search">Search elements</a>
+      <a href="../index.html#verified" data-i18n="nav.verified">Verified products</a>
+      <a href="../index.html#services" data-i18n="nav.services">Services</a>
     </div>
   </nav>
 
   <div class="searchbox">
-    <input id="q" type="search" placeholder="Search by name, ingredient, brand or goal…" autocomplete="off" aria-label="Search supplements">
+    <input id="q" type="search" data-i18n-placeholder="finder.search.placeholder" data-i18n-aria="finder.search.aria" placeholder="Search by name, ingredient, brand or goal…" autocomplete="off" aria-label="Search supplements">
   </div>
 
   <main class="layout">
-    <aside class="filters" aria-label="Filters">
+    <aside class="filters" aria-label="Filters" data-i18n-aria="finder.filters.aria">
       <div class="filters-head">
-        <h2>Filters</h2>
-        <button id="clear-all" class="link" type="button">Clear all</button>
+        <h2 data-i18n="finder.filters">Filters</h2>
+        <button id="clear-all" class="link" type="button" data-i18n="finder.clear">Clear all</button>
       </div>
 
       <section class="group">
-        <h3>Dietary &amp; availability</h3>
-        <label class="check"><input type="checkbox" data-flag="vegan"> Vegan</label>
-        <label class="check"><input type="checkbox" data-flag="gluten_free"> Gluten-free</label>
-        <label class="check"><input type="checkbox" data-flag="in_stock"> In stock only</label>
+        <h3 data-i18n="finder.group.dietary">Dietary &amp; availability</h3>
+        <label class="check"><input type="checkbox" data-flag="vegan"> <span data-i18n="flag.vegan">Vegan</span></label>
+        <label class="check"><input type="checkbox" data-flag="gluten_free"> <span data-i18n="flag.gluten_free">Gluten-free</span></label>
+        <label class="check"><input type="checkbox" data-flag="in_stock"> <span data-i18n="flag.in_stock">In stock only</span></label>
       </section>
 
       <section class="group">
-        <h3>Price</h3>
+        <h3 data-i18n="finder.group.price">Price</h3>
         <div class="price-row">
-          <input id="min-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Min" aria-label="Minimum price">
+          <input id="min-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Min" aria-label="Minimum price" data-i18n-aria="price.min.aria">
           <span>–</span>
-          <input id="max-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Max" aria-label="Maximum price">
+          <input id="max-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Max" aria-label="Maximum price" data-i18n-aria="price.max.aria">
         </div>
       </section>
 
@@ -56,19 +57,19 @@
     <section class="results" aria-live="polite">
       <div class="results-head">
         <p id="count" class="count"></p>
-        <label class="sort">Sort
+        <label class="sort"><span data-i18n="sort">Sort</span>
           <select id="sort">
-            <option value="relevance">Relevance</option>
-            <option value="price_asc">Price: low to high</option>
-            <option value="price_desc">Price: high to low</option>
-            <option value="name_asc">Name A–Z</option>
+            <option value="relevance" data-i18n="sort.relevance">Relevance</option>
+            <option value="price_asc" data-i18n="sort.price_asc">Price: low to high</option>
+            <option value="price_desc" data-i18n="sort.price_desc">Price: high to low</option>
+            <option value="name_asc" data-i18n="sort.name_asc">Name A–Z</option>
           </select>
         </label>
       </div>
       <div id="chips" class="chips"></div>
       <div id="error" class="error" hidden></div>
       <div id="grid" class="grid"></div>
-      <div class="more"><button id="load-more" type="button" hidden>Load more</button></div>
+      <div class="more"><button id="load-more" type="button" hidden data-i18n="load.more">Load more</button></div>
     </section>
   </main>
 

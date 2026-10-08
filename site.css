@@ -41,3 +41,14 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 10px
 @media (max-width: 800px) {
   .hero h1 { font-size: 30px; }
 }
+
+/* Language switcher (injected by i18n.js) and no-flash loading state */
+html.i18n-loading body { visibility: hidden; }
+.nav .lang { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.nav .lang button {
+  font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .05em; color: #fff;
+  background: transparent; border: 1px solid rgba(255,255,255,.45); border-radius: var(--radius-sm);
+  padding: 3px 9px; cursor: pointer;
+}
+.nav .lang button:hover { background: var(--green-900); }
+.nav .lang button[aria-pressed="true"] { background: #fff; color: var(--green-900); border-color: #fff; }

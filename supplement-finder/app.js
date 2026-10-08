@@ -4,16 +4,10 @@ import MiniSearch from './vendor/minisearch.js';
 
 // ---- Settings -------------------------------------------------------------
 const DATA_URL = 'products.json';
-const FACETS = [
-  { field: 'form', label: 'Form' },
-  { field: 'category', label: 'Category' },
-  { field: 'goals', label: 'Goal' },
-  { field: 'brand', label: 'Brand' },
-  { field: 'ingredients', label: 'Ingredient' },
-];
+const FACETS = ['form', 'category', 'goals', 'brand', 'ingredients'].map((field) => ({ field, labelKey: `facet.${field}` }));
 const FLAGS = ['vegan', 'gluten_free', 'in_stock'];
-const FLAG_LABELS = { vegan: 'Vegan', gluten_free: 'Gluten-free', in_stock: 'In stock' };
-const SEARCH_FIELDS = ['name', 'ingredients', 'brand', 'category', 'form', 'goals', 'description'];
+// search_en keeps the English name and ingredients searchable when the page is shown in another language.
+const SEARCH_FIELDS = ['name', 'ingredients', 'brand', 'category', 'form', 'goals', 'description', 'search_en'];
 const PER_PAGE = 12;
 
 // ---- State ----------------------------------------------------------------
@@ -39,8 +33,25 @@ const els = {
 
 const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const money = (n) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
+// Strings come from i18n/<lang>.json; i18n.js is loaded in the page <head>.
+const { t, plural, value: tv } = window.i18n;
+const LOCALE = { en: 'en-US', cs: 'cs-CZ' }[window.i18n.lang] ?? 'en-US';
+const money = (n, digits = 2) =>
+  new Intl.NumberFormat(LOCALE, { style: 'currency', currency: 'USD', minimumFractionDigits: digits, maximumFractionDigits: digits }).format(n);
 const asArray = (v) => (Array.isArray(v) ? v : v == null ? [] : [v]);
+
+// Translate the displayed values of a product. Facets, chips and search then all work in the page language.
+function localize(p) {
+  return {
+    ...p,
+    name: t(`product.${p.id}`) === `product.${p.id}` ? p.name : t(`product.${p.id}`),
+    form: tv(p.form),
+    category: tv(p.category),
+    goals: asArray(p.goals).map(tv),
+    ingredients: asArray(p.ingredients).map(tv),
+    search_en: [p.name, ...asArray(p.ingredients)].join(' '),
+  };
+}
 
 // ---- Search + filter logic -----------------------------------------------
 // Returns the ids matching the text query (in relevance order), or null if no query.
@@ -94,9 +105,9 @@ function compute() {
 // ---- Rendering ------------------------------------------------------------
 function cardHtml(p) {
   const tags = [
-    p.vegan ? '<span class="tag">Vegan</span>' : '',
-    p.gluten_free ? '<span class="tag">Gluten-free</span>' : '',
-    p.in_stock ? '' : '<span class="tag out">Out of stock</span>',
+    p.vegan ? `<span class="tag">${esc(t('flag.vegan'))}</span>` : '',
+    p.gluten_free ? `<span class="tag">${esc(t('flag.gluten_free'))}</span>` : '',
+    p.in_stock ? '' : `<span class="tag out">${esc(t('tag.out'))}</span>`,
   ].join('');
   const ingr = asArray(p.ingredients).join(', ');
   return `
@@ -114,7 +125,7 @@ function cardHtml(p) {
 }
 
 function renderFacets(facetData) {
-  els.facets.innerHTML = FACETS.map(({ field, label }) => {
+  els.facets.innerHTML = FACETS.map(({ field, labelKey }) => {
     const counts = new Map(facetData[field]);
     for (const v of state.sel[field]) if (!counts.has(v)) counts.set(v, 0); // keep ticked values visible
     const rows = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
@@ -128,7 +139,7 @@ function renderFacets(facetData) {
         </label>`
       )
       .join('');
-    return `<section class="group"><h3>${esc(label)}</h3><div class="list">${items}</div></section>`;
+    return `<section class="group"><h3>${esc(t(labelKey))}</h3><div class="list">${items}</div></section>`;
   }).join('');
 }
 
@@ -137,9 +148,9 @@ function renderChips() {
   for (const { field } of FACETS)
     for (const v of state.sel[field])
       chips.push(`<button class="chip" data-chip-field="${esc(field)}" data-chip-value="${esc(v)}">${esc(v)} ×</button>`);
-  for (const f of FLAGS) if (state.flags[f]) chips.push(`<button class="chip" data-chip-flag="${f}">${FLAG_LABELS[f]} ×</button>`);
-  if (state.minPrice !== '') chips.push(`<button class="chip" data-chip-price="min">Min ${money(Number(state.minPrice))} ×</button>`);
-  if (state.maxPrice !== '') chips.push(`<button class="chip" data-chip-price="max">Max ${money(Number(state.maxPrice))} ×</button>`);
+  for (const f of FLAGS) if (state.flags[f]) chips.push(`<button class="chip" data-chip-flag="${f}">${esc(f === 'in_stock' ? t('flag.chip.in_stock') : t(`flag.${f}`))} ×</button>`);
+  if (state.minPrice !== '') chips.push(`<button class="chip" data-chip-price="min">${esc(t('chip.min', { price: money(Number(state.minPrice)) }))} ×</button>`);
+  if (state.maxPrice !== '') chips.push(`<button class="chip" data-chip-price="max">${esc(t('chip.max', { price: money(Number(state.maxPrice)) }))} ×</button>`);
   els.chips.innerHTML = chips.join('');
 }
 
@@ -153,8 +164,8 @@ function render({ append = false } = {}) {
   const start = (state.page - 1) * PER_PAGE;
   const html = results.slice(start, start + PER_PAGE).map(cardHtml).join('');
   if (append) els.grid.insertAdjacentHTML('beforeend', html);
-  else els.grid.innerHTML = html || '<p class="empty">No supplements match your search and filters.</p>';
-  els.count.textContent = `${results.length} ${results.length === 1 ? 'product' : 'products'}`;
+  else els.grid.innerHTML = html || `<p class="empty">${esc(t('empty'))}</p>`;
+  els.count.textContent = plural('count', results.length);
   els.more.hidden = results.length <= state.page * PER_PAGE;
   renderFacets(facetData);
   renderChips();
@@ -206,16 +217,14 @@ els.clear.addEventListener('click', () => {
 
 // ---- Start ----------------------------------------------------------------
 async function start() {
+  await window.i18n.ready; // strings must be loaded before data is localized and rendered
   try {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    products = await res.json();
+    products = (await res.json()).map(localize);
   } catch (err) {
     console.error(err);
-    showError(
-      `Could not load ${DATA_URL} (${err.message}). Open this page through a web server ` +
-        `(run "python3 -m http.server 8000" in this folder), not by double-clicking the file.`
-    );
+    showError(t('error.load', { url: DATA_URL, msg: err.message }));
     return;
   }
   index = new MiniSearch({
@@ -227,8 +236,8 @@ async function start() {
 
   const prices = products.map((p) => p.price);
   if (prices.length) {
-    els.min.placeholder = `Min $${Math.floor(Math.min(...prices))}`;
-    els.max.placeholder = `Max $${Math.ceil(Math.max(...prices))}`;
+    els.min.placeholder = t('price.min.placeholder', { price: money(Math.floor(Math.min(...prices)), 0) });
+    els.max.placeholder = t('price.max.placeholder', { price: money(Math.ceil(Math.max(...prices)), 0) });
   }
   // Deep link from the landing page: ?q=magnesium preloads the search.
   const initialQ = new URLSearchParams(location.search).get('q')?.trim();
