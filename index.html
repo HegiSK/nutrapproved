@@ -31,11 +31,17 @@
     border-radius: var(--radius); background: #fff;
   }
   .search input:focus { outline: 2px solid var(--green-500); border-color: var(--green-500); }
+  /* Same look as the highlighted item in the main bar (site.css .nav-indicator) */
   .search button {
-    padding: 0 22px; font: inherit; font-weight: 600; color: #fff; background: var(--green-700);
-    border: 0; border-radius: var(--radius); cursor: pointer;
+    padding: 0 26px; font: inherit; font-weight: 600; letter-spacing: .02em; color: #fff; border: 0; border-radius: 999px; cursor: pointer;
+    background: linear-gradient(135deg, var(--green-500), var(--green-700) 60%, var(--green-900));
+    box-shadow: 0 4px 12px rgba(47,122,69,.45);
+    transition: transform .2s cubic-bezier(.3,1.3,.5,1), box-shadow .2s ease, filter .2s ease;
   }
-  .search button:hover { background: var(--green-900); }
+  .search button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(47,122,69,.5); filter: brightness(1.06); }
+  .search button:active { transform: scale(.96); box-shadow: 0 2px 6px rgba(47,122,69,.4); }
+  .search button:focus-visible { outline: 2px solid var(--green-700); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .search button { transition: none; } .search button:hover, .search button:active { transform: none; } }
 
 
   /* Search suggestions (suggest.js) */
