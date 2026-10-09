@@ -97,7 +97,7 @@ function cardHtml(p) {
         <p class="meta">${esc(p.form)} · ${esc(p.category)}</p>
         ${ingr ? `<p class="ingr">${esc(ingr)}</p>` : ''}
         <div class="tags">${tags}</div>
-        <div class="foot"><span class="price">${money(p.price)}</span></div>
+        <div class="foot"><span class="price">${money(p.price)}</span>${p.review ? `<a class="review-link" href="../review.html?id=${encodeURIComponent(p.review)}">${esc(t('card.review'))}</a>` : ''}</div>
       </div>
     </article>`;
 }

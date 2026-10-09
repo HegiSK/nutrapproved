@@ -1,0 +1,236 @@
+{
+ "id": "magnesium-bisglycinate",
+ "structure": "magnesium-bisglycinate.svg",
+ "scores": {
+  "evidence": 7.0,
+  "pricing": 6.0,
+  "benefits": 8.5,
+  "safety": 9.0
+ },
+ "references": [
+  "Schuette SA, Lashner BA, Janghorbani M. Bioavailability of magnesium diglycinate vs magnesium oxide in patients with ileal resection. *JPEN*. 1994;18(5):430–435.",
+  "Abbasi B, et al. The effect of magnesium supplementation on primary insomnia in elderly: a double-blind placebo-controlled clinical trial. *J Res Med Sci*. 2012;17(12):1161–1169.",
+  "Boyle NB, Lawton C, Dye L. The effects of magnesium supplementation on subjective anxiety and stress: a systematic review. *Nutrients*. 2017;9(5):429.",
+  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov"
+ ],
+ "en": {
+  "name": "Magnesium Bisglycinate",
+  "subtitle": "Chelated magnesium · Minerals · Sleep, stress & muscle function",
+  "about": [
+   "Magnesium bisglycinate (magnesium glycinate) is a chelate in which one magnesium ion is bound to two molecules of the amino acid glycine. The chelated form is absorbed well and is generally gentle on the gut, unlike magnesium oxide or citrate.",
+   "Magnesium supports hundreds of enzymatic reactions, including muscle and nerve function, energy metabolism and sleep regulation. Glycine itself has a calming effect on the nervous system."
+  ],
+  "structure_alt": "Structure of magnesium bisglycinate: Mg2+ chelated by two glycinate ligands",
+  "facts": [
+   [
+    "Formula",
+    "C₄H₈MgN₂O₄"
+   ],
+   [
+    "Molar mass",
+    "172.4 g/mol"
+   ],
+   [
+    "Elemental Mg",
+    "≈ 14 % by weight"
+   ],
+   [
+    "Typical dose",
+    "200–400 mg elemental Mg / day"
+   ],
+   [
+    "Best taken",
+    "Evening, with or without food"
+   ]
+  ],
+  "positives": [
+   "High bioavailability compared with magnesium oxide",
+   "Gentle on the stomach, with a low laxative effect",
+   "May improve sleep quality and reduce subjective stress",
+   "Helps with muscle cramps and recovery when intake is low",
+   "Glycine adds a mild calming effect"
+  ],
+  "negatives": [
+   "More expensive per mg of elemental magnesium than oxide or citrate",
+   "Low elemental Mg per capsule, so several capsules per dose",
+   "Direct clinical evidence for the glycinate form is still limited",
+   "Caution in kidney disease and with some medications (antibiotics, bisphosphonates)"
+  ],
+  "foods": {
+   "title": "Top dietary magnesium sources",
+   "warning": "These foods contain natural magnesium, **not magnesium bisglycinate**. They are an alternative or complement to the supplement, not a source of this ingredient.",
+   "columns": [
+    "Food",
+    "Natural form of Mg",
+    "Elemental Mg per serving"
+   ],
+   "rows": [
+    [
+     "Pumpkin seeds",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 150 mg"
+    ],
+    [
+     "Chia seeds",
+     "28 g (1 oz)",
+     "Phytate- and fibre-bound",
+     "≈ 110 mg"
+    ],
+    [
+     "Almonds",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 80 mg"
+    ],
+    [
+     "Spinach, cooked",
+     "½ cup (90 g)",
+     "Chlorophyll core and bound",
+     "≈ 75 mg"
+    ],
+    [
+     "Dark chocolate 70–85%",
+     "28 g (1 oz)",
+     "Bound to cocoa solids",
+     "≈ 65 mg"
+    ]
+   ],
+   "note": "Approximate values based on NIH ODS data. Bisglycinate is a glycine chelate made for supplements and is not found in foods. Magnesium in plant foods is mostly bound to phytate and fibre, so absorption is typically lower."
+  },
+  "scores_note": "Scores are illustrative sample values for this layout, not a validated rating.",
+  "recommendations": {
+   "items": [
+    {
+     "tag": "Best overall",
+     "name": "Product name A",
+     "text": "Pure bisglycinate chelate, 100 mg elemental Mg per capsule, third-party tested.",
+     "price": "≈ €18 / 90 caps"
+    },
+    {
+     "tag": "Best value",
+     "name": "Product name B",
+     "text": "Powder form, 200 mg elemental Mg per scoop, no fillers.",
+     "price": "≈ €14 / 60 servings"
+    },
+    {
+     "tag": "Best for sleep",
+     "name": "Product name C",
+     "text": "Bisglycinate combined with L-theanine and vitamin B6.",
+     "price": "≈ €24 / 60 caps"
+    }
+   ],
+   "note": "Placeholder products and prices. Replace with real listings and affiliate links."
+  }
+ },
+ "cs": {
+  "name": "Hořčík bisglycinát",
+  "subtitle": "Chelátový hořčík · Minerály · Spánek, stres a funkce svalů",
+  "about": [
+   "Hořčík bisglycinát (hořčík glycinát) je chelát, ve kterém je jeden iont hořčíku vázán na dvě molekuly aminokyseliny glycinu. Chelátová forma se dobře vstřebává a na rozdíl od oxidu nebo citrátu hořečnatého je obvykle šetrná k trávicímu traktu.",
+   "Hořčík podporuje stovky enzymatických reakcí, včetně funkce svalů a nervů, energetického metabolismu a regulace spánku. Samotný glycin má uklidňující účinek na nervový systém."
+  ],
+  "structure_alt": "Struktura hořčík bisglycinátu: iont Mg2+ vázaný dvěma glycinátovými ligandy",
+  "facts": [
+   [
+    "Vzorec",
+    "C₄H₈MgN₂O₄"
+   ],
+   [
+    "Molární hmotnost",
+    "172,4 g/mol"
+   ],
+   [
+    "Elementární Mg",
+    "≈ 14 % hmotnosti"
+   ],
+   [
+    "Typická dávka",
+    "200–400 mg elementárního Mg / den"
+   ],
+   [
+    "Kdy užívat",
+    "Večer, s jídlem nebo bez něj"
+   ]
+  ],
+  "positives": [
+   "Vysoká biologická dostupnost ve srovnání s oxidem hořečnatým",
+   "Šetrný k žaludku, s nízkým projímavým účinkem",
+   "Může zlepšit kvalitu spánku a snížit subjektivní stres",
+   "Pomáhá při svalových křečích a regeneraci při nízkém příjmu",
+   "Glycin přidává mírný uklidňující účinek"
+  ],
+  "negatives": [
+   "Dražší na mg elementárního hořčíku než oxid nebo citrát",
+   "Nízký obsah elementárního Mg v kapsli, proto je na dávku potřeba více kapslí",
+   "Přímé klinické důkazy pro glycinátovou formu jsou stále omezené",
+   "Opatrnost při onemocnění ledvin a s některými léky (antibiotika, bisfosfonáty)"
+  ],
+  "foods": {
+   "title": "Hlavní potravinové zdroje hořčíku",
+   "warning": "Tyto potraviny obsahují přirozený hořčík, **nikoli hořčík bisglycinát**. Jsou alternativou nebo doplňkem k doplňku stravy, ne zdrojem této látky.",
+   "columns": [
+    "Potravina",
+    "Přirozená forma Mg",
+    "Elementární Mg na porci"
+   ],
+   "rows": [
+    [
+     "Dýňová semínka",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 150 mg"
+    ],
+    [
+     "Chia semínka",
+     "28 g (1 oz)",
+     "Vázaný na fytát a vlákninu",
+     "≈ 110 mg"
+    ],
+    [
+     "Mandle",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 80 mg"
+    ],
+    [
+     "Špenát, vařený",
+     "½ šálku (90 g)",
+     "Střed chlorofylu a vázaný",
+     "≈ 75 mg"
+    ],
+    [
+     "Hořká čokoláda 70–85 %",
+     "28 g (1 oz)",
+     "Vázaný na kakaové složky",
+     "≈ 65 mg"
+    ]
+   ],
+   "note": "Přibližné hodnoty podle dat NIH ODS. Bisglycinát je glycinový chelát vyráběný pro doplňky stravy a v potravinách se nevyskytuje. Hořčík v rostlinných potravinách je většinou vázán na fytát a vlákninu, proto je jeho vstřebávání obvykle nižší."
+  },
+  "scores_note": "Skóre jsou ilustrační ukázkové hodnoty pro toto rozvržení, nejde o ověřené hodnocení.",
+  "recommendations": {
+   "items": [
+    {
+     "tag": "Nejlepší celkově",
+     "name": "Název produktu A",
+     "text": "Čistý bisglycinátový chelát, 100 mg elementárního Mg v kapsli, testováno třetí stranou.",
+     "price": "≈ 18 € / 90 kapslí"
+    },
+    {
+     "tag": "Nejlepší poměr cena/výkon",
+     "name": "Název produktu B",
+     "text": "Prášková forma, 200 mg elementárního Mg v odměrce, bez plniv.",
+     "price": "≈ 14 € / 60 dávek"
+    },
+    {
+     "tag": "Nejlepší na spánek",
+     "name": "Název produktu C",
+     "text": "Bisglycinát kombinovaný s L-theaninem a vitaminem B6.",
+     "price": "≈ 24 € / 60 kapslí"
+    }
+   ],
+   "note": "Ukázkové produkty a ceny. Nahraďte skutečnými nabídkami a affiliate odkazy."
+  }
+ }
+}

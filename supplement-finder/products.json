@@ -19,7 +19,8 @@
     "serving_size": "2 capsules",
     "servings_per_container": 45,
     "description": "Magnesium (as glycinate) 400 mg per serving. Vegetable capsule.",
-    "image_url": "images/placeholder.svg"
+    "image_url": "images/placeholder.svg",
+    "review": "magnesium-bisglycinate"
   },
   {
     "id": "2",
