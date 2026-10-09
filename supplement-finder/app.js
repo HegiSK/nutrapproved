@@ -1,13 +1,10 @@
 // Supplement Finder: search and filtering run entirely in the browser.
-// products.json is downloaded once; MiniSearch (vendor/) provides typo-tolerant search.
-import MiniSearch from './vendor/minisearch.js';
+// products.json is downloaded once (catalog.js); MiniSearch (vendor/) provides typo-tolerant search.
+import { loadCatalog, searchIds, money, asArray } from './catalog.js';
 
 // ---- Settings -------------------------------------------------------------
-const DATA_URL = 'products.json';
 const FACETS = ['form', 'category', 'goals', 'brand', 'ingredients'].map((field) => ({ field, labelKey: `facet.${field}` }));
 const FLAGS = ['vegan', 'gluten_free', 'in_stock'];
-// search_en keeps the English name and ingredients searchable when the page is shown in another language.
-const SEARCH_FIELDS = ['name', 'ingredients', 'brand', 'category', 'form', 'goals', 'description', 'search_en'];
 const PER_PAGE = 12;
 
 // ---- State ----------------------------------------------------------------
@@ -34,33 +31,14 @@ const els = {
 const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 // Strings come from i18n/<lang>.json; i18n.js is loaded in the page <head>.
-const { t, plural, value: tv } = window.i18n;
-const LOCALE = { en: 'en-US', cs: 'cs-CZ' }[window.i18n.lang] ?? 'en-US';
-const money = (n, digits = 2) =>
-  new Intl.NumberFormat(LOCALE, { style: 'currency', currency: 'USD', minimumFractionDigits: digits, maximumFractionDigits: digits }).format(n);
-const asArray = (v) => (Array.isArray(v) ? v : v == null ? [] : [v]);
-
-// Translate the displayed values of a product. Facets, chips and search then all work in the page language.
-function localize(p) {
-  return {
-    ...p,
-    name: t(`product.${p.id}`) === `product.${p.id}` ? p.name : t(`product.${p.id}`),
-    form: tv(p.form),
-    category: tv(p.category),
-    goals: asArray(p.goals).map(tv),
-    ingredients: asArray(p.ingredients).map(tv),
-    search_en: [p.name, ...asArray(p.ingredients)].join(' '),
-  };
-}
+const { t, plural } = window.i18n;
 
 // ---- Search + filter logic -----------------------------------------------
 // Returns the ids matching the text query (in relevance order), or null if no query.
 function textMatches() {
   const q = state.q.trim();
   if (!q) return null;
-  return index
-    .search(q, { prefix: true, fuzzy: 0.2, combineWith: 'AND', boost: { name: 3, ingredients: 2, brand: 1.5 } })
-    .map((r) => r.id);
+  return searchIds(index, q);
 }
 
 // Does product p pass the filters? `exclude` skips one facet so its other options stay visible.
@@ -217,22 +195,13 @@ els.clear.addEventListener('click', () => {
 
 // ---- Start ----------------------------------------------------------------
 async function start() {
-  await window.i18n.ready; // strings must be loaded before data is localized and rendered
   try {
-    const res = await fetch(DATA_URL);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    products = (await res.json()).map(localize);
+    ({ products, index } = await loadCatalog());
   } catch (err) {
     console.error(err);
-    showError(t('error.load', { url: DATA_URL, msg: err.message }));
+    showError(t('error.load', { url: 'products.json', msg: err.message }));
     return;
   }
-  index = new MiniSearch({
-    fields: SEARCH_FIELDS,
-    idField: 'id',
-    extractField: (doc, field) => asArray(doc[field]).join(' '),
-  });
-  index.addAll(products);
 
   const prices = products.map((p) => p.price);
   if (prices.length) {

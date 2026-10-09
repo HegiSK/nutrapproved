@@ -150,5 +150,8 @@
  "mea.how.2.x": "Analysis by XRD, HPLC or both, depending on the question.",
  "mea.how.3.t": "You receive the report",
  "mea.how.3.x": "Results, raw data and a clear conclusion.",
- "mea.meta": "Measurements | Know your supplements!"
+ "mea.meta": "Measurements | Know your supplements!",
+ "suggest.none": "No matching products",
+ "suggest.all.one": "See the {n} result in the finder →",
+ "suggest.all.other": "See all {n} results in the finder →"
 }
