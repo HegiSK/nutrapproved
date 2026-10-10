@@ -30,12 +30,18 @@ a { color: inherit; text-decoration: none; }
 .hero h1 { margin: 0 0 6px; font-size: 38px; letter-spacing: .01em; }
 .hero p { margin: 0; color: #b9d8c2; }
 
-/* Header with logo (opt-in via class hero--logo) */
-.hero--logo { display: flex; align-items: center; justify-content: center; gap: 22px; }
-.hero--logo .logo { height: 84px; width: auto; flex: none; filter: drop-shadow(0 4px 10px rgba(0,0,0,.28)); }
+/* Header with logo (opt-in via class hero--logo). The logo is oversized and tilted; the header crops it top and bottom,
+   and the negative left margin pushes it out to the left, over the left end of the main bar. */
+.hero--logo { display: flex; align-items: center; justify-content: center; gap: 24px; overflow: hidden; }
+.hero--logo .logo {
+  height: 268px; width: auto; flex: none; margin: -66px 0 -66px -100px;  /* negative margins: size does not change the header height */
+  transform: rotate(-15deg); transform-origin: center;
+  translate: -30px 0;   /* nudges only the logo to the left; the title stays put */
+  filter: drop-shadow(0 8px 14px rgba(0,0,0,.35));
+}
 @media (max-width: 800px) {
-  .hero--logo { flex-direction: column; gap: 10px; }
-  .hero--logo .logo { height: 64px; }
+  .hero--logo { flex-direction: column; gap: 6px; }
+  .hero--logo .logo { height: 160px; margin: -30px 0 -6px; translate: -20px 0; }
 }
 
 /* Main bar: floating pill that overlaps the header. A highlight slides to the hovered item (site.js). */
