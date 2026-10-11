@@ -1,4 +1,4 @@
-// One template for all supplement reviews: review.html?id=<id> loads reviews/<id>.json
+// One template for all supplement reviews: review.html?id=<id> loads <id>.json from this folder
 // (shared data plus one block per language) and renders it. Add a review = add a JSON file.
 const { t, lang, ready } = window.i18n;
 const root = document.getElementById('review');
@@ -14,14 +14,14 @@ const section = (cls, title, body) => `<section class="panel ${cls}"><h2>${esc(t
 function notFound() {
   document.title = `${t('review.nf.title')} | ${t('hero.title')}`;
   root.innerHTML = `<div class="panel notfound"><h2>${esc(t('review.nf.title'))}</h2><p>${esc(t('review.nf.text'))}</p>
-    <a class="btn" href="supplement-finder/index.html">${esc(t('review.nf.link'))}</a></div>`;
+    <a class="btn" href="../index.html">${esc(t('review.nf.link'))}</a></div>`;
 }
 
 function render(r) {
   const c = r[lang] ?? r.en;           // fall back to English if a language block is missing
   const scores = SCORE_KEYS.filter((k) => r.scores?.[k] != null);
   const total = r.scores?.total ?? (scores.length ? scores.reduce((a, k) => a + r.scores[k], 0) / scores.length : null);
-  const dir = new URL(`reviews/${r.id}.json`, location.href);
+  const dir = new URL(`${r.id}.json`, location.href);
 
   document.title = `${c.name} – ${t('review.suffix')} | ${t('hero.title')}`;
   const left = section('', t('review.about'),
@@ -54,7 +54,7 @@ function render(r) {
 
   const refs = r.references?.length ? section('full', t('review.refs'), `<ol>${r.references.map((x) => `<li>${md(x)}</li>`).join('')}</ol>`) : '';
 
-  root.innerHTML = `<p class="crumb"><a href="supplement-finder/index.html">${esc(t('review.back'))}</a></p>
+  root.innerHTML = `<p class="crumb"><a href="../index.html">${esc(t('review.back'))}</a></p>
     <h1>${esc(c.name)}</h1><p class="sub">${esc(c.subtitle ?? '')}</p>
     <div class="r-grid">${left}${right}${score}${recs}${refs}</div>`;
 }
@@ -62,9 +62,9 @@ function render(r) {
 async function start() {
   await ready;
   const id = new URLSearchParams(location.search).get('id') ?? '';
-  if (!/^[a-z0-9-]+$/.test(id)) return notFound();   // also keeps ids from escaping the reviews/ folder
+  if (!/^[a-z0-9-]+$/.test(id)) return notFound();   // also keeps ids from escaping this folder
   try {
-    const res = await fetch(`reviews/${id}.json`);
+    const res = await fetch(`${id}.json`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     render(await res.json());
   } catch (err) {

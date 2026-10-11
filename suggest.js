@@ -27,7 +27,7 @@ function init() {
   let active = -1;
 
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const reviewUrl = (p) => `review.html?id=${encodeURIComponent(p.review)}`;
+  const reviewUrl = (p) => `supplement-finder/reviews/review.html?id=${encodeURIComponent(p.review)}`;
   const finderUrl = (q) => `supplement-finder/index.html?q=${encodeURIComponent(q)}`;
   const load = () => (loading ??= loadCatalog().then((c) => (catalog = c)).catch((e) => { console.error(e); loading = null; }));
 
