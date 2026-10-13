@@ -1,0 +1,207 @@
+{
+ "id": "magnesium-taurate",
+ "compound": {
+  "name": {
+   "en": "Magnesium taurate",
+   "cs": "Hořčík taurát"
+  },
+  "aliases": [
+   "magnesium taurinate",
+   "magnesium bis(2-aminoethanesulfonate)",
+   "magnesium taurine",
+   "hořčík taurinát",
+   "taurát hořečnatý"
+  ],
+  "type": "mineral",
+  "form": "ionic",
+  "active": "magnesium",
+  "goals": [
+   "stress"
+  ],
+  "dose": {
+   "min": 100,
+   "max": 250,
+   "unit": "mg",
+   "basis": "elemental magnesium",
+   "per": "day"
+  },
+  "upper_limit": {
+   "value": 250,
+   "unit": "mg",
+   "basis": "supplemental magnesium",
+   "source": "EFSA"
+  },
+  "timing": null,
+  "vegan": null
+ },
+ "smiles": "[Mg+2].NCCS(=O)(=O)[O-].NCCS(=O)(=O)[O-]",
+ "scores": {
+  "evidence": 3.0,
+  "pricing": null,
+  "benefits": 2.0,
+  "safety": 7.0
+ },
+ "references": [
+  "EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS). Scientific opinion on iron (II) taurate, magnesium taurate and magnesium acetyl taurate as sources of iron and magnesium added for nutritional purposes to food supplements. *EFSA J*. 2009;947.",
+  "EFSA ANS Panel. Statement on the safety of magnesium taurinate as a source of magnesium added for nutritional purposes to food supplements. *EFSA J*. 2009; ej1118.",
+  "Hasan HL, Majeed MJ. The promising role of magnesium taurate in managing hypertension. *Modern Sport*. 2024;23(1):134–142.",
+  "The structure and antibacterial activity of taurine and its magnesium complex. *Adv Mater Res*. 2012;366:404–407.",
+  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+ ],
+ "en": {
+  "subtitle": "Magnesium salt of taurine · Minerals · Stress",
+  "about": [
+   "Magnesium taurate (magnesium bis(2-aminoethanesulfonate), CAS 334824-43-0) is a salt of one magnesium ion with two molecules of the amino-sulfonic acid taurine. EFSA describes it as readily soluble in water, so in the gut it is expected to behave like other soluble magnesium salts; no absorption study on this specific form was found.",
+   "Magnesium takes part in hundreds of enzymatic reactions, including muscle and nerve function and energy metabolism. Taurine is a conditionally essential amino-sulfonic acid, but claims for heart or calming effects of the combined salt rest mainly on animal data and one very small human study. Kidney disease and some antibiotics or bisphosphonates call for caution with any magnesium supplement."
+  ],
+  "structure_alt": "Structure of magnesium taurate: Mg2+ ion with two taurinate (2-aminoethanesulfonate) anions",
+  "facts": [
+   [
+    "Formula",
+    "C₄H₁₂MgN₂O₆S₂"
+   ],
+   [
+    "Molar mass",
+    "272.6 g/mol"
+   ],
+   [
+    "Elemental Mg",
+    "≈ 8.9 % by weight"
+   ]
+  ],
+  "positives": [
+   "Readily soluble in water according to EFSA, so absorption is expected to be similar to other dissociable magnesium salts",
+   "Assessed by EFSA (2009): use within the 250 mg/day supplemental magnesium upper limit was not considered a safety concern",
+   "Defined 1:2 salt (Mg : taurine), so the dose of elemental magnesium is easy to calculate (≈ 89 mg Mg per gram)",
+   "A small pilot in 20 hypertensive adults (500 mg/day for 30 days) reported changes in blood pressure, serum magnesium and cortisol"
+  ],
+  "negatives": [
+   "No human bioavailability study on magnesium taurate was found; EFSA inferred absorption from solubility only",
+   "Low magnesium content (≈ 8.9 %): about 2.8 g of salt is needed for 250 mg of elemental magnesium",
+   "The only clinical data are one small uncontrolled study with no placebo group and no reported statistical tests; heart and anxiety claims are not backed by controlled trials",
+   "No single-crystal structure of magnesium taurate was found, so the solid form of marketed products is not well characterised"
+  ],
+  "foods": {
+   "title": "Top dietary magnesium sources",
+   "warning": "These foods contain natural magnesium, **not magnesium taurate**. Taurine itself comes mainly from meat and seafood. The foods are an alternative or complement, not a source of this compound.",
+   "columns": [
+    "Food",
+    "Serving",
+    "Natural form of Mg",
+    "Elemental Mg per serving"
+   ],
+   "rows": [
+    [
+     "Pumpkin seeds, roasted",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 156 mg"
+    ],
+    [
+     "Chia seeds",
+     "28 g (1 oz)",
+     "Phytate- and fibre-bound",
+     "≈ 111 mg"
+    ],
+    [
+     "Almonds, dry roasted",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 80 mg"
+    ],
+    [
+     "Spinach, boiled",
+     "½ cup",
+     "Chlorophyll core and bound",
+     "≈ 78 mg"
+    ],
+    [
+     "Black beans, cooked",
+     "½ cup",
+     "Phytate- and fibre-bound",
+     "≈ 60 mg"
+    ]
+   ],
+   "note": "Approximate values from NIH ODS (Magnesium fact sheet). Magnesium in plant foods is largely bound to phytate and fibre, so absorption is typically lower than from soluble salts."
+  },
+  "scores_note": "Evidence 3.0: no human data on this form beyond one small uncontrolled study. Benefits 2.0: absorption advantage unknown, clinical effect unproven (capped by low evidence). Safety 7.0: within EFSA limit, minus GI effects, drug interactions and kidney caution typical of magnesium. Pricing: not scored, no retail prices collected."
+ },
+ "cs": {
+  "subtitle": "Hořečnatá sůl taurinu · Minerály · Stres",
+  "about": [
+   "Hořčík taurát (hořčík bis(2-aminoethansulfonát), CAS 334824-43-0) je sůl jednoho iontu hořčíku se dvěma molekulami aminosulfonové kyseliny taurinu. EFSA ji popisuje jako snadno rozpustnou ve vodě, proto se v trávicím traktu očekává chování podobné jiným rozpustným hořečnatým solím; studie vstřebávání právě této formy nebyla nalezena.",
+   "Hořčík se podílí na stovkách enzymatických reakcí, včetně funkce svalů a nervů a energetického metabolismu. Taurin je podmíněně esenciální aminosulfonová kyselina, ale tvrzení o účincích kombinované soli na srdce či uklidnění vycházejí hlavně ze zvířecích dat a jedné velmi malé studie na lidech. U onemocnění ledvin a při užívání některých antibiotik nebo bisfosfonátů je u každého hořčíkového doplňku nutná opatrnost."
+  ],
+  "structure_alt": "Struktura hořčík taurátu: iont Mg2+ se dvěma taurinátovými (2-aminoethansulfonátovými) anionty",
+  "facts": [
+   [
+    "Vzorec",
+    "C₄H₁₂MgN₂O₆S₂"
+   ],
+   [
+    "Molární hmotnost",
+    "272,6 g/mol"
+   ],
+   [
+    "Elementární Mg",
+    "≈ 8,9 % hmotnosti"
+   ]
+  ],
+  "positives": [
+   "Podle EFSA snadno rozpustný ve vodě, proto se očekává vstřebávání podobné jiným disociujícím hořečnatým solím",
+   "Posouzen EFSA (2009): užití v rámci horního limitu 250 mg/den hořčíku z doplňků nebylo považováno za bezpečnostní riziko",
+   "Definovaná sůl 1:2 (Mg : taurin), takže dávku elementárního hořčíku lze snadno spočítat (≈ 89 mg Mg na gram)",
+   "Malá pilotní studie na 20 dospělých s hypertenzí (500 mg/den po 30 dní) uvádí změny krevního tlaku, sérového hořčíku a kortizolu"
+  ],
+  "negatives": [
+   "Nebyla nalezena žádná studie biologické dostupnosti hořčík taurátu u lidí; EFSA vstřebávání odvodila pouze z rozpustnosti",
+   "Nízký obsah hořčíku (≈ 8,9 %): na 250 mg elementárního hořčíku je potřeba asi 2,8 g soli",
+   "Jedinými klinickými daty je jedna malá studie bez kontrolní skupiny s placebem a bez uvedených statistických testů; tvrzení o srdci a úzkosti nepodporují kontrolované studie",
+   "Nebyla nalezena monokrystalová struktura hořčík taurátu, takže pevná forma prodávaných přípravků není dobře charakterizována"
+  ],
+  "foods": {
+   "title": "Nejlepší potravinové zdroje hořčíku",
+   "warning": "Tyto potraviny obsahují přirozený hořčík, **nikoli hořčík taurát**. Taurin pochází hlavně z masa a mořských plodů. Potraviny jsou alternativou nebo doplňkem, ne zdrojem této látky.",
+   "columns": [
+    "Potravina",
+    "Porce",
+    "Přirozená forma Mg",
+    "Elementární Mg v porci"
+   ],
+   "rows": [
+    [
+     "Dýňová semínka, pražená",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 156 mg"
+    ],
+    [
+     "Chia semínka",
+     "28 g (1 oz)",
+     "Vázaný na fytát a vlákninu",
+     "≈ 111 mg"
+    ],
+    [
+     "Mandle, pražené",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 80 mg"
+    ],
+    [
+     "Špenát, vařený",
+     "½ hrnku",
+     "Střed molekuly chlorofylu a vázaný",
+     "≈ 78 mg"
+    ],
+    [
+     "Černé fazole, vařené",
+     "½ hrnku",
+     "Vázaný na fytát a vlákninu",
+     "≈ 60 mg"
+    ]
+   ],
+   "note": "Přibližné hodnoty podle NIH ODS (informační list o hořčíku). Hořčík v rostlinných potravinách je z velké části vázán na fytát a vlákninu, proto je vstřebávání obvykle nižší než z rozpustných solí."
+  },
+  "scores_note": "Důkazy 3,0: kromě jedné malé studie bez kontroly nejsou data u lidí pro tuto formu. Přínosy 2,0: výhoda ve vstřebávání neznámá, klinický účinek neprokázán (omezeno nízkými důkazy). Bezpečnost 7,0: v rámci limitu EFSA, minus trávicí obtíže, interakce s léky a opatrnost při onemocnění ledvin typické pro hořčík. Cena: nehodnoceno, ceny z obchodů nebyly shromážděny."
+ }
+}

@@ -29,15 +29,16 @@
   {
     "id": "zinc-picolinate",
     "name": {"en": "Zinc picolinate", "cs": "Zinek pikolinát"},
-    "aliases": ["zinc picolinic acid", "zinek pikolinan"],
+    "aliases": ["zinc picolinic acid", "zinc pyridine-2-carboxylate", "zinek pikolinan", "pikolinát zinečnatý"],
     "type": "mineral",
     "form": "complex",
     "active": "zinc",
     "goals": ["immunity", "skin"],
-    "dose": {"min": 15, "max": 30, "unit": "mg", "basis": "elemental zinc", "per": "day"},
+    "dose": {"min": 15, "max": 25, "unit": "mg", "basis": "elemental zinc", "per": "day"},
     "upper_limit": {"value": 25, "unit": "mg", "basis": "total zinc", "source": "EFSA"},
     "timing": "with a meal",
-    "vegan": true
+    "vegan": true,
+    "review": true
   },
   {
     "id": "vitamin-d3",
@@ -77,5 +78,19 @@
     "upper_limit": null,
     "timing": "evening",
     "vegan": true
+  },
+  {
+    "id": "magnesium-taurate",
+    "name": {"en": "Magnesium taurate", "cs": "Hořčík taurát"},
+    "aliases": ["magnesium taurinate", "magnesium bis(2-aminoethanesulfonate)", "magnesium taurine", "hořčík taurinát", "taurát hořečnatý"],
+    "type": "mineral",
+    "form": "ionic",
+    "active": "magnesium",
+    "goals": ["stress"],
+    "dose": {"min": 100, "max": 250, "unit": "mg", "basis": "elemental magnesium", "per": "day"},
+    "upper_limit": {"value": 250, "unit": "mg", "basis": "supplemental magnesium", "source": "EFSA"},
+    "timing": null,
+    "vegan": null,
+    "review": true
   }
 ]

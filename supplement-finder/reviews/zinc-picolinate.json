@@ -1,0 +1,385 @@
+{
+ "id": "zinc-picolinate",
+ "compound": {
+  "name": {
+   "en": "Zinc picolinate",
+   "cs": "Zinek pikolinát"
+  },
+  "aliases": [
+   "zinc picolinic acid",
+   "zinc pyridine-2-carboxylate",
+   "zinek pikolinan",
+   "pikolinát zinečnatý"
+  ],
+  "type": "mineral",
+  "form": "complex",
+  "active": "zinc",
+  "goals": [
+   "immunity",
+   "skin"
+  ],
+  "dose": {
+   "min": 15,
+   "max": 25,
+   "unit": "mg",
+   "basis": "elemental zinc",
+   "per": "day"
+  },
+  "upper_limit": {
+   "value": 25,
+   "unit": "mg",
+   "basis": "total zinc",
+   "source": "EFSA"
+  },
+  "timing": "with a meal",
+  "vegan": true
+ },
+ "smiles": "O=C1c2ccccn2->[Zn]3(O1)OC(=O)c4ccccn->34",
+ "forms": [
+  {
+   "key": "anhydrate",
+   "formula": "C₁₂H₈N₂O₄Zn",
+   "cas": "17949-65-4",
+   "molar_mass": 309.59,
+   "active_percent": 21.1,
+   "commercial": true,
+   "source": "ChemicalBook SDS (C12H8N2O4Zn, MW 309.59); computed from formula",
+   "note": "The form listed on supplier SDS and used for ingredient-grade zinc picolinate. Label values of retail products (zinc as picolinate) are consistent with it."
+  },
+  {
+   "key": "diaqua",
+   "formula": "C₁₂H₈N₂O₄Zn·2H₂O",
+   "cas": null,
+   "molar_mass": 345.62,
+   "active_percent": 18.9,
+   "commercial": false,
+   "source": "Croitor et al., Acta Cryst. E 2013, 69, m454 (DMF hemisolvate of the diaqua complex); computed from formula",
+   "note": "Known from crystallography as the diaqua complex [Zn(pic)2(H2O)2]; only found as a DMF hemisolvate crystal in the search. No separate CAS found for the pure dihydrate. Wikipedia lists CAS 17949-65-4 with formula C12H12N2O6Zn (345.62), i.e. the diaqua complex under the anhydrate CAS, which is a discrepancy."
+  },
+  {
+   "key": "tetrahydrate",
+   "formula": "C₁₂H₈N₂O₄Zn·4H₂O",
+   "cas": null,
+   "molar_mass": 381.65,
+   "active_percent": 17.1,
+   "commercial": false,
+   "source": "Wikipedia (Zinc picolinate); computed from formula",
+   "note": "Wikipedia states the complex crystallises with two further lattice waters. Not confirmed in a primary crystallographic source in this search, no CAS found; listed for completeness."
+  }
+ ],
+ "scores": {
+  "evidence": 5.0,
+  "pricing": 6.0,
+  "benefits": 4.0,
+  "safety": 6.0
+ },
+ "pricing": {
+  "currency": "CZK",
+  "date": "2026-10-13",
+  "per": "100 mg elemental mineral",
+  "confidence": "medium",
+  "products": [
+   {
+    "shop": "rohlik.cz",
+    "name": "Solgar Zinc Picolinate 22 mg, 100 tablets",
+    "url": "https://www.rohlik.cz/lekarna/praha/1436525-solgar-zinc-picolinate-22mg-tbl-100",
+    "form": "anhydrate",
+    "price": 469.9,
+    "units": 100,
+    "elemental_per_unit": 22,
+    "cost_per_100mg": 21.3591
+   },
+   {
+    "shop": "aponeo.de",
+    "name": "Klean Labs Zinkpicolinat 25 mg, 100 capsules",
+    "url": "https://www.aponeo.de/18726938-zinkpicolinat-25-mg-klean-labs-kapseln.html",
+    "form": "anhydrate",
+    "price": 412.86,
+    "units": 100,
+    "elemental_per_unit": 25,
+    "cost_per_100mg": 16.5144
+   },
+   {
+    "shop": "vitalabo.com",
+    "name": "Allergy Research Group Zinc Picolinate 25 mg, 60 veg. capsules",
+    "url": "https://www.vitalabo.com/allergy-research-group/zinc-picolinate-3",
+    "form": "anhydrate",
+    "price": 420.15,
+    "units": 60,
+    "elemental_per_unit": 25,
+    "cost_per_100mg": 28.01
+   },
+   {
+    "shop": "ebay.de (naturprodukte.shop)",
+    "name": "NOW Foods Zinc Picolinate 50 mg, 120 veg. capsules",
+    "url": "https://www.ebay.de/p/1412256096",
+    "form": "anhydrate",
+    "price": 188.08,
+    "units": 120,
+    "elemental_per_unit": 50,
+    "cost_per_100mg": 3.1347
+   }
+  ],
+  "median_cost_per_100mg": 18.9367,
+  "reference": {
+   "form": "gluconate",
+   "median_cost_per_100mg": 6.071,
+   "products": [
+    {
+     "shop": "rohlik.cz",
+     "name": "MedPharma Zinek 25 mg forte, 107 tablets (zinc gluconate)",
+     "url": "https://www.rohlik.cz/1416259-medpharma-zinek-25mg-forte-tbl-107",
+     "form": "gluconate",
+     "price": 119.9,
+     "units": 107,
+     "elemental_per_unit": 25,
+     "cost_per_100mg": 4.4822
+    },
+    {
+     "shop": "kaufland.cz",
+     "name": "Vitaworld Zinek 15 mg, 100 capsules (zinc gluconate)",
+     "url": "https://www.kaufland.cz/product/407178710/",
+     "form": "gluconate",
+     "price": 216.1,
+     "units": 100,
+     "elemental_per_unit": 15,
+     "cost_per_100mg": 14.4067
+    },
+    {
+     "shop": "vitalabo.com",
+     "name": "Mammut Zinc Tabs 25 mg, 240 tablets (zinc gluconate)",
+     "url": "https://vitalabo.com/mammut-sports-nutrition/zinc-tabs-1",
+     "form": "gluconate",
+     "price": 364.26,
+     "units": 240,
+     "elemental_per_unit": 25,
+     "cost_per_100mg": 6.071
+    }
+   ]
+  },
+  "ratio": 3.12,
+  "note": "Rung: medium. 4 zinc picolinate products (rohlik.cz, aponeo.de, vitalabo.com, ebay.de), prices read from product pages on 2026-10-13. EUR converted at an assumed 1 EUR = 24.3 CZK (rate not looked up). EU prices include VAT, shipping excluded. Amazon, gymbeam, vilgain, nutrend and venira could not be read (robots/blocked, no price shown), so no Amazon price is included. Zinc oxide, the usual cheapest reference form, was not found as a single-ingredient supplement in the shops reachable, so the reference is zinc gluconate (the cheapest common Czech form, 3 products); the ratio would be higher against oxide. NOW Foods 50 mg and Klean Labs/ARG 25 mg labels were read as elemental zinc (the Klean Labs page does not say explicitly)."
+ },
+ "references": [
+  "Barrie SA, Wright JV, Pizzorno JE, Kutter E, Barron PC. Comparative absorption of zinc picolinate, zinc citrate and zinc gluconate in humans. *Agents Actions*. 1987;21(1–2):223–228. doi:10.1007/BF01974946. PMID 3630857.",
+  "Wegmüller R, Tay F, Zeder C, Brnić M, Hurrell RF. Zinc absorption by young adults from supplemental zinc citrate is comparable with that from zinc gluconate and higher than from zinc oxide. *J Nutr*. 2014;144(2):132–136. doi:10.3945/jn.113.181487.",
+  "Devarshi PP, Mao Q, Grant RW, Hazels Mitmesser S. Comparative absorption and bioavailability of various chemical forms of zinc in humans: a narrative review. *Nutrients*. 2024;16(24):4269. doi:10.3390/nu16244269. PMID 39770891.",
+  "Croitor L, Chisca D, Coropceanu EB, Fonari MS. Diaquabis(pyridine-2-carboxylato-κ²N,O)zinc dimethylformamide hemisolvate. *Acta Crystallogr E*. 2013;69(Pt 8):m454. doi:10.1107/S1600536813018941.",
+  "NIH Office of Dietary Supplements. Zinc: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Zinc-HealthProfessional/",
+  "European Food Safety Authority. Tolerable upper intake levels for vitamins and minerals (2006); zinc UL 25 mg/day from SCF. efsa.europa.eu",
+  "ChemicalBook. Zinc picolinate (CAS 17949-65-4) safety data sheet. chemicalbook.com/msds/zincpicolinate.htm",
+  "Wikipedia. Zinc picolinate. en.wikipedia.org/wiki/Zinc_picolinate"
+ ],
+ "en": {
+  "subtitle": "Chelated zinc · Minerals · Immunity & skin",
+  "about": [
+   "Zinc picolinate is the zinc(II) salt of picolinic acid (pyridine-2-carboxylic acid). In crystal structures of the related diaqua complex, zinc is held by the pyridine nitrogen and a carboxylate oxygen of two picolinate ligands in a distorted octahedron. It is sold as capsules and tablets, usually as the anhydrous compound with about 21 % zinc.",
+   "Zinc supports immune function, wound healing, skin integrity and many enzymes. Picolinic acid is claimed to improve zinc uptake, but this rests mainly on one small 1987 crossover trial of tissue zinc markers; a later isotope-based absorption comparison covered citrate, gluconate and oxide, not picolinate."
+  ],
+  "structure_alt": "Structural formula of zinc picolinate: a central zinc atom bonded to two picolinate ligands, each through the pyridine nitrogen and a carboxylate oxygen, forming two five-membered chelate rings.",
+  "facts": [
+   [
+    "Formula",
+    "C₁₂H₈N₂O₄Zn"
+   ],
+   [
+    "Molar mass",
+    "309.6 g/mol"
+   ],
+   [
+    "Elemental Zn",
+    "≈ 21.1 % by weight"
+   ],
+   [
+    "CAS (anhydrate)",
+    "17949-65-4"
+   ],
+   [
+    "Diaqua (dihydrate) – formula",
+    "C₁₂H₈N₂O₄Zn·2H₂O (crystal form, not confirmed as sold)"
+   ],
+   [
+    "Diaqua – molar mass / CAS",
+    "345.62 g/mol / no separate CAS found"
+   ],
+   [
+    "Diaqua – elemental Zn",
+    "≈ 18.9 % by weight"
+   ],
+   [
+    "Tetrahydrate – formula",
+    "C₁₂H₈N₂O₄Zn·4H₂O (per Wikipedia, unconfirmed)"
+   ],
+   [
+    "Tetrahydrate – molar mass / CAS",
+    "381.65 g/mol / no CAS found"
+   ],
+   [
+    "Tetrahydrate – elemental Zn",
+    "≈ 17.1 % by weight"
+   ]
+  ],
+  "positives": [
+   "Zinc picolinate raised hair, urine and red-cell zinc in a 4-week, double-blind crossover trial (n = 15, 50 mg Zn/day) where gluconate and citrate did not (Barrie 1987).",
+   "About 21 % elemental zinc in the anhydrous form, so a 25 mg zinc capsule needs only about 120 mg of powder.",
+   "Well-defined chelate: the picolinate binds zinc through nitrogen and oxygen (N,O-chelate), as seen in crystal structures of the diaqua complex.",
+   "Widely available as single-ingredient, vegan-capsule products in doses of 22–50 mg zinc, including Czech pharmacy retail."
+  ],
+  "negatives": [
+   "Human evidence for this specific form is thin: one small 1987 trial with tissue markers and an unpublished-detail 12-woman comparison in which picolinate was no better than oxide on plasma zinc (reviewed in Devarshi 2024, a Pharmavite-funded review).",
+   "No head-to-head isotope absorption study versus oxide, citrate or gluconate; the modern isotope trial found citrate and gluconate (about 61 %) above oxide (about 50 %) but did not include picolinate.",
+   "Costs about 3.1× zinc gluconate per mg of elemental zinc (median 18.9 vs 6.1 CZK per 100 mg Zn, 2026-10-13).",
+   "Many products carry 25–50 mg zinc per unit, at or above the EU upper level of 25 mg/day for total zinc; long use of 50 mg or more can lower copper status."
+  ],
+  "foods": {
+   "title": "Top dietary zinc sources",
+   "warning": "These foods contain natural zinc, **not zinc picolinate**. They are an alternative or complement, not a source of this compound.",
+   "columns": [
+    "Food",
+    "Serving",
+    "Natural form of Zn",
+    "Elemental Zn per serving"
+   ],
+   "rows": [
+    [
+     "Oysters, Eastern, farmed, raw",
+     "3 oz (85 g)",
+     "Protein-bound",
+     "≈ 32 mg"
+    ],
+    [
+     "Beef, bottom sirloin, roasted",
+     "3 oz (85 g)",
+     "Protein-bound",
+     "≈ 3.8 mg"
+    ],
+    [
+     "Blue crab, cooked",
+     "3 oz (85 g)",
+     "Protein-bound",
+     "≈ 3.2 mg"
+    ],
+    [
+     "Pumpkin seeds, roasted",
+     "1 oz (28 g)",
+     "Phytate-bound",
+     "≈ 2.2 mg"
+    ],
+    [
+     "Greek yogurt, plain",
+     "6 oz (170 g)",
+     "Protein-bound",
+     "≈ 1.0 mg"
+    ]
+   ],
+   "note": "Approximate values from NIH ODS (Zinc fact sheet). Zinc from plant foods is partly bound to phytate, which lowers absorption."
+  },
+  "scores_note": "Evidence 5.0: one small crossover trial on this form plus mixed single-dose data, none with isotopes; benefits 4.0: absorption advantage unproven, effects are those of zinc generally; safety 6.0: typical doses sit at the EU 25 mg UL, with GI upset and copper/antibiotic interactions; pricing 6.0: median 18.9 CZK per 100 mg Zn from 4 products vs 6.1 for gluconate (ratio 3.12), prices of 2026-10-13 in CZK, medium confidence."
+ },
+ "cs": {
+  "subtitle": "Chelátovaný zinek · Minerály · Imunita a pokožka",
+  "about": [
+   "Zinek pikolinát je zinečná sůl kyseliny pikolinové (pyridin-2-karboxylové). V krystalových strukturách příbuzného diaqua komplexu je zinek vázán dusíkem pyridinu a karboxylátovým kyslíkem dvou pikolinátových ligandů ve zkresleném oktaedru. Prodává se v kapslích a tabletách, obvykle jako bezvodá sloučenina s asi 21 % zinku.",
+   "Zinek podporuje imunitu, hojení ran, zdraví pokožky a řadu enzymů. Kyselině pikolinové se přisuzuje lepší vstřebávání zinku, ale opírá se to hlavně o jednu malou zkříženou studii z roku 1987 s tkáňovými markery; novější izotopové srovnání vstřebávání zahrnovalo citrát, glukonát a oxid, nikoli pikolinát."
+  ],
+  "structure_alt": "Strukturní vzorec zinek pikolinátu: centrální atom zinku vázaný ke dvěma pikolinátovým ligandům, každý přes dusík pyridinu a karboxylátový kyslík, za vzniku dvou pětičlenných chelátových kruhů.",
+  "facts": [
+   [
+    "Vzorec",
+    "C₁₂H₈N₂O₄Zn"
+   ],
+   [
+    "Molární hmotnost",
+    "309,6 g/mol"
+   ],
+   [
+    "Elementární Zn",
+    "≈ 21,1 % hm,"
+   ],
+   [
+    "CAS (bezvodý)",
+    "17949-65-4"
+   ],
+   [
+    "Diaqua (dihydrát) – vzorec",
+    "C₁₂H₈N₂O₄Zn·2H₂O (krystalová forma, prodej nepotvrzen)"
+   ],
+   [
+    "Diaqua – molární hmotnost / CAS",
+    "345,62 g/mol / vlastní CAS nenalezen"
+   ],
+   [
+    "Diaqua – elementární Zn",
+    "≈ 18,9 % hm,"
+   ],
+   [
+    "Tetrahydrát – vzorec",
+    "C₁₂H₈N₂O₄Zn·4H₂O (dle Wikipedie, nepotvrzeno)"
+   ],
+   [
+    "Tetrahydrát – molární hmotnost / CAS",
+    "381,65 g/mol / CAS nenalezen"
+   ],
+   [
+    "Tetrahydrát – elementární Zn",
+    "≈ 17,1 % hm,"
+   ]
+  ],
+  "positives": [
+   "Zinek pikolinát zvýšil obsah zinku ve vlasech, moči a červených krvinkách ve 4týdenní dvojitě zaslepené zkřížené studii (n = 15, 50 mg Zn/den), kde glukonát a citrát ne (Barrie 1987).",
+   "Asi 21 % elementárního zinku v bezvodé formě, takže na kapsli s 25 mg zinku stačí asi 120 mg prášku.",
+   "Dobře definovaný chelát: pikolinát váže zinek dusíkem a kyslíkem (N,O-chelát), jak ukazují krystalové struktury diaqua komplexu.",
+   "Široce dostupný jako jednosložkový přípravek ve veganských kapslích o dávkách 22–50 mg zinku, včetně české lékárenské nabídky."
+  ],
+  "negatives": [
+   "Důkazy u lidí pro tuto konkrétní formu jsou slabé: jedna malá studie z roku 1987 s tkáňovými markery a srovnání 12 žen bez publikovaných detailů, kde pikolinát nebyl lepší než oxid v plazmatickém zinku (přehled Devarshi 2024, financovaný firmou Pharmavite).",
+   "Chybí přímé izotopové srovnání vstřebávání s oxidem, citrátem či glukonátem; moderní izotopová studie našla u citrátu a glukonátu (asi 61 %) vyšší vstřebávání než u oxidu (asi 50 %), ale pikolinát nezahrnovala.",
+   "Stojí asi 3,1× víc než glukonát zinečnatý na mg elementárního zinku (medián 18,9 vs 6,1 Kč za 100 mg Zn, 13. 10. 2026).",
+   "Mnoho přípravků obsahuje 25–50 mg zinku v jednotce, tedy na úrovni nebo nad horním limitem EU 25 mg/den pro celkový zinek; dlouhodobé užívání 50 mg a více může snížit stav mědi."
+  ],
+  "foods": {
+   "title": "Nejlepší potravinové zdroje zinku",
+   "warning": "Tyto potraviny obsahují přírodní zinek, **nikoli zinek pikolinát**. Jsou alternativou nebo doplňkem, ne zdrojem této sloučeniny.",
+   "columns": [
+    "Potravina",
+    "Porce",
+    "Přírodní forma Zn",
+    "Elementární Zn v porci"
+   ],
+   "rows": [
+    [
+     "Ústřice východní, farmové, syrové",
+     "3 oz (85 g)",
+     "Vázaný na bílkoviny",
+     "≈ 32 mg"
+    ],
+    [
+     "Hovězí, spodní svíčková, pečená",
+     "3 oz (85 g)",
+     "Vázaný na bílkoviny",
+     "≈ 3,8 mg"
+    ],
+    [
+     "Krab modrý, vařený",
+     "3 oz (85 g)",
+     "Vázaný na bílkoviny",
+     "≈ 3,2 mg"
+    ],
+    [
+     "Dýňová semínka, pražená",
+     "1 oz (28 g)",
+     "Vázaný na fytát",
+     "≈ 2,2 mg"
+    ],
+    [
+     "Řecký jogurt, bílý",
+     "6 oz (170 g)",
+     "Vázaný na bílkoviny",
+     "≈ 1,0 mg"
+    ]
+   ],
+   "note": "Přibližné hodnoty z NIH ODS (informační list o zinku). Zinek z rostlinných potravin je částečně vázán na fytát, což snižuje vstřebávání."
+  },
+  "scores_note": "Důkazy 5,0: jedna malá zkřížená studie této formy a smíšená jednorázová data, žádná izotopová; přínosy 4,0: výhoda ve vstřebávání nedoložena, účinky odpovídají zinku obecně; bezpečnost 6,0: typické dávky leží u limitu EU 25 mg, GI potíže a interakce s mědí a antibiotiky; cena 6,0: medián 18,9 Kč za 100 mg Zn ze 4 přípravků vs 6,1 u glukonátu (poměr 3,12), ceny z 13. 10. 2026 v Kč, střední jistota."
+ }
+}

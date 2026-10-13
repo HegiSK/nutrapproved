@@ -23,10 +23,14 @@ LIMIT_KEYS = {"value": (int, float), "unit": str, "basis": str, "source": str}
 SLUG = re.compile(r"^[a-z0-9-]+$")
 LANGS = ("en", "cs")
 
+NULLABLE = ("timing", "vegan")  # unknown on purpose: null is allowed and shown blank
+
 def check_keys(obj, spec, label, errors):
     for key, typ in spec.items():
         if key not in obj:
             errors.append(f"{label}: missing '{key}'")
+        elif obj[key] is None and key in NULLABLE:
+            continue
         elif not isinstance(obj[key], typ) or (typ is not bool and isinstance(obj[key], bool)):
             errors.append(f"{label}: '{key}' has the wrong type (expected {typ})")
 
