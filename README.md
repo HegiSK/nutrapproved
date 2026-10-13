@@ -17,6 +17,7 @@ One key ties everything together: the compound `id` (lowercase letters, digits, 
 {
   "id": "<id>",                     must equal the file name
   "compound": { ... },              index fields, see below; shared by all languages
+  "smiles": "...",                  optional, for drawing the structure; never shown on the page, not copied to compounds.json
   "scores": { evidence, pricing, benefits, safety },   0-10; optional "total"
   "references": [ "...", ... ],
   "en": { ... },                    text blocks, one per language; missing language falls back to en

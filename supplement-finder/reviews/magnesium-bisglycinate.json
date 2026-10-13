@@ -34,6 +34,7 @@
   "timing": "evening",
   "vegan": true
  },
+ "smiles": "O=C1CN->[Mg]2(O1)OC(=O)CN->2",
  "scores": {
   "evidence": 7.0,
   "pricing": 6.0,
