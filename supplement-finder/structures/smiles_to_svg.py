@@ -6,14 +6,55 @@ Usage:
     python smiles_to_svg.py "CCO" ethanol.svg --width 500 --height 400
 """
 import argparse
+import math
 import sys
 
-from rdkit import Chem
+from rdkit import Chem, Geometry
 from rdkit.Chem import rdDepictor
 from rdkit.Chem.Draw import rdMolDraw2D
 
 
 ORGANIC_ELEMENTS = {1, 5, 6, 7, 8, 9, 15, 16, 17, 35, 53}
+
+
+def centre_ion_between_ligands(mol, gap=2.4, tilt=90):
+    """Salt SMILES such as [Mg+2].L.L have no bonds, so RDKit lays the fragments out
+    side by side and the ion lands in an odd corner. Put the single-atom ion in the
+    middle with one ligand on each side, as close as the labels allow. Each ligand is
+    turned so its long axis points `tilt` degrees from horizontal (90 = upright), which
+    keeps the picture compact; the right ligand is the left one turned by 180 degrees,
+    so the drawing is point-symmetric around the ion. Returns True if done."""
+    frags = Chem.GetMolFrags(mol)
+    ions = [f for f in frags if len(f) == 1 and mol.GetAtomWithIdx(f[0]).GetAtomicNum() not in ORGANIC_ELEMENTS]
+    ligands = [f for f in frags if len(f) > 1]
+    if len(ions) != 1 or len(ligands) != 2:
+        return False
+    conf = mol.GetConformer()
+    pos = {i: (conf.GetAtomPosition(i).x, conf.GetAtomPosition(i).y) for f in frags for i in f}
+    conf.SetAtomPosition(ions[0][0], Geometry.Point3D(0, 0, 0))
+    for side, frag in zip((1, -1), ligands):
+        # axis = from the anionic atom (e.g. sulfonate O-), else the first atom, to the ligand centre
+        anchor = next((i for i in frag if mol.GetAtomWithIdx(i).GetFormalCharge() < 0), frag[0])
+        ax, ay = pos[anchor]
+        mx = sum(pos[i][0] for i in frag) / len(frag)
+        my = sum(pos[i][1] for i in frag) / len(frag)
+        theta = math.atan2(my - ay, mx - ax) - math.radians(tilt)
+        c, sn = math.cos(-theta), math.sin(-theta)
+        rot = {}
+        for i in frag:
+            x, y = pos[i][0] - mx, pos[i][1] - my
+            rot[i] = (x * c - y * sn, x * sn + y * c)
+        # centre of the ligand's bounding box goes next to the ion
+        xs = [v[0] for v in rot.values()]
+        ys = [v[1] for v in rot.values()]
+        cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
+        half_w = (max(xs) - min(xs)) / 2
+        for i, (x, y) in rot.items():
+            x, y = x - cx, y - cy
+            if side < 0:  # second ligand: turn by 180 degrees
+                x, y = -x, -y
+            conf.SetAtomPosition(i, Geometry.Point3D(x + side * (half_w + gap / 2 + 0.3), y, 0))
+    return True
 
 
 def smiles_to_svg(smiles, width=400, height=300, dotted_metal_bonds=True):
@@ -30,6 +71,7 @@ def smiles_to_svg(smiles, width=400, height=300, dotted_metal_bonds=True):
     # Lay out the molecule while the metal bonds are still real bonds; zero-order
     # bonds are ignored by the layout and would break the rings apart.
     rdDepictor.Compute2DCoords(mol)
+    centre_ion_between_ligands(mol)
 
     if dotted_metal_bonds:
         # Zero-order bonds are drawn dashed/dotted by RDKit.
