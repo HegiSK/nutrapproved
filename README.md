@@ -39,7 +39,7 @@ One key ties everything together: the compound `id` (lowercase letters, digits, 
 | `timing` | when to take it |
 | `vegan` | true / false |
 
-Language block (`en`, `cs`): `subtitle`, `about` (paragraphs), `structure_alt`, `facts` (`[label, value]` rows such as formula and molar mass; dose and timing rows are added automatically from `compound`), `positives`, `negatives`, `foods`, `scores_note`, `recommendations`. Sections that are left out are not shown. Text supports `**bold**` and `*italic*`.
+Language block (`en`, `cs`): `subtitle`, `about` (paragraphs), `structure_alt`, `facts` (`[label, value]` rows such as formula and molar mass; dose and timing rows are added automatically from `compound`), `positives`, `negatives`, `foods`, `scores_note`. Sections that are left out are not shown. Text supports `**bold**` and `*italic*`.
 
 ### Steps
 

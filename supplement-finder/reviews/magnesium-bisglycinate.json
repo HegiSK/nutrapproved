@@ -122,30 +122,7 @@
    ],
    "note": "Approximate values based on NIH ODS data. Bisglycinate is a glycine chelate made for supplements and is not found in foods. Magnesium in plant foods is mostly bound to phytate and fibre, so absorption is typically lower."
   },
-  "scores_note": "Scores are illustrative sample values for this layout, not a validated rating.",
-  "recommendations": {
-   "items": [
-    {
-     "tag": "Best overall",
-     "name": "Product name A",
-     "text": "Pure bisglycinate chelate, 100 mg elemental Mg per capsule, third-party tested.",
-     "price": "≈ €18 / 90 caps"
-    },
-    {
-     "tag": "Best value",
-     "name": "Product name B",
-     "text": "Powder form, 200 mg elemental Mg per scoop, no fillers.",
-     "price": "≈ €14 / 60 servings"
-    },
-    {
-     "tag": "Best for sleep",
-     "name": "Product name C",
-     "text": "Bisglycinate combined with L-theanine and vitamin B6.",
-     "price": "≈ €24 / 60 caps"
-    }
-   ],
-   "note": "Placeholder products and prices. Replace with real listings and affiliate links."
-  }
+  "scores_note": "Scores are illustrative sample values for this layout, not a validated rating."
  },
  "cs": {
   "subtitle": "Chelátový hořčík · Minerály · Spánek, stres a funkce svalů",
@@ -223,29 +200,6 @@
    ],
    "note": "Přibližné hodnoty podle dat NIH ODS. Bisglycinát je glycinový chelát vyráběný pro doplňky stravy a v potravinách se nevyskytuje. Hořčík v rostlinných potravinách je většinou vázán na fytát a vlákninu, proto je jeho vstřebávání obvykle nižší."
   },
-  "scores_note": "Skóre jsou ilustrační ukázkové hodnoty pro toto rozvržení, nejde o ověřené hodnocení.",
-  "recommendations": {
-   "items": [
-    {
-     "tag": "Nejlepší celkově",
-     "name": "Název produktu A",
-     "text": "Čistý bisglycinátový chelát, 100 mg elementárního Mg v kapsli, testováno třetí stranou.",
-     "price": "≈ 18 € / 90 kapslí"
-    },
-    {
-     "tag": "Nejlepší poměr cena/výkon",
-     "name": "Název produktu B",
-     "text": "Prášková forma, 200 mg elementárního Mg v odměrce, bez plniv.",
-     "price": "≈ 14 € / 60 dávek"
-    },
-    {
-     "tag": "Nejlepší na spánek",
-     "name": "Název produktu C",
-     "text": "Bisglycinát kombinovaný s L-theaninem a vitaminem B6.",
-     "price": "≈ 24 € / 60 kapslí"
-    }
-   ],
-   "note": "Ukázkové produkty a ceny. Nahraďte skutečnými nabídkami a affiliate odkazy."
-  }
+  "scores_note": "Skóre jsou ilustrační ukázkové hodnoty pro toto rozvržení, nejde o ověřené hodnocení."
  }
 }

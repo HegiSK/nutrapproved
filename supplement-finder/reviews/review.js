@@ -56,16 +56,11 @@ function render(r) {
       <div class="total"><div class="lbl">${esc(t('review.total'))}</div><div class="num">${num(total)}</div><div class="of">${esc(t('review.outof'))}</div></div></div>` +
     (c.scores_note ? `<p class="note">${md(c.scores_note)}</p>` : '')) : '';
 
-  const rec = c.recommendations;
-  const recs = rec?.items?.length ? section('full', t('review.recs'),
-    `<div class="products">${rec.items.map((p) => `<div class="product"><span class="tag">${esc(p.tag)}</span><h3>${esc(p.name)}</h3><p>${esc(p.text)}</p><span class="price">${esc(p.price)}</span></div>`).join('')}</div>` +
-    (rec.note ? `<p class="note">${md(rec.note)}</p>` : '')) : '';
-
   const refs = r.references?.length ? section('full', t('review.refs'), `<ol>${r.references.map((x) => `<li>${md(x)}</li>`).join('')}</ol>`) : '';
 
   root.innerHTML = `<p class="crumb"><a href="../index.html">${esc(t('review.back'))}</a></p>
     <h1>${esc(name)}</h1><p class="sub">${esc(c.subtitle ?? '')}</p>
-    <div class="r-grid">${left}${right}${score}${recs}${refs}</div>`;
+    <div class="r-grid">${left}${right}${score}${refs}</div>`;
 }
 
 async function start() {
