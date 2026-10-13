@@ -54,7 +54,7 @@
    "active_percent": 18.9,
    "commercial": false,
    "source": "Croitor et al., Acta Cryst. E 2013, 69, m454 (DMF hemisolvate of the diaqua complex); computed from formula",
-   "note": "Known from crystallography as the diaqua complex [Zn(pic)2(H2O)2]; only found as a DMF hemisolvate crystal in the search. No separate CAS found for the pure dihydrate. Wikipedia lists CAS 17949-65-4 with formula C12H12N2O6Zn (345.62), i.e. the diaqua complex under the anhydrate CAS, which is a discrepancy."
+   "note": "Coordination-sphere formula only, as in the DMF hemisolvate crystal (Croitor 2013). The fully hydrated crystal known from the literature is the tetrahydrate below. No separate CAS found. Wikipedia lists CAS 17949-65-4 with formula C12H12N2O6Zn (345.62), i.e. the diaqua complex under the anhydrate CAS, which is a discrepancy."
   },
   {
    "key": "tetrahydrate",
@@ -63,8 +63,8 @@
    "molar_mass": 381.65,
    "active_percent": 17.1,
    "commercial": false,
-   "source": "Wikipedia (Zinc picolinate); computed from formula",
-   "note": "Wikipedia states the complex crystallises with two further lattice waters. Not confirmed in a primary crystallographic source in this search, no CAS found; listed for completeness."
+   "source": "Lumme et al., Acta Chem. Scand. 1969, 23, 3011–3022 (single-crystal structure of Zn(C6H4O2N)2(H2O)4); Wikipedia; mass computed from formula",
+   "note": "Published crystal structure: trans-diaquabis(picolinato)zinc(II) dihydrate (2 coordinated + 2 lattice waters). A later refinement is listed in the OSTI/ETDE record 20506704 (details not read). Cell and space group were not retrieved here. Supplier SDS give the anhydrous formula, so whether any product is sold as this hydrate is unconfirmed. No CAS found."
   }
  ],
  "scores": {
@@ -165,6 +165,8 @@
   "Wegmüller R, Tay F, Zeder C, Brnić M, Hurrell RF. Zinc absorption by young adults from supplemental zinc citrate is comparable with that from zinc gluconate and higher than from zinc oxide. *J Nutr*. 2014;144(2):132–136. doi:10.3945/jn.113.181487.",
   "Devarshi PP, Mao Q, Grant RW, Hazels Mitmesser S. Comparative absorption and bioavailability of various chemical forms of zinc in humans: a narrative review. *Nutrients*. 2024;16(24):4269. doi:10.3390/nu16244269. PMID 39770891.",
   "Croitor L, Chisca D, Coropceanu EB, Fonari MS. Diaquabis(pyridine-2-carboxylato-κ²N,O)zinc dimethylformamide hemisolvate. *Acta Crystallogr E*. 2013;69(Pt 8):m454. doi:10.1107/S1600536813018941.",
+  "Lumme P, Lundgren G, Mark W, Lundström H, Borch G, Craig JC. The crystal structure of zinc picolinate tetrahydrate, Zn(C6H4O2N)2(H2O)4. *Acta Chem Scand*. 1969;23:3011–3022.",
+  "A refinement of the crystal structure of trans-diaquabis(picolinato)zinc(II) dihydrate. OSTI/ETDE record 20506704 (authors, journal and data not read).",
   "NIH Office of Dietary Supplements. Zinc: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Zinc-HealthProfessional/",
   "European Food Safety Authority. Tolerable upper intake levels for vitamins and minerals (2006); zinc UL 25 mg/day from SCF. efsa.europa.eu",
   "ChemicalBook. Zinc picolinate (CAS 17949-65-4) safety data sheet. chemicalbook.com/msds/zincpicolinate.htm",
@@ -173,7 +175,7 @@
  "en": {
   "subtitle": "Chelated zinc · Minerals · Immunity & skin",
   "about": [
-   "Zinc picolinate is the zinc(II) salt of picolinic acid (pyridine-2-carboxylic acid). In crystal structures of the related diaqua complex, zinc is held by the pyridine nitrogen and a carboxylate oxygen of two picolinate ligands in a distorted octahedron. It is sold as capsules and tablets, usually as the anhydrous compound with about 21 % zinc.",
+   "Zinc picolinate is the zinc(II) salt of picolinic acid (pyridine-2-carboxylic acid). In the published crystal structure of the tetrahydrate (trans-[Zn(pic)2(H2O)2]·2H2O), zinc is held by the pyridine nitrogen and a carboxylate oxygen of two picolinate ligands in a distorted octahedron. It is sold as capsules and tablets, usually as the anhydrous compound with about 21 % zinc.",
    "Zinc supports immune function, wound healing, skin integrity and many enzymes. Picolinic acid is claimed to improve zinc uptake, but this rests mainly on one small 1987 crossover trial of tissue zinc markers; a later isotope-based absorption comparison covered citrate, gluconate and oxide, not picolinate."
   ],
   "structure_alt": "Structural formula of zinc picolinate: a central zinc atom bonded to two picolinate ligands, each through the pyridine nitrogen and a carboxylate oxygen, forming two five-membered chelate rings.",
@@ -208,7 +210,7 @@
    ],
    [
     "Tetrahydrate – formula",
-    "C₁₂H₈N₂O₄Zn·4H₂O (per Wikipedia, unconfirmed)"
+    "C₁₂H₈N₂O₄Zn·4H₂O (published crystal structure; sale unconfirmed)"
    ],
    [
     "Tetrahydrate – molar mass / CAS",
@@ -222,7 +224,7 @@
   "positives": [
    "Zinc picolinate raised hair, urine and red-cell zinc in a 4-week, double-blind crossover trial (n = 15, 50 mg Zn/day) where gluconate and citrate did not (Barrie 1987).",
    "About 21 % elemental zinc in the anhydrous form, so a 25 mg zinc capsule needs only about 120 mg of powder.",
-   "Well-defined chelate: the picolinate binds zinc through nitrogen and oxygen (N,O-chelate), as seen in crystal structures of the diaqua complex.",
+   "Well-defined chelate: the picolinate binds zinc through nitrogen and oxygen (N,O-chelate), as seen in the published crystal structure of the tetrahydrate (Lumme 1969).",
    "Widely available as single-ingredient, vegan-capsule products in doses of 22–50 mg zinc, including Czech pharmacy retail."
   ],
   "negatives": [
@@ -279,7 +281,7 @@
  "cs": {
   "subtitle": "Chelátovaný zinek · Minerály · Imunita a pokožka",
   "about": [
-   "Zinek pikolinát je zinečná sůl kyseliny pikolinové (pyridin-2-karboxylové). V krystalových strukturách příbuzného diaqua komplexu je zinek vázán dusíkem pyridinu a karboxylátovým kyslíkem dvou pikolinátových ligandů ve zkresleném oktaedru. Prodává se v kapslích a tabletách, obvykle jako bezvodá sloučenina s asi 21 % zinku.",
+   "Zinek pikolinát je zinečná sůl kyseliny pikolinové (pyridin-2-karboxylové). V publikované krystalové struktuře tetrahydrátu (trans-[Zn(pic)2(H2O)2]·2H2O) je zinek vázán dusíkem pyridinu a karboxylátovým kyslíkem dvou pikolinátových ligandů ve zkresleném oktaedru. Prodává se v kapslích a tabletách, obvykle jako bezvodá sloučenina s asi 21 % zinku.",
    "Zinek podporuje imunitu, hojení ran, zdraví pokožky a řadu enzymů. Kyselině pikolinové se přisuzuje lepší vstřebávání zinku, ale opírá se to hlavně o jednu malou zkříženou studii z roku 1987 s tkáňovými markery; novější izotopové srovnání vstřebávání zahrnovalo citrát, glukonát a oxid, nikoli pikolinát."
   ],
   "structure_alt": "Strukturní vzorec zinek pikolinátu: centrální atom zinku vázaný ke dvěma pikolinátovým ligandům, každý přes dusík pyridinu a karboxylátový kyslík, za vzniku dvou pětičlenných chelátových kruhů.",
@@ -314,7 +316,7 @@
    ],
    [
     "Tetrahydrát – vzorec",
-    "C₁₂H₈N₂O₄Zn·4H₂O (dle Wikipedie, nepotvrzeno)"
+    "C₁₂H₈N₂O₄Zn·4H₂O (publikovaná krystalová struktura; prodej nepotvrzen)"
    ],
    [
     "Tetrahydrát – molární hmotnost / CAS",
@@ -328,7 +330,7 @@
   "positives": [
    "Zinek pikolinát zvýšil obsah zinku ve vlasech, moči a červených krvinkách ve 4týdenní dvojitě zaslepené zkřížené studii (n = 15, 50 mg Zn/den), kde glukonát a citrát ne (Barrie 1987).",
    "Asi 21 % elementárního zinku v bezvodé formě, takže na kapsli s 25 mg zinku stačí asi 120 mg prášku.",
-   "Dobře definovaný chelát: pikolinát váže zinek dusíkem a kyslíkem (N,O-chelát), jak ukazují krystalové struktury diaqua komplexu.",
+   "Dobře definovaný chelát: pikolinát váže zinek dusíkem a kyslíkem (N,O-chelát), jak ukazuje publikovaná krystalová struktura tetrahydrátu (Lumme 1969).",
    "Široce dostupný jako jednosložkový přípravek ve veganských kapslích o dávkách 22–50 mg zinku, včetně české lékárenské nabídky."
   ],
   "negatives": [
