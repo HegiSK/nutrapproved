@@ -1,5 +1,5 @@
 // Landing page: live product suggestions that drop down from the search box.
-import { loadCatalog, searchIds, money } from './supplement-finder/catalog.js';
+import { loadCatalog, searchIds } from './supplement-finder/catalog.js';
 
 const form = document.getElementById('search');
 const input = form?.querySelector('input[name="q"]');
@@ -27,7 +27,7 @@ function init() {
   let active = -1;
 
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const reviewUrl = (p) => `supplement-finder/reviews/review.html?id=${encodeURIComponent(p.review)}`;
+  const reviewUrl = (p) => `supplement-finder/reviews/review.html?id=${encodeURIComponent(p.id)}`;
   const finderUrl = (q) => `supplement-finder/index.html?q=${encodeURIComponent(q)}`;
   const load = () => (loading ??= loadCatalog().then((c) => (catalog = c)).catch((e) => { console.error(e); loading = null; }));
 
@@ -56,13 +56,14 @@ function init() {
     if (!q || !catalog) return close();
     const byId = new Map(catalog.products.map((p) => [p.id, p]));
     const hits = searchIds(catalog.index, q, { strict: true }).map((id) => byId.get(id)).filter(Boolean);
-    const img = (p) => new URL(p.image_url || 'images/placeholder.svg', catalog.url).href;
+    const img = (p) => new URL(p.image, catalog.url).href;
+    const fallback = new URL('images/placeholder.svg', catalog.url).href;
     let html = hits.slice(0, MAX).map((p, i) => `
       <li role="presentation"><a id="sg-${i}" role="option" href="${p.review ? reviewUrl(p) : finderUrl(p.name)}">
-        <img src="${esc(img(p))}" alt="" width="40" height="40">
-        <span class="txt"><b>${esc(p.name)}</b><small>${esc(p.brand)} · ${esc(p.category)}</small></span>
+        <img src="${esc(img(p))}" alt="" width="40" height="40" onerror="this.onerror=null;this.src='${fallback}'">
+        <span class="txt"><b>${esc(p.name)}</b><small>${esc(p.type)} · ${esc(p.form)}</small></span>
         ${p.review ? `<span class="rv">${esc(t('suggest.review'))}</span>` : ''}
-        <span class="pr">${money(p.price)}</span>
+        <span class="pr">${esc(p.dose ? `${p.dose.min}–${p.dose.max} ${p.dose.unit}` : '')}</span>
       </a></li>`).join('');
     if (!hits.length) html = `<li class="none">${esc(t('suggest.none'))}</li>`;
     else html += `<li role="presentation"><a id="sg-all" role="option" class="all" href="${finderUrl(q)}">${esc(plural('suggest.all', hits.length))}</a></li>`;

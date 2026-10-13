@@ -21,12 +21,11 @@ function render(r) {
   const c = r[lang] ?? r.en;           // fall back to English if a language block is missing
   const scores = SCORE_KEYS.filter((k) => r.scores?.[k] != null);
   const total = r.scores?.total ?? (scores.length ? scores.reduce((a, k) => a + r.scores[k], 0) / scores.length : null);
-  const dir = new URL(`${r.id}.json`, location.href);
 
   document.title = `${c.name} – ${t('review.suffix')} | ${t('hero.title')}`;
   const left = section('', t('review.about'),
     (c.about ?? []).map((p) => `<p>${md(p)}</p>`).join('') +
-    (r.structure ? `<div class="structure"><img src="${esc(new URL(r.structure, dir).href)}" alt="${esc(c.structure_alt ?? c.name)}"></div>` : '') +
+    `<div class="structure"><img src="../structures/${esc(r.id)}.svg" alt="${esc(c.structure_alt ?? c.name)}" onerror="this.parentNode.remove()"></div>` +
     (c.facts?.length ? `<dl>${c.facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''));
 
   const f = c.foods;

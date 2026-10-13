@@ -1,27 +1,36 @@
 // Shared by the finder page and the landing page's search suggestions:
-// loads products.json, translates it to the page language and builds the search index.
+// loads compounds.json, translates it to the page language and builds the search index.
 import MiniSearch from './vendor/minisearch.js';
 
 const { t, value: tv } = window.i18n; // i18n.js is loaded in the page <head>
-const DATA_URL = new URL('products.json', import.meta.url);
-// search_en keeps the English name and ingredients searchable when the page is shown in another language.
-const SEARCH_FIELDS = ['name', 'ingredients', 'brand', 'category', 'form', 'goals', 'description', 'search_en'];
+const DATA_URL = new URL('compounds.json', import.meta.url);
+// search_en keeps the English name and aliases searchable when the page is shown in another language.
+const SEARCH_FIELDS = ['name', 'aliases', 'active', 'type', 'form', 'goals', 'search_en'];
 
 export const LOCALE = { en: 'en-US', cs: 'cs-CZ' }[window.i18n.lang] ?? 'en-US';
-export const money = (n, digits = 2) =>
-  new Intl.NumberFormat(LOCALE, { style: 'currency', currency: 'USD', minimumFractionDigits: digits, maximumFractionDigits: digits }).format(n);
 export const asArray = (v) => (Array.isArray(v) ? v : v == null ? [] : [v]);
 
-// Translate the displayed values of a product. Facets, chips and search then all work in the page language.
-function localize(p) {
+// Translate the displayed values of a compound. Facets, chips and search then all work in the page language.
+function localize(c) {
+  const dose = c.dose && {
+    ...c.dose,
+    basis: tv(c.dose.basis),
+    text: `${c.dose.min === c.dose.max ? c.dose.min : `${c.dose.min}–${c.dose.max}`} ${c.dose.unit} ${tv(c.dose.basis)} ${t('card.per_day')}`,
+  };
+  const upper = c.upper_limit && {
+    ...c.upper_limit,
+    text: `${c.upper_limit.value} ${c.upper_limit.unit} ${tv(c.upper_limit.basis)} (${c.upper_limit.source})`,
+  };
   return {
-    ...p,
-    name: t(`product.${p.id}`) === `product.${p.id}` ? p.name : t(`product.${p.id}`),
-    form: tv(p.form),
-    category: tv(p.category),
-    goals: asArray(p.goals).map(tv),
-    ingredients: asArray(p.ingredients).map(tv),
-    search_en: [p.name, ...asArray(p.ingredients)].join(' '),
+    ...c,
+    image: `structures/${c.id}.svg`, // by convention; the card falls back to the placeholder if the file is missing
+    name: c.name[window.i18n.lang] ?? c.name.en,
+    type: tv(c.type),
+    form: tv(c.form),
+    goals: asArray(c.goals).map(tv),
+    dose,
+    upper_limit: upper,
+    search_en: [c.name.en, ...asArray(c.aliases)].join(' '),
   };
 }
 
@@ -43,6 +52,6 @@ export async function loadCatalog() {
 // strict: no typo tolerance for very short input, so live suggestions stay relevant.
 export function searchIds(index, q, { strict = false } = {}) {
   return index
-    .search(q, { prefix: true, fuzzy: strict && q.length < 4 ? false : 0.2, combineWith: 'AND', boost: { name: 3, ingredients: 2, brand: 1.5 } })
+    .search(q, { prefix: true, fuzzy: strict && q.length < 4 ? false : 0.2, combineWith: 'AND', boost: { name: 3, aliases: 2, active: 1.5 } })
     .map((r) => r.id);
 }

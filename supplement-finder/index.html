@@ -26,7 +26,7 @@
   </nav>
 
   <div class="searchbox">
-    <input id="q" type="search" data-i18n-placeholder="finder.search.placeholder" data-i18n-aria="finder.search.aria" placeholder="Search by name, ingredient, brand or goal…" autocomplete="off" aria-label="Search supplements">
+    <input id="q" type="search" data-i18n-placeholder="finder.search.placeholder" data-i18n-aria="finder.search.aria" placeholder="Search by compound, form, type or goal…" autocomplete="off" aria-label="Search compounds">
   </div>
 
   <main class="layout">
@@ -37,19 +37,8 @@
       </div>
 
       <section class="group">
-        <h3 data-i18n="finder.group.dietary">Dietary &amp; availability</h3>
+        <h3 data-i18n="finder.group.dietary">Dietary</h3>
         <label class="check"><input type="checkbox" data-flag="vegan"> <span data-i18n="flag.vegan">Vegan</span></label>
-        <label class="check"><input type="checkbox" data-flag="gluten_free"> <span data-i18n="flag.gluten_free">Gluten-free</span></label>
-        <label class="check"><input type="checkbox" data-flag="in_stock"> <span data-i18n="flag.in_stock">In stock only</span></label>
-      </section>
-
-      <section class="group">
-        <h3 data-i18n="finder.group.price">Price</h3>
-        <div class="price-row">
-          <input id="min-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Min" aria-label="Minimum price" data-i18n-aria="price.min.aria">
-          <span>–</span>
-          <input id="max-price" type="number" min="0" step="1" inputmode="decimal" placeholder="Max" aria-label="Maximum price" data-i18n-aria="price.max.aria">
-        </div>
       </section>
 
       <div id="facets"></div>
@@ -61,8 +50,6 @@
         <label class="sort"><span data-i18n="sort">Sort</span>
           <select id="sort">
             <option value="relevance" data-i18n="sort.relevance">Relevance</option>
-            <option value="price_asc" data-i18n="sort.price_asc">Price: low to high</option>
-            <option value="price_desc" data-i18n="sort.price_desc">Price: high to low</option>
             <option value="name_asc" data-i18n="sort.name_asc">Name A–Z</option>
           </select>
         </label>

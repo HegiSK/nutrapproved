@@ -1,0 +1,81 @@
+[
+  {
+    "id": "magnesium-bisglycinate",
+    "name": {"en": "Magnesium bisglycinate", "cs": "Hořčík bisglycinát"},
+    "aliases": ["magnesium glycinate", "magnesium diglycinate", "hořčík glycinát"],
+    "type": "mineral",
+    "form": "complex",
+    "active": "magnesium",
+    "goals": ["sleep", "stress", "muscle"],
+    "dose": {"min": 200, "max": 400, "unit": "mg", "basis": "elemental magnesium", "per": "day"},
+    "upper_limit": {"value": 250, "unit": "mg", "basis": "supplemental magnesium", "source": "EFSA"},
+    "timing": "evening",
+    "vegan": true,
+    "review": true
+  },
+  {
+    "id": "magnesium-oxide",
+    "name": {"en": "Magnesium oxide", "cs": "Oxid hořečnatý"},
+    "aliases": ["MgO", "magnesia", "magnesium oxid", "hořčík oxid"],
+    "type": "mineral",
+    "form": "ionic",
+    "active": "magnesium",
+    "goals": ["muscle", "digestion"],
+    "dose": {"min": 200, "max": 400, "unit": "mg", "basis": "elemental magnesium", "per": "day"},
+    "upper_limit": {"value": 250, "unit": "mg", "basis": "supplemental magnesium", "source": "EFSA"},
+    "timing": "with a meal",
+    "vegan": true
+  },
+  {
+    "id": "zinc-picolinate",
+    "name": {"en": "Zinc picolinate", "cs": "Zinek pikolinát"},
+    "aliases": ["zinc picolinic acid", "zinek pikolinan"],
+    "type": "mineral",
+    "form": "complex",
+    "active": "zinc",
+    "goals": ["immunity", "skin"],
+    "dose": {"min": 15, "max": 30, "unit": "mg", "basis": "elemental zinc", "per": "day"},
+    "upper_limit": {"value": 25, "unit": "mg", "basis": "total zinc", "source": "EFSA"},
+    "timing": "with a meal",
+    "vegan": true
+  },
+  {
+    "id": "vitamin-d3",
+    "name": {"en": "Vitamin D3 (cholecalciferol)", "cs": "Vitamin D3 (cholekalciferol)"},
+    "aliases": ["cholecalciferol", "vitamin D", "cholekalciferol"],
+    "type": "vitamin",
+    "form": "free molecule",
+    "active": "vitamin D",
+    "goals": ["bones", "immunity"],
+    "dose": {"min": 25, "max": 50, "unit": "µg", "basis": "vitamin D3 (1000–2000 IU)", "per": "day"},
+    "upper_limit": {"value": 100, "unit": "µg", "basis": "vitamin D3 (4000 IU)", "source": "EFSA"},
+    "timing": "with a fat-containing meal",
+    "vegan": false
+  },
+  {
+    "id": "creatine-monohydrate",
+    "name": {"en": "Creatine monohydrate", "cs": "Kreatin monohydrát"},
+    "aliases": ["creatine", "kreatin"],
+    "type": "amino acid derivative",
+    "form": "hydrate",
+    "active": "creatine",
+    "goals": ["performance", "muscle"],
+    "dose": {"min": 3, "max": 5, "unit": "g", "basis": "creatine monohydrate", "per": "day"},
+    "upper_limit": null,
+    "timing": "any time, consistently",
+    "vegan": true
+  },
+  {
+    "id": "ashwagandha-root-extract",
+    "name": {"en": "Ashwagandha root extract", "cs": "Extrakt z kořene ašvagandhy"},
+    "aliases": ["withania somnifera", "ashwagandha", "KSM-66", "ašvagandha"],
+    "type": "herbal extract",
+    "form": "extract",
+    "active": "withanolides",
+    "goals": ["stress", "sleep"],
+    "dose": {"min": 300, "max": 600, "unit": "mg", "basis": "standardised extract", "per": "day"},
+    "upper_limit": null,
+    "timing": "evening",
+    "vegan": true
+  }
+]
