@@ -1,5 +1,39 @@
 {
  "id": "magnesium-bisglycinate",
+ "compound": {
+  "name": {
+   "en": "Magnesium bisglycinate",
+   "cs": "Hořčík bisglycinát"
+  },
+  "aliases": [
+   "magnesium glycinate",
+   "magnesium diglycinate",
+   "hořčík glycinát"
+  ],
+  "type": "mineral",
+  "form": "complex",
+  "active": "magnesium",
+  "goals": [
+   "sleep",
+   "stress",
+   "muscle"
+  ],
+  "dose": {
+   "min": 200,
+   "max": 400,
+   "unit": "mg",
+   "basis": "elemental magnesium",
+   "per": "day"
+  },
+  "upper_limit": {
+   "value": 250,
+   "unit": "mg",
+   "basis": "supplemental magnesium",
+   "source": "EFSA"
+  },
+  "timing": "evening",
+  "vegan": true
+ },
  "scores": {
   "evidence": 7.0,
   "pricing": 6.0,
@@ -13,7 +47,6 @@
   "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov"
  ],
  "en": {
-  "name": "Magnesium Bisglycinate",
   "subtitle": "Chelated magnesium · Minerals · Sleep, stress & muscle function",
   "about": [
    "Magnesium bisglycinate (magnesium glycinate) is a chelate in which one magnesium ion is bound to two molecules of the amino acid glycine. The chelated form is absorbed well and is generally gentle on the gut, unlike magnesium oxide or citrate.",
@@ -32,14 +65,6 @@
    [
     "Elemental Mg",
     "≈ 14 % by weight"
-   ],
-   [
-    "Typical dose",
-    "200–400 mg elemental Mg / day"
-   ],
-   [
-    "Best taken",
-    "Evening, with or without food"
    ]
   ],
   "positives": [
@@ -123,7 +148,6 @@
   }
  },
  "cs": {
-  "name": "Hořčík bisglycinát",
   "subtitle": "Chelátový hořčík · Minerály · Spánek, stres a funkce svalů",
   "about": [
    "Hořčík bisglycinát (hořčík glycinát) je chelát, ve kterém je jeden iont hořčíku vázán na dvě molekuly aminokyseliny glycinu. Chelátová forma se dobře vstřebává a na rozdíl od oxidu nebo citrátu hořečnatého je obvykle šetrná k trávicímu traktu.",
@@ -142,14 +166,6 @@
    [
     "Elementární Mg",
     "≈ 14 % hmotnosti"
-   ],
-   [
-    "Typická dávka",
-    "200–400 mg elementárního Mg / den"
-   ],
-   [
-    "Kdy užívat",
-    "Večer, s jídlem nebo bez něj"
    ]
   ],
   "positives": [

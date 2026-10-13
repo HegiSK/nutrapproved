@@ -19,14 +19,24 @@ function notFound() {
 
 function render(r) {
   const c = r[lang] ?? r.en;           // fall back to English if a language block is missing
+  const k = r.compound;                 // index fields (name, dose, timing...) are shared by all languages
+  const name = k.name[lang] ?? k.name.en;
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const { value: tv } = window.i18n;
+  // Dose and timing come from the compound block, so they are written once and cannot drift from the finder.
+  const facts = [
+    ...(c.facts ?? []),
+    ...(k.dose ? [[t('review.fact.dose'), `${k.dose.min === k.dose.max ? k.dose.min : `${k.dose.min}–${k.dose.max}`} ${k.dose.unit} ${tv(k.dose.basis)} ${t('card.per_day')}`]] : []),
+    ...(k.timing ? [[t('review.fact.timing'), cap(tv(k.timing))]] : []),
+  ];
   const scores = SCORE_KEYS.filter((k) => r.scores?.[k] != null);
   const total = r.scores?.total ?? (scores.length ? scores.reduce((a, k) => a + r.scores[k], 0) / scores.length : null);
 
-  document.title = `${c.name} – ${t('review.suffix')} | ${t('hero.title')}`;
+  document.title = `${name} – ${t('review.suffix')} | ${t('hero.title')}`;
   const left = section('', t('review.about'),
     (c.about ?? []).map((p) => `<p>${md(p)}</p>`).join('') +
-    `<div class="structure"><img src="../structures/${esc(r.id)}.svg" alt="${esc(c.structure_alt ?? c.name)}" onerror="this.parentNode.remove()"></div>` +
-    (c.facts?.length ? `<dl>${c.facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''));
+    `<div class="structure"><img src="../structures/${esc(r.id)}.svg" alt="${esc(c.structure_alt ?? name)}" onerror="this.parentNode.remove()"></div>` +
+    (facts.length ? `<dl>${facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''));
 
   const f = c.foods;
   const foods = f ? section('', f.title,
@@ -54,7 +64,7 @@ function render(r) {
   const refs = r.references?.length ? section('full', t('review.refs'), `<ol>${r.references.map((x) => `<li>${md(x)}</li>`).join('')}</ol>`) : '';
 
   root.innerHTML = `<p class="crumb"><a href="../index.html">${esc(t('review.back'))}</a></p>
-    <h1>${esc(c.name)}</h1><p class="sub">${esc(c.subtitle ?? '')}</p>
+    <h1>${esc(name)}</h1><p class="sub">${esc(c.subtitle ?? '')}</p>
     <div class="r-grid">${left}${right}${score}${recs}${refs}</div>`;
 }
 

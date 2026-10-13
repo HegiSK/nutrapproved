@@ -162,5 +162,7 @@
  "facet.type": "Type",
  "card.dose": "Daily dose",
  "card.upper": "Upper limit",
- "card.per_day": "/ day"
+ "card.per_day": "/ day",
+ "review.fact.dose": "Typical dose",
+ "review.fact.timing": "Best taken"
 }

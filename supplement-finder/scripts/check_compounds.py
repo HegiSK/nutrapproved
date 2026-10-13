@@ -55,8 +55,14 @@ for i, c in enumerate(compounds, start=1):
             errors.append(f"{label}: review is true but reviews/{cid}.json does not exist")
         else:
             with open(path, encoding="utf-8") as rf:
-                if json.load(rf).get("id") != cid:
-                    errors.append(f"{label}: reviews/{cid}.json has a different id inside")
+                review = json.load(rf)
+            if review.get("id") != cid:
+                errors.append(f"{label}: reviews/{cid}.json has a different id inside")
+            # compounds.json is copied from the review's "compound" block; they must match.
+            expected = {"id": cid, **review.get("compound", {}), "review": True}
+            if c != expected:
+                diff = sorted(k for k in set(c) | set(expected) if c.get(k) != expected.get(k))
+                errors.append(f"{label}: differs from reviews/{cid}.json 'compound' block in: {', '.join(diff)}")
     elif "review" in c and c["review"] is not False:
         errors.append(f"{label}: 'review' must be true or false")
     if not os.path.isfile(os.path.join(root, "structures", f"{cid}.svg")):

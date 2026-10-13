@@ -191,5 +191,11 @@
  "value.hydrate": "hydrát",
  "value.extract": "extrakt",
  "value.free molecule": "volná molekula",
- "value.digestion": "trávení"
+ "value.digestion": "trávení",
+ "review.fact.dose": "Typická dávka",
+ "review.fact.timing": "Kdy užívat",
+ "value.evening": "večer",
+ "value.with a meal": "s jídlem",
+ "value.with a fat-containing meal": "s jídlem obsahujícím tuk",
+ "value.any time, consistently": "kdykoli, pravidelně"
 }
