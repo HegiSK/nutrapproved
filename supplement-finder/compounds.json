@@ -54,5 +54,33 @@
     "timing": "with a meal",
     "vegan": true,
     "review": true
+  },
+  {
+    "id": "calcium-carbonate",
+    "name": {"en": "Calcium carbonate", "cs": "Uhličitan vápenatý"},
+    "aliases": ["CaCO3", "calcite", "E170", "limestone", "chalk", "calcii carbonas", "vápník uhličitan", "kalcit", "křída"],
+    "type": "mineral",
+    "form": "ionic",
+    "active": "calcium",
+    "goals": ["bones"],
+    "dose": {"min": 500, "max": 1200, "unit": "mg", "basis": "elemental calcium", "per": "day"},
+    "upper_limit": {"value": 2500, "unit": "mg", "basis": "total calcium", "source": "EFSA"},
+    "timing": "with a meal",
+    "vegan": true,
+    "review": true
+  },
+  {
+    "id": "calcium-citrate",
+    "name": {"en": "Calcium citrate", "cs": "Citrát vápenatý"},
+    "aliases": ["tricalcium citrate", "tricalcium dicitrate", "calcium citrate tetrahydrate", "E333", "vápník citrát", "citronan vápenatý", "trikalcium citrát"],
+    "type": "mineral",
+    "form": "ionic",
+    "active": "calcium",
+    "goals": ["bones"],
+    "dose": {"min": 500, "max": 1200, "unit": "mg", "basis": "elemental calcium", "per": "day"},
+    "upper_limit": {"value": 2500, "unit": "mg", "basis": "total calcium", "source": "EFSA"},
+    "timing": "with or without food",
+    "vegan": true,
+    "review": true
   }
 ]

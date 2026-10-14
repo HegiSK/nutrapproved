@@ -46,7 +46,7 @@
   "Schuster J, Cycelskij I, Lopresti A, Hahn A. Magnesium bisglycinate supplementation in healthy adults reporting poor sleep: a randomized, placebo-controlled trial. *Nat Sci Sleep*. 2025;17:2027–2040. doi:10.2147/NSS.S524348",
   "Blancquaert L, Vervaet C, Derave W. Predicting and testing bioavailability of magnesium supplements. *Nutrients*. 2019;11(7):1663. doi:10.3390/nu11071663. PMID 31330811.",
   "Boyle NB, Lawton C, Dye L. The effects of magnesium supplementation on subjective anxiety and stress: a systematic review. *Nutrients*. 2017;9(5):429.",
-  "Crystal polymorph of magnesium glycinate dihydrate and process for its preparation. US patent 9,394,318.",
+  "US patent 9,394,318 B2. Crystal polymorph of magnesium glycinate dihydrate and process for its preparation (single-crystal structure, P21/n).",
   "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
  ],
  "en": {
@@ -111,9 +111,9 @@
   },
   "scores_note": "Evidence 4.5: one placebo-controlled trial on this form (small, borderline effect, partly industry-linked), the rest is general magnesium evidence. Solubility & bioavailability 4.5: organic chelate, solubility figures conflict and none was confirmed in a primary source (2.5/4); no verified human absorption study of this form, so absorption is capped at 2/6. Benefits 4.0: small sleep effect (2/7), mainly the general roles of magnesium (2/3 breadth); capped by evidence. Safety 8.5: well tolerated, EFSA 250 mg limit and kidney caution apply. Pricing 5.0: median 4.79 CZK per 100 mg Mg over 3 products (2026-10-14) against 0.97 for oxide (ratio 4.96), confidence medium. A 1994 study in ileal-resection patients is known only from a manufacturer summary and was not scored.",
   "form_labels": {
-   "dihydrate": "Dihydrate (assumed main form)"
+   "dihydrate": "Dihydrate (expected main form)"
   },
-  "forms_note": "No crystal structure of magnesium bisglycinate was found; only a patent describes a dihydrate by its powder pattern. It is listed as the likely main form, but the actual hydration and magnesium content (about 12 to 14 %) differ between labels.",
+  "forms_note": "Only the dihydrate has a known crystal structure, described in a patent rather than a journal paper, so it is expected to be the main form, at about 12 % magnesium. Labels differ (12 to 20 % Mg per powder weight), so the actual hydration of a product is unconfirmed.",
   "dosing": [
    [
     "Comment",
@@ -183,9 +183,9 @@
   },
   "scores_note": "Důkazy 4,5: jedna studie s placebem přímo s touto formou (malý, hraniční efekt, částečně spojená s průmyslem), zbytek jsou obecné důkazy o hořčíku. Rozpustnost a biologická dostupnost 4,5: organický chelát, údaje o rozpustnosti si odporují a žádný nebyl potvrzen v primárním zdroji (2,5/4); ověřená studie vstřebávání této formy u lidí chybí, vstřebávání je proto omezeno na 2/6. Přínosy 4,0: malý vliv na spánek (2/7), jinak obecné role hořčíku (rozsah 2/3); omezeno důkazy. Bezpečnost 8,5: dobře snášen, platí limit EFSA 250 mg a opatrnost při onemocnění ledvin. Cena 5,0: medián 4,79 Kč za 100 mg Mg ze 3 přípravků (14. 10. 2026) proti 0,97 u oxidu (poměr 4,96), spolehlivost střední. Studie z roku 1994 u pacientů po resekci ilea je známa jen z výtahu výrobce a nebyla bodována.",
   "form_labels": {
-   "dihydrate": "Dihydrát (předpokládaná hlavní forma)"
+   "dihydrate": "Dihydrát (očekávaná hlavní forma)"
   },
-  "forms_note": "Krystalová struktura hořčík bisglycinátu nalezena nebyla; dihydrát popisuje jen patent podle práškového difraktogramu. Je uveden jako pravděpodobná hlavní forma, ale skutečná hydratace a obsah hořčíku (asi 12 až 14 %) se mezi štítky liší.",
+  "forms_note": "Známá je jen krystalová struktura dihydrátu, popsaná v patentu, nikoli v odborném článku, proto se očekává, že jde o hlavní formu, s asi 12 % hořčíku. Štítky se liší (12 až 20 % Mg z hmotnosti prášku), skutečná hydratace přípravku tedy není potvrzena.",
   "dosing": [
    [
     "Poznámka",
@@ -201,9 +201,14 @@
    "molar_mass": 208.45,
    "active_percent": 11.7,
    "commercial": true,
-   "source": "US patent 9,394,318 (crystalline dihydrate, powder diffraction only); molar mass computed from formula",
-   "note": "No single-crystal or refined crystal structure of magnesium bisglycinate was found in COD or the journal literature searched; the only crystallographic description is the powder pattern of a dihydrate in a patent, which is not a structure. The dihydrate is listed because the patent and a retail label (625 mg of powder for 75 mg Mg, about 12 %) point to it, but this is an inference. Other labels do not agree with each other (20 % Mg per powder weight on two EU products), so the hydration of a given product is unknown. No CAS for the dihydrate was confirmed; 14783-68-7 on supplier sheets is the anhydrous formula.",
-   "structure": null
+   "source": "US patent 9,394,318 B2 (single-crystal X-ray structure of the dihydrate, SHELXTL refinement, R1 = 0.027); molar mass computed from formula",
+   "note": "The only crystal structure found is in a patent, not a peer-reviewed paper: monoclinic, space group P21/n, Z = 4, a = 7.548, b = 9.053, c = 12.970 Å, β = 98.61°, with magnesium bound to two glycinate nitrogens, two carboxylate oxygens and two waters. No journal structure or COD/CSD entry was found, so the dihydrate is the only form listed. One retail label (625 mg of powder for 75 mg Mg, about 12 %) fits the dihydrate, but two other labels state about 20 % Mg per powder weight, so the hydration of a given product is unconfirmed. No CAS for the dihydrate was confirmed; 14783-68-7 on supplier sheets is the anhydrous formula.",
+   "structure": {
+    "ref": "US patent 9,394,318 B2, Crystal polymorph of magnesium glycinate dihydrate (single-crystal data)",
+    "id": null,
+    "system": "monoclinic",
+    "space_group": "P21/n"
+   }
   }
  ],
  "pricing": {

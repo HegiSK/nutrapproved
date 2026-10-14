@@ -1,0 +1,434 @@
+{
+ "id": "calcium-carbonate",
+ "compound": {
+  "name": {
+   "en": "Calcium carbonate",
+   "cs": "Uhličitan vápenatý"
+  },
+  "aliases": [
+   "CaCO3",
+   "calcite",
+   "E170",
+   "limestone",
+   "chalk",
+   "calcii carbonas",
+   "vápník uhličitan",
+   "kalcit",
+   "křída"
+  ],
+  "type": "mineral",
+  "form": "ionic",
+  "active": "calcium",
+  "goals": [
+   "bones"
+  ],
+  "dose": {
+   "min": 500,
+   "max": 1200,
+   "unit": "mg",
+   "basis": "elemental calcium",
+   "per": "day"
+  },
+  "upper_limit": {
+   "value": 2500,
+   "unit": "mg",
+   "basis": "total calcium",
+   "source": "EFSA"
+  },
+  "timing": "with a meal",
+  "vegan": true
+ },
+ "smiles": "[Ca+2].[O-]C([O-])=O",
+ "forms": [
+  {
+   "key": "calcite",
+   "formula": "CaCO₃",
+   "cas": "471-34-1",
+   "molar_mass": 100.09,
+   "active_percent": 40.04,
+   "commercial": true,
+   "source": "ICSC 1193 (IPCS/ILO, 2012); COD 1010962; Effenberger et al. 1981",
+   "note": "Thermodynamically stable polymorph at room conditions; ground limestone and precipitated calcium carbonate used in supplements are calcite (expected from the crystallography; supplier labels give only CaCO₃ and CAS 471-34-1, the generic calcium carbonate number). Trigonal, R-3c (COD 1010962, Wyckoff 1920; refined by Effenberger, Mereiter & Zemann 1981, Z Kristallogr 156:233–243). Search log: name variants calcium carbonate, CaCO3, calcite, aragonite, vaterite, monohydrocalcite, ikaite, calcium carbonate hemihydrate/dihydrate; 15 queries (main ones in extended mode); checked COD (and mirrors), American Mineralogist, Canadian Mineralogist, Mineralogical Magazine, Z Kristallogr, Angew Chem, Nat Commun, Science, Google Patents/USPTO (patents found cover particle habit, precipitation processes and amorphous CaCO3, no new crystal form). Mineral-specific CAS numbers for the polymorphs were not verified in this run.",
+   "structure": {
+    "ref": "Wyckoff RWG. Am J Sci 1920;50:317–360 (COD 1010962); refinement: Effenberger H, Mereiter K, Zemann J. Z Kristallogr 1981;156:233–243",
+    "id": "COD 1010962",
+    "system": "trigonal",
+    "space_group": "R-3c"
+   }
+  },
+  {
+   "key": "aragonite",
+   "formula": "CaCO₃",
+   "cas": null,
+   "molar_mass": 100.09,
+   "active_percent": 40.04,
+   "commercial": false,
+   "source": "COD 9016240 (Antao & Hassan 2010)",
+   "note": "Orthorhombic polymorph, Pmcn, a = 4.966, b = 8.013, c = 5.790 Å (synchrotron powder data, Rietveld). Metastable at room conditions; forms shells and corals. No supplement was confirmed in this run to be sold as aragonite, so commercial is false. CAS not verified.",
+   "structure": {
+    "ref": "Antao SM, Hassan I. Can Mineral 2010;48:1225–1236",
+    "id": "COD 9016240",
+    "system": "orthorhombic",
+    "space_group": "Pmcn"
+   }
+  },
+  {
+   "key": "vaterite",
+   "formula": "CaCO₃",
+   "cas": null,
+   "molar_mass": 100.09,
+   "active_percent": 40.04,
+   "commercial": false,
+   "source": "COD 1508970 (Mugnaioli et al. 2012); San et al. 2023",
+   "note": "Least stable anhydrous polymorph; structure is disordered and polytypic. Ab initio structure from automated electron diffraction: monoclinic C2/c, a = 12.17, b = 7.12, c = 9.47 Å, β = 118.4° (R ≈ 0.38, typical of electron data). San et al. 2023 confirm a monoclinic pseudo-hexagonal lattice (C2 below about 190 K, C2/c above) with stacking polytypes. Research material, not sold as a supplement form. CAS not verified.",
+   "structure": {
+    "ref": "Mugnaioli E, et al. Angew Chem Int Ed 2012;51:7041–7045",
+    "id": "COD 1508970",
+    "system": "monoclinic",
+    "space_group": "C2/c"
+   }
+  },
+  {
+   "key": "hemihydrate",
+   "formula": "CaCO₃·½H₂O",
+   "cas": null,
+   "molar_mass": 109.09,
+   "active_percent": 36.74,
+   "commercial": false,
+   "source": "Zou et al. 2019 (Science)",
+   "note": "Crystalline hemihydrate found in 2019 while crystallising amorphous calcium carbonate in the presence of magnesium; monoclinic, P2₁/c as originally proposed (Aufort & Demichelis 2020 computed Pbcn for the Mg-free ideal phase). Metastable laboratory phase, takes up water and transforms under moist conditions. Cell data not read in this run. Not sold.",
+   "structure": {
+    "ref": "Zou Z, et al. Science 2019;363:396–400",
+    "id": null,
+    "system": "monoclinic",
+    "space_group": "P2₁/c"
+   }
+  },
+  {
+   "key": "monohydrate",
+   "formula": "CaCO₃·H₂O",
+   "cas": null,
+   "molar_mass": 118.1,
+   "active_percent": 33.94,
+   "commercial": false,
+   "source": "Effenberger 1981; Swainson 2008",
+   "note": "Mineral monohydrocalcite. Single-crystal structure of the synthetic phase by Effenberger (1981); re-examined by Rietveld refinement of neutron and X-ray powder data (Swainson 2008). Trigonal, space group P3₁12 as reported by Rodriguez-Blanco et al. (2014), cell volume about 722 Å³. Metastable, forms in lakes and beachrock. Not sold.",
+   "structure": {
+    "ref": "Effenberger H. Monatsh Chem 1981;112:899–909; Swainson IP. Am Mineral 2008;93 (doi:10.2138/am.2008.2825)",
+    "id": null,
+    "system": "trigonal",
+    "space_group": "P3₁12"
+   }
+  },
+  {
+   "key": "hexahydrate",
+   "formula": "CaCO₃·6H₂O",
+   "cas": null,
+   "molar_mass": 208.18,
+   "active_percent": 19.25,
+   "commercial": false,
+   "source": "Lennie et al. 2004",
+   "note": "Mineral ikaite; monoclinic C2/c, structure refined from synchrotron powder data at 243 K. Forms only in cold water and decomposes to calcite at room temperature. Not sold.",
+   "structure": {
+    "ref": "Lennie AR, Tang CC, Thompson SP. Mineral Mag 2004;68:135–146",
+    "id": null,
+    "system": "monoclinic",
+    "space_group": "C2/c"
+   }
+  }
+ ],
+ "scores": {
+  "evidence": 8.0,
+  "pricing": 10.0,
+  "benefits": 5.0,
+  "safety": 6.0,
+  "bioavailability": 4.0
+ },
+ "pricing": {
+  "currency": "CZK",
+  "date": "2026-10-14",
+  "per": "100 mg elemental mineral",
+  "confidence": "high",
+  "products": [
+   {
+    "shop": "benu.cz",
+    "name": "Calcii carbonici 0,5 Medicamenta, 100 tablets",
+    "url": "https://www.benu.cz/uhlicitan-vapenaty",
+    "form": "calcite",
+    "price": 209.0,
+    "units": 100,
+    "elemental_per_unit": 200.2,
+    "cost_per_100mg": 1.0439
+   },
+   {
+    "shop": "mtbiker.shop (GymBeam)",
+    "name": "GymBeam Calcium (calcium carbonate), 90 capsules",
+    "url": "https://www.mtbiker.shop/shop/outdoor/gymbeam-calcium-calcium-carbonate-90-capsules-p406398.html",
+    "form": "calcite",
+    "price": 133.72,
+    "units": 90,
+    "elemental_per_unit": 266.7,
+    "cost_per_100mg": 0.5571
+   },
+   {
+    "shop": "iherb.com",
+    "name": "21st Century Calcium 600, 75 tablets",
+    "url": "https://www.iherb.com/pr/21st-century-calcium-supplement-600-75-tablets-600-mg-per-tablet/59330",
+    "form": "calcite",
+    "price": 108.57,
+    "units": 75,
+    "elemental_per_unit": 600,
+    "cost_per_100mg": 0.2413
+   },
+   {
+    "shop": "iherb.com",
+    "name": "NOW Foods Calcium Carbonate Pure Powder, 340 g (200 servings)",
+    "url": "https://www.iherb.com/pr/now-foods-calcium-carbonate-pure-powder-12-oz-340-g/480",
+    "form": "calcite",
+    "price": 213.0,
+    "units": 200,
+    "elemental_per_unit": 600,
+    "cost_per_100mg": 0.1775
+   }
+  ],
+  "median_cost_per_100mg": 0.3992,
+  "reference": {
+   "form": "carbonate",
+   "median_cost_per_100mg": 0.3992,
+   "products": [
+    {
+     "shop": "benu.cz",
+     "name": "Calcii carbonici 0,5 Medicamenta, 100 tablets",
+     "url": "https://www.benu.cz/uhlicitan-vapenaty",
+     "form": "carbonate",
+     "price": 209.0,
+     "units": 100,
+     "elemental_per_unit": 200.2,
+     "cost_per_100mg": 1.0439
+    },
+    {
+     "shop": "mtbiker.shop (GymBeam)",
+     "name": "GymBeam Calcium (calcium carbonate), 90 capsules",
+     "url": "https://www.mtbiker.shop/shop/outdoor/gymbeam-calcium-calcium-carbonate-90-capsules-p406398.html",
+     "form": "carbonate",
+     "price": 133.72,
+     "units": 90,
+     "elemental_per_unit": 266.7,
+     "cost_per_100mg": 0.5571
+    },
+    {
+     "shop": "iherb.com",
+     "name": "21st Century Calcium 600, 75 tablets",
+     "url": "https://www.iherb.com/pr/21st-century-calcium-supplement-600-75-tablets-600-mg-per-tablet/59330",
+     "form": "carbonate",
+     "price": 108.57,
+     "units": 75,
+     "elemental_per_unit": 600,
+     "cost_per_100mg": 0.2413
+    },
+    {
+     "shop": "iherb.com",
+     "name": "NOW Foods Calcium Carbonate Pure Powder, 340 g (200 servings)",
+     "url": "https://www.iherb.com/pr/now-foods-calcium-carbonate-pure-powder-12-oz-340-g/480",
+     "form": "carbonate",
+     "price": 213.0,
+     "units": 200,
+     "elemental_per_unit": 600,
+     "cost_per_100mg": 0.1775
+    }
+   ]
+  },
+  "ratio": 1.0,
+  "note": "Calcium carbonate is itself the cheapest common calcium form, so it is its own reference (ratio 1.0). Prices read from shop pages on 2026-10-14; EUR and USD converted at the ECB reference rates of 2026-10-14 (1 EUR = 24.357 CZK, 1 USD = 21.757 CZK). Calcii carbonici 0,5 lists 0.5 g calcium carbonate per tablet, converted to 200 mg Ca at 40.04 %. GymBeam lists 800 mg calcium per 3 capsules (266.7 mg per capsule). NOW powder label gives 600 mg Ca per 1.7 g serving while 1.7 g CaCO3 holds about 680 mg; the label value is used. Two products include common tablet excipients only; none contains another calcium source."
+ },
+ "references": [
+  "Wyckoff RWG. The crystal structures of some carbonates of the calcite group. *Am J Sci*. 1920;50:317–360. (COD 1010962)",
+  "Effenberger H, Mereiter K, Zemann J. Crystal structure refinements of magnesite, calcite, rhodochrosite, siderite, smithonite, and dolomite. *Z Kristallogr*. 1981;156:233–243.",
+  "Antao SM, Hassan I. Temperature dependence of the structural parameters in the transformation of aragonite to calcite, as determined from in situ synchrotron powder X-ray diffraction data. *Can Mineral*. 2010;48:1225–1236. (COD 9016240)",
+  "Mugnaioli E, et al. Ab initio structure determination of vaterite by automated electron diffraction. *Angew Chem Int Ed*. 2012;51(28):7041–7045. (COD 1508970)",
+  "San X, Hu J, Chen M, et al. Unlocking the mysterious polytypic features within vaterite CaCO3. *Nat Commun*. 2023;14:7858. doi:10.1038/s41467-023-43625-0",
+  "Zou Z, et al. A hydrated crystalline calcium carbonate phase: calcium carbonate hemihydrate. *Science*. 2019;363(6425):396–400. doi:10.1126/science.aav0210",
+  "Effenberger H. Kristallstruktur und Infrarot-Absorptionsspektrum von synthetischem Monohydrocalcit, CaCO3·H2O. *Monatsh Chem*. 1981;112:899–909.",
+  "Swainson IP. The structure of monohydrocalcite and the phase composition of the beachrock deposits of Lake Butler and Lake Fellmongery, South Australia. *Am Mineral*. 2008;93. doi:10.2138/am.2008.2825",
+  "Lennie AR, Tang CC, Thompson SP. The structure and thermal expansion behaviour of ikaite, CaCO3·6H2O, from T = 114 to T = 293 K. *Mineral Mag*. 2004;68(1):135–146.",
+  "Recker RR. Calcium absorption and achlorhydria. *N Engl J Med*. 1985;313(2):70–73. doi:10.1056/NEJM198507113130202",
+  "Sakhaee K, Bhuket T, Adams-Huet B, Rao DS. Meta-analysis of calcium bioavailability: a comparison of calcium citrate with calcium carbonate. *Am J Ther*. 1999;6(6):313–321. doi:10.1097/00045391-199911000-00005",
+  "Heaney RP, Recker RR, Weaver CM. Absorbability of calcium sources: the limited role of solubility. *Calcif Tissue Int*. 1990;46:300–304. doi:10.1007/BF02563819",
+  "Goss SL, Lemons KA, Kerstetter JE, Bogner RH. Determination of calcium salt solubility with changes in pH and PCO2, simulating varying gastrointestinal environments. *J Pharm Pharmacol*. 2007;59(11):1485–1492. doi:10.1211/jpp.59.11.0004",
+  "Vavrusova M, Garcia AC, Danielsen BP, Skibsted LH. Spontaneous supersaturation of calcium citrate from simultaneous isothermal dissolution of sodium citrate and sparingly soluble calcium hydroxycarboxylates in water. *RSC Adv*. 2017;7:3078–3088. doi:10.1039/c6ra25807g",
+  "International Chemical Safety Card 1193: Calcium carbonate. IPCS/ILO; 2012.",
+  "Jackson RD, LaCroix AZ, Gass M, et al. Calcium plus vitamin D supplementation and the risk of fractures. *N Engl J Med*. 2006;354(7):669–683. doi:10.1056/NEJMoa055218",
+  "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific Opinion on the Tolerable Upper Intake Level of calcium. *EFSA J*. 2012;10(7):2814. doi:10.2903/j.efsa.2012.2814",
+  "NIH Office of Dietary Supplements. Calcium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Calcium-HealthProfessional/"
+ ],
+ "en": {
+  "subtitle": "Inorganic calcium salt · Minerals · Bones",
+  "about": [
+   "Calcium carbonate is a simple mineral salt, the substance of limestone, chalk and eggshell, and the most concentrated common calcium supplement at about 40 % calcium by weight. Calcium is the main mineral of bone and teeth and is also needed for muscle contraction, nerve signalling and blood clotting. The salt hardly dissolves in water and needs stomach acid to release its calcium, so it is absorbed well with a meal but poorly on an empty stomach in people with little stomach acid. A meta-analysis found calcium citrate absorbed roughly 20–27 % better, although in healthy fasting adults the two were similar in an isotope study. Large trials, including one with over 36,000 women, used this form and showed small gains in hip bone density but no clear drop in fractures overall."
+  ],
+  "structure_alt": "Calcium carbonate drawn as a Ca²⁺ ion and a carbonate ion; in calcite each calcium is surrounded by six oxygen atoms from six carbonate groups.",
+  "form_labels": {
+   "calcite": "calcite, trigonal",
+   "aragonite": "aragonite, orthorhombic",
+   "vaterite": "vaterite, monoclinic",
+   "hemihydrate": "hemihydrate",
+   "monohydrate": "monohydrate (monohydrocalcite)",
+   "hexahydrate": "hexahydrate (ikaite)"
+  },
+  "forms_note": "All six forms have a published crystal structure, but supplements are made from calcite; aragonite, vaterite and the three hydrates are minerals or laboratory phases not confirmed in any product.",
+  "dosing": [
+   [
+    "With food",
+    "Take with a meal: carbonate needs stomach acid, and with acid-reducing drugs (PPIs, H2 blockers) or low stomach acid, calcium citrate is the better choice."
+   ],
+   [
+    "Dose size",
+    "Absorption is highest at 500 mg of calcium or less per dose, so split larger amounts over the day."
+   ],
+   [
+    "Interactions",
+    "Keep levothyroxine at least 4 hours apart and quinolone antibiotics 2 hours apart; dolutegravir 2 hours before or 6 hours after. A large trial saw slightly more kidney stones (HR 1.17), so people with a stone history should discuss it with a doctor."
+   ]
+  ],
+  "positives": [
+   "Most calcium per tablet, about 40 % by weight",
+   "Cheapest common calcium form per milligram",
+   "Well absorbed in healthy adults when taken with food",
+   "Form used in the largest calcium trials"
+  ],
+  "negatives": [
+   "Poorly absorbed fasting when stomach acid is low",
+   "Can cause gas, bloating or constipation",
+   "Only small effects on bone density and fractures",
+   "Interferes with thyroid hormone and some antibiotics"
+  ],
+  "foods": {
+   "title": "Top dietary calcium sources",
+   "warning": "These foods contain natural calcium, **not calcium carbonate**. They are an alternative or complement to the supplement, not a source of this compound.",
+   "columns": [
+    "Food",
+    "Natural form of Ca",
+    "Elemental Ca per serving"
+   ],
+   "rows": [
+    [
+     "Yogurt, plain low-fat",
+     "8 oz (227 g)",
+     "Casein-bound calcium phosphate",
+     "≈ 415 mg"
+    ],
+    [
+     "Mozzarella, part-skim",
+     "1.5 oz (42 g)",
+     "Casein-bound calcium phosphate",
+     "≈ 333 mg"
+    ],
+    [
+     "Sardines, canned with bones",
+     "3 oz (85 g)",
+     "Bone mineral (calcium phosphate)",
+     "≈ 325 mg"
+    ],
+    [
+     "Milk, nonfat",
+     "1 cup (240 ml)",
+     "Casein-bound calcium phosphate",
+     "≈ 299 mg"
+    ],
+    [
+     "Tofu, firm, made with calcium sulfate",
+     "½ cup (126 g)",
+     "Added calcium sulfate",
+     "≈ 253 mg"
+    ]
+   ],
+   "note": "Approximate values from NIH ODS (Calcium fact sheet, based on USDA FoodData Central). Dairy calcium is largely bound to casein as calcium phosphate; about 30 % of the calcium in dairy is absorbed."
+  },
+  "scores_note": "Evidence 8.0: large RCTs on this form (WHI, 36,282 women, 1000 mg Ca + 400 IU D3 for 7 years) plus isotope absorption studies. Bioavailability 4.0 = solubility 1 (about 0.014 g/L in water at 25 °C vs about 1 g/L for calcium citrate, about 43 g/L for gluconate and about 105 g/L for lactate; dissolves in stomach acid) + absorption 3 (fractional absorption 0.225 vs 0.243 for citrate in healthy fasting adults but 0.042 vs 0.452 in achlorhydria; citrate 20–27 % better in a meta-analysis of 15 studies; solubility tracks absorption only weakly). Benefits 5.0: hip BMD +1.06 % at 9 years and adherence-adjusted hip fracture HR 0.71, but intention-to-treat hip fracture HR 0.88 (n.s.). Safety 6.0: EFSA UL 2500 mg/day total calcium is reachable with diet plus high-dose supplements, constipation and bloating, kidney stones HR 1.17 in WHI, interactions with levothyroxine, quinolones and dolutegravir, caution in kidney disease. Pricing 10.0: reference form, ratio 1.0, median 0.40 CZK per 100 mg Ca over 4 products (2026-10-14, CZK, EUR/USD at ECB rates), confidence high."
+ },
+ "cs": {
+  "subtitle": "Anorganická sůl vápníku · Minerály · Kosti",
+  "about": [
+   "Uhličitan vápenatý je jednoduchá minerální sůl, látka, z níž je vápenec, křída i vaječná skořápka, a s asi 40 % vápníku v hmotnosti je to nejkoncentrovanější běžný doplněk vápníku. Vápník je hlavním minerálem kostí a zubů a je potřeba také pro stah svalů, přenos nervových signálů a srážení krve. Sůl se ve vodě téměř nerozpouští a k uvolnění vápníku potřebuje žaludeční kyselinu, takže se dobře vstřebává s jídlem, ale špatně nalačno u lidí s nízkou žaludeční kyselostí. Metaanalýza zjistila, že citrát vápenatý se vstřebává zhruba o 20–27 % lépe, ačkoli u zdravých dospělých nalačno byly obě formy v izotopové studii podobné. Velké studie, včetně jedné s více než 36 000 ženami, používaly právě tuto formu a ukázaly malé zvýšení hustoty kosti v kyčli, ale celkově žádný jasný pokles zlomenin."
+  ],
+  "structure_alt": "Uhličitan vápenatý znázorněný jako iont Ca²⁺ a uhličitanový iont; v kalcitu je každý vápník obklopen šesti atomy kyslíku ze šesti uhličitanových skupin.",
+  "form_labels": {
+   "calcite": "kalcit, trigonální",
+   "aragonite": "aragonit, kosočtverečný",
+   "vaterite": "vaterit, jednoklonný",
+   "hemihydrate": "hemihydrát",
+   "monohydrate": "monohydrát (monohydrokalcit)",
+   "hexahydrate": "hexahydrát (ikait)"
+  },
+  "forms_note": "Všech šest forem má publikovanou krystalovou strukturu, ale doplňky se vyrábějí z kalcitu; aragonit, vaterit a tři hydráty jsou minerály nebo laboratorní fáze, jejichž použití v žádném přípravku nebylo potvrzeno.",
+  "dosing": [
+   [
+    "S jídlem",
+    "Užívejte s jídlem: uhličitan potřebuje žaludeční kyselinu, a při užívání léků snižujících kyselost (PPI, H2 blokátory) nebo při nízké kyselosti je lepší volbou citrát vápenatý."
+   ],
+   [
+    "Velikost dávky",
+    "Vstřebávání je nejvyšší při 500 mg vápníku nebo méně na dávku, proto větší množství rozdělte během dne."
+   ],
+   [
+    "Interakce",
+    "Levothyroxin užívejte s odstupem alespoň 4 hodin a chinolonová antibiotika s odstupem 2 hodin; dolutegravir 2 hodiny před nebo 6 hodin po. Ve velké studii se objevilo mírně více ledvinových kamenů (HR 1,17), proto by lidé s kameny v anamnéze měli užívání probrat s lékařem."
+   ]
+  ],
+  "positives": [
+   "Nejvíce vápníku v tabletě, asi 40 % hmotnosti",
+   "Nejlevnější běžná forma vápníku na miligram",
+   "U zdravých dospělých se s jídlem dobře vstřebává",
+   "Forma použitá v největších studiích s vápníkem"
+  ],
+  "negatives": [
+   "Nalačno se při nízké žaludeční kyselosti špatně vstřebává",
+   "Může způsobit plynatost, nadýmání nebo zácpu",
+   "Jen malý účinek na hustotu kostí a zlomeniny",
+   "Narušuje vstřebávání hormonu štítné žlázy a některých antibiotik"
+  ],
+  "foods": {
+   "title": "Hlavní potravinové zdroje vápníku",
+   "warning": "Tyto potraviny obsahují přirozený vápník, **nikoli uhličitan vápenatý**. Jsou alternativou nebo doplňkem k doplňku stravy, ne zdrojem této látky.",
+   "columns": [
+    "Potravina",
+    "Přirozená forma Ca",
+    "Elementární Ca na porci"
+   ],
+   "rows": [
+    [
+     "Jogurt bílý nízkotučný",
+     "8 oz (227 g)",
+     "Fosforečnan vápenatý vázaný na kasein",
+     "≈ 415 mg"
+    ],
+    [
+     "Mozzarella, polotučná",
+     "1,5 oz (42 g)",
+     "Fosforečnan vápenatý vázaný na kasein",
+     "≈ 333 mg"
+    ],
+    [
+     "Sardinky v konzervě i s kostmi",
+     "3 oz (85 g)",
+     "Kostní minerál (fosforečnan vápenatý)",
+     "≈ 325 mg"
+    ],
+    [
+     "Mléko odtučněné",
+     "1 hrnek (240 ml)",
+     "Fosforečnan vápenatý vázaný na kasein",
+     "≈ 299 mg"
+    ],
+    [
+     "Tofu pevné, srážené síranem vápenatým",
+     "½ hrnku (126 g)",
+     "Přidaný síran vápenatý",
+     "≈ 253 mg"
+    ]
+   ],
+   "note": "Přibližné hodnoty podle NIH ODS (přehled o vápníku, na základě USDA FoodData Central). Vápník v mléčných výrobcích je z velké části vázán na kasein jako fosforečnan vápenatý; vstřebá se ho asi 30 %."
+  },
+  "scores_note": "Důkazy 8,0: velké RCT s touto formou (WHI, 36 282 žen, 1000 mg Ca + 400 IU D3 po 7 let) a izotopové studie vstřebávání. Biologická dostupnost 4,0 = rozpustnost 1 (asi 0,014 g/l ve vodě při 25 °C oproti asi 1 g/l u citrátu vápenatého, asi 43 g/l u glukonátu a asi 105 g/l u laktátu; rozpouští se v žaludeční kyselině) + vstřebávání 3 (frakční vstřebávání 0,225 oproti 0,243 u citrátu u zdravých dospělých nalačno, ale 0,042 oproti 0,452 při achlorhydrii; citrát o 20–27 % lepší v metaanalýze 15 studií; rozpustnost se vstřebáváním souvisí jen slabě). Přínosy 5,0: hustota kosti v kyčli +1,06 % po 9 letech a HR zlomeniny kyčle 0,71 po úpravě na adherenci, ale v analýze intention-to-treat HR 0,88 (nevýznamné). Bezpečnost 6,0: horní limit EFSA 2500 mg/den celkového vápníku lze se stravou a vysokými dávkami doplňků dosáhnout, zácpa a nadýmání, ledvinové kameny HR 1,17 ve WHI, interakce s levothyroxinem, chinolony a dolutegravirem, opatrnost při onemocnění ledvin. Cena 10,0: referenční forma, poměr 1,0, medián 0,40 Kč za 100 mg Ca u 4 přípravků (14. 10. 2026, Kč, EUR/USD podle kurzů ECB), jistota vysoká."
+ }
+}

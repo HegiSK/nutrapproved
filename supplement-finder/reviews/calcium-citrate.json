@@ -1,0 +1,394 @@
+{
+ "id": "calcium-citrate",
+ "compound": {
+  "name": {
+   "en": "Calcium citrate",
+   "cs": "Citrát vápenatý"
+  },
+  "aliases": [
+   "tricalcium citrate",
+   "tricalcium dicitrate",
+   "calcium citrate tetrahydrate",
+   "E333",
+   "vápník citrát",
+   "citronan vápenatý",
+   "trikalcium citrát"
+  ],
+  "type": "mineral",
+  "form": "ionic",
+  "active": "calcium",
+  "goals": [
+   "bones"
+  ],
+  "dose": {
+   "min": 500,
+   "max": 1200,
+   "unit": "mg",
+   "basis": "elemental calcium",
+   "per": "day"
+  },
+  "upper_limit": {
+   "value": 2500,
+   "unit": "mg",
+   "basis": "total calcium",
+   "source": "EFSA"
+  },
+  "timing": "with or without food",
+  "vegan": true
+ },
+ "smiles": "OC(CC(=O)[O-])(CC(=O)[O-])C(=O)[O-].OC(CC(=O)[O-])(CC(=O)[O-])C(=O)[O-].[Ca+2].[Ca+2].[Ca+2]",
+ "forms": [
+  {
+   "key": "tetrahydrate",
+   "formula": "C₁₂H₁₀Ca₃O₁₄·4H₂O",
+   "cas": "5785-44-4",
+   "molar_mass": 570.49,
+   "active_percent": 21.08,
+   "commercial": true,
+   "source": "Kaduk 2018 (Powder Diffraction); CAS from Jungbunzlauer specification; JECFA monograph",
+   "note": "New tetrahydrate polymorph solved by Kaduk (2018) from laboratory and synchrotron powder data with DFT optimisation; layers of edge-sharing Ca polyhedra including triply chelated Ca, plus an isolated water-coordinated Ca. Kaduk reports it as the major crystalline phase in several commercial calcium supplements, so it is expected to be the most commonly sold form (from the crystallography, not a market survey); suppliers (Jungbunzlauer, JECFA E333) specify the tetrahydrate without naming the polymorph. Space group and cell not read (full text not accessible; Powder Diffraction File entries 00-069-1272 to 1274 cover Kaduk's three phases). Search log: name variants calcium citrate, tricalcium citrate, tricalcium dicitrate, tri-calcium di-citrate tetrahydrate, calcium citrate tetrahydrate/hexahydrate/dihydrate/anhydrous, earlandite, calcium hydrogen citrate; 11 queries (main ones in extended mode); checked Z Anorg Allg Chem, Powder Diffraction, Acta Cryst E/IUCrData, AMCSD, OSTI, Food Res Int, Google Patents. Not checked: CSD entries directly (no access).",
+   "structure": {
+    "ref": "Kaduk JA. Powder Diffr 2018;33(2):98–107",
+    "id": null,
+    "system": null,
+    "space_group": null
+   }
+  },
+  {
+   "key": "tetrahydrate-earlandite",
+   "formula": "C₁₂H₁₀Ca₃O₁₄·4H₂O",
+   "cas": null,
+   "molar_mass": 570.49,
+   "active_percent": 21.08,
+   "commercial": false,
+   "source": "Herdtweck et al. 2011; AMCSD 0019542",
+   "note": "Earlier tetrahydrate polymorph, [Ca₃(C₆H₅O₇)₂(H₂O)₂]·2H₂O: two waters bound to Ca and two in the lattice. Single-crystal structure, triclinic P-1, a = 5.947, b = 10.225, c = 16.650 Å, α = 72.21°, β = 79.72°, γ = 89.79° (synthetic; composition of the mineral earlandite; CSD ISEQIH). Not confirmed as the phase in any product, so commercial is false; it shares CAS 5785-44-4 with the other tetrahydrate.",
+   "structure": {
+    "ref": "Herdtweck E, Kornprobst T, Sieber R, Straver L, Plank J. Z Anorg Allg Chem 2011;637:655–659",
+    "id": "AMCSD 0019542; CSD ISEQIH",
+    "system": "triclinic",
+    "space_group": "P-1"
+   }
+  },
+  {
+   "key": "anhydrous",
+   "formula": "C₁₂H₁₀Ca₃O₁₄",
+   "cas": "813-94-5",
+   "molar_mass": 498.43,
+   "active_percent": 24.12,
+   "commercial": true,
+   "source": "Kaduk 2018; CAS from JECFA monograph (INS 333) and Lohmann product data",
+   "note": "Anhydrous tricalcium citrate, a three-dimensional network of Ca polyhedra (Kaduk 2018, powder data + DFT). Sold as a supplement ingredient (e.g. Lohmann Tricalcium Citrate anhydrous, USP-NF, E 333(iii), approx. 24 % Ca); Kaduk (2020, Acta Cryst E) describes the anhydrous phase as occurring in dietary supplements, while Kaduk (2018) found the tetrahydrate the major phase in the products he tested. Space group and cell not read. JECFA lists CAS 813-94-5 for calcium citrate in general.",
+   "structure": {
+    "ref": "Kaduk JA. Powder Diffr 2018;33(2):98–107",
+    "id": null,
+    "system": null,
+    "space_group": null
+   }
+  },
+  {
+   "key": "hexahydrate",
+   "formula": "C₁₂H₁₀Ca₃O₁₄·6H₂O",
+   "cas": null,
+   "molar_mass": 606.52,
+   "active_percent": 19.82,
+   "commercial": false,
+   "source": "Kaduk 2018",
+   "note": "Hexahydrate with the same Ca-citrate layers, water on the isolated Ca and two uncoordinated waters (Kaduk 2018). Forms by precipitation below about 52 °C and is the stable hydrate at body temperature, but less soluble than the tetrahydrate (Liu et al. 2020; Hedegaard & Skibsted 2016). Not confirmed in products. Space group and cell not read.",
+   "structure": {
+    "ref": "Kaduk JA. Powder Diffr 2018;33(2):98–107",
+    "id": null,
+    "system": null,
+    "space_group": null
+   }
+  }
+ ],
+ "scores": {
+  "evidence": 7.5,
+  "pricing": 2.0,
+  "benefits": 5.0,
+  "safety": 6.5,
+  "bioavailability": 6.0
+ },
+ "pricing": {
+  "currency": "CZK",
+  "date": "2026-10-14",
+  "per": "100 mg elemental mineral",
+  "confidence": "high",
+  "products": [
+   {
+    "shop": "gymbeam.cz",
+    "name": "NOW Foods Calcium Citrate, 100 tablets",
+    "url": "https://gymbeam.cz/citrat-vapenaty-now-foods.html",
+    "form": "tetrahydrate",
+    "price": 369.0,
+    "units": 100,
+    "elemental_per_unit": 300,
+    "cost_per_100mg": 1.23
+   },
+   {
+    "shop": "alza.cz",
+    "name": "Swanson Calcium Citrate 200 mg, 60 capsules",
+    "url": "https://m.alza.cz/swanson-calcium-citrate-vapnik-citrat-200-mg-60-kapsli-d7045044.htm",
+    "form": "tetrahydrate",
+    "price": 179.0,
+    "units": 60,
+    "elemental_per_unit": 200,
+    "cost_per_100mg": 1.4917
+   },
+   {
+    "shop": "vegmart.cz",
+    "name": "BioCare Calcium Citrate, 90 capsules",
+    "url": "https://vegmart.cz/biocare-calcium-citrate-citrat-vapenaty-90-kapsli",
+    "form": "tetrahydrate",
+    "price": 624.0,
+    "units": 90,
+    "elemental_per_unit": 100,
+    "cost_per_100mg": 6.9333
+   },
+   {
+    "shop": "vitalabo.com",
+    "name": "Pure Encapsulations Calcium (calcium citrate), 180 capsules",
+    "url": "https://vitalabo.com/pure/calcium-calcium-citrate",
+    "form": "tetrahydrate",
+    "price": 1388.11,
+    "units": 180,
+    "elemental_per_unit": 150,
+    "cost_per_100mg": 5.1411
+   }
+  ],
+  "median_cost_per_100mg": 3.3164,
+  "reference": {
+   "form": "carbonate",
+   "median_cost_per_100mg": 0.3992,
+   "products": [
+    {
+     "shop": "benu.cz",
+     "name": "Calcii carbonici 0,5 Medicamenta, 100 tablets",
+     "url": "https://www.benu.cz/uhlicitan-vapenaty",
+     "form": "carbonate",
+     "price": 209.0,
+     "units": 100,
+     "elemental_per_unit": 200.2,
+     "cost_per_100mg": 1.0439
+    },
+    {
+     "shop": "mtbiker.shop (GymBeam)",
+     "name": "GymBeam Calcium (calcium carbonate), 90 capsules",
+     "url": "https://www.mtbiker.shop/shop/outdoor/gymbeam-calcium-calcium-carbonate-90-capsules-p406398.html",
+     "form": "carbonate",
+     "price": 133.72,
+     "units": 90,
+     "elemental_per_unit": 266.7,
+     "cost_per_100mg": 0.5571
+    },
+    {
+     "shop": "iherb.com",
+     "name": "21st Century Calcium 600, 75 tablets",
+     "url": "https://www.iherb.com/pr/21st-century-calcium-supplement-600-75-tablets-600-mg-per-tablet/59330",
+     "form": "carbonate",
+     "price": 108.57,
+     "units": 75,
+     "elemental_per_unit": 600,
+     "cost_per_100mg": 0.2413
+    },
+    {
+     "shop": "iherb.com",
+     "name": "NOW Foods Calcium Carbonate Pure Powder, 340 g (200 servings)",
+     "url": "https://www.iherb.com/pr/now-foods-calcium-carbonate-pure-powder-12-oz-340-g/480",
+     "form": "carbonate",
+     "price": 213.0,
+     "units": 200,
+     "elemental_per_unit": 600,
+     "cost_per_100mg": 0.1775
+    }
+   ]
+  },
+  "ratio": 8.31,
+  "note": "Prices read from shop pages on 2026-10-14; EUR and USD converted at the ECB reference rates of 2026-10-14 (1 EUR = 24.357 CZK, 1 USD = 21.757 CZK). All four citrate products print calcium per unit on the label and are single-source calcium citrate; the hydrate is not stated, so they carry the main tetrahydrate key. Pure Encapsulations lists 900 mg Ca from 4500 mg calcium citrate per 6 capsules (20 %, consistent with the tetrahydrate). The median is pulled up by two premium brands (5.1 and 6.9 CZK per 100 mg Ca); the two cheapest citrate products cost 3.1–3.7× the carbonate median. Reference: the four calcium carbonate products of the calcium-carbonate review, same date."
+ },
+ "references": [
+  "Kaduk JA. Crystal structures of tricalcium citrates. *Powder Diffr*. 2018;33(2):98–107. doi:10.1017/S0885715618000283",
+  "Herdtweck E, Kornprobst T, Sieber R, Straver L, Plank J. Crystal structure, synthesis, and properties of tri-calcium di-citrate tetra-hydrate [Ca3(C6H5O7)2(H2O)2]·2H2O. *Z Anorg Allg Chem*. 2011;637:655–659. doi:10.1002/zaac.201100088 (AMCSD 0019542)",
+  "Kaduk JA. Crystal structure of aqua(citric acid)(hydrogen citrato)calcium monohydrate, [Ca(HC6H5O7)(H3C6H5O7)(H2O)]·H2O, from synchrotron X-ray powder data, and DFT-optimized crystal structure of existing calcium hydrogen citrate trihydrate. *Acta Cryst E*. 2020;76:1689–1693.",
+  "Liu X-C, Kirkensgaard JJK, Skibsted LH. Hydrates of calcium citrate and their interconversion in relation to calcium bioaccessibility. *Food Res Int*. 2021;140:109867. doi:10.1016/j.foodres.2020.109867",
+  "Hedegaard MV, Skibsted LH. Aqueous solubility of calcium citrate and interconversion between the tetrahydrate and the hexahydrate as a balance between endothermic dissolution and exothermic complex formation. *Int Dairy J*. 2016;57:20–28. doi:10.1016/j.idairyj.2016.02.033",
+  "Vavrusova M, Garcia AC, Danielsen BP, Skibsted LH. Spontaneous supersaturation of calcium citrate from simultaneous isothermal dissolution of sodium citrate and sparingly soluble calcium hydroxycarboxylates in water. *RSC Adv*. 2017;7:3078–3088. doi:10.1039/c6ra25807g",
+  "International Chemical Safety Card 1193: Calcium carbonate. IPCS/ILO; 2012.",
+  "Goss SL, Lemons KA, Kerstetter JE, Bogner RH. Determination of calcium salt solubility with changes in pH and PCO2, simulating varying gastrointestinal environments. *J Pharm Pharmacol*. 2007;59(11):1485–1492. doi:10.1211/jpp.59.11.0004",
+  "Heaney RP, Recker RR, Weaver CM. Absorbability of calcium sources: the limited role of solubility. *Calcif Tissue Int*. 1990;46:300–304. doi:10.1007/BF02563819",
+  "Recker RR. Calcium absorption and achlorhydria. *N Engl J Med*. 1985;313(2):70–73. doi:10.1056/NEJM198507113130202",
+  "Sakhaee K, Bhuket T, Adams-Huet B, Rao DS. Meta-analysis of calcium bioavailability: a comparison of calcium citrate with calcium carbonate. *Am J Ther*. 1999;6(6):313–321. doi:10.1097/00045391-199911000-00005",
+  "Heaney RP, Dowell MS, Bierman J, Hale CA, Bendich A. Absorbability and cost effectiveness in calcium supplementation. *J Am Coll Nutr*. 2001;20(3):239–246. doi:10.1080/07315724.2001.10719038",
+  "Reid IR, Mason B, Horne A, et al. Randomized controlled trial of calcium in healthy older women. *Am J Med*. 2006;119(9):777–785. doi:10.1016/j.amjmed.2006.02.038",
+  "Joint FAO/WHO Expert Committee on Food Additives. Calcium citrate (INS 333) specification. *JECFA Monograph 1*. FAO.",
+  "EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific Opinion on the Tolerable Upper Intake Level of calcium. *EFSA J*. 2012;10(7):2814. doi:10.2903/j.efsa.2012.2814",
+  "NIH Office of Dietary Supplements. Calcium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Calcium-HealthProfessional/"
+ ],
+ "en": {
+  "subtitle": "Organic calcium salt · Minerals · Bones",
+  "about": [
+   "Calcium citrate is the calcium salt of citric acid, the acid of citrus fruit, and is sold as a fine white powder that is about one fifth calcium by weight. Calcium is the main mineral of bone and teeth and is also needed for muscle contraction, nerve signalling and blood clotting. Citrate is a normal product of human metabolism and a common food additive, and at supplement doses it has not been shown to have a health effect of its own beyond helping the salt dissolve. Unlike carbonate it does not need stomach acid, so it is absorbed well even on an empty stomach or with acid-reducing drugs, and a meta-analysis found it absorbed about 20–27 % better than carbonate, although some head-to-head studies with food found no difference. In a five-year trial in older women it slowed bone loss but did not clearly reduce fractures."
+  ],
+  "structure_alt": "Calcium citrate drawn as three Ca²⁺ ions and two citrate ions; in the crystal the citrate carboxylate and hydroxyl groups bind calcium in a layered network, which a simple drawing cannot show.",
+  "form_labels": {
+   "tetrahydrate": "tetrahydrate (Kaduk 2018 polymorph)",
+   "tetrahydrate-earlandite": "tetrahydrate, triclinic (earlandite type)",
+   "anhydrous": "anhydrous",
+   "hexahydrate": "hexahydrate"
+  },
+  "forms_note": "Four forms have a published crystal structure; supplements are sold as the tetrahydrate, and an anhydrous ingredient grade also exists, while the earlandite-type tetrahydrate and the hexahydrate are not confirmed in any product.",
+  "dosing": [
+   [
+    "With or without food",
+    "Can be taken on an empty stomach, so it suits people with low stomach acid or on acid-reducing drugs (PPIs, H2 blockers)."
+   ],
+   [
+    "Dose size",
+    "Absorption is highest at 500 mg of calcium or less per dose; at about 21 % calcium, 500 mg of calcium needs about 2.4 g of the salt, often several capsules."
+   ],
+   [
+    "Interactions",
+    "Keep levothyroxine at least 4 hours apart and quinolone antibiotics 2 hours apart; dolutegravir 2 hours before or 6 hours after."
+   ]
+  ],
+  "positives": [
+   "Absorbed without stomach acid, even on an empty stomach",
+   "Better absorbed than carbonate in a meta-analysis",
+   "Suitable with acid-reducing drugs such as PPIs",
+   "Slowed bone loss in a five-year trial"
+  ],
+  "negatives": [
+   "Only about 21 % calcium, so more pills per dose",
+   "About eight times the cost of carbonate per mg calcium",
+   "No clear reduction in fractures in a large trial",
+   "Constipation was more common than with placebo"
+  ],
+  "foods": {
+   "title": "Top dietary calcium sources",
+   "warning": "These foods contain natural calcium, **not calcium citrate**. They are an alternative or complement to the supplement, not a source of this compound.",
+   "columns": [
+    "Food",
+    "Natural form of Ca",
+    "Elemental Ca per serving"
+   ],
+   "rows": [
+    [
+     "Yogurt, plain low-fat",
+     "8 oz (227 g)",
+     "Casein-bound calcium phosphate",
+     "≈ 415 mg"
+    ],
+    [
+     "Mozzarella, part-skim",
+     "1.5 oz (42 g)",
+     "Casein-bound calcium phosphate",
+     "≈ 333 mg"
+    ],
+    [
+     "Sardines, canned with bones",
+     "3 oz (85 g)",
+     "Bone mineral (calcium phosphate)",
+     "≈ 325 mg"
+    ],
+    [
+     "Milk, nonfat",
+     "1 cup (240 ml)",
+     "Casein-bound calcium phosphate",
+     "≈ 299 mg"
+    ],
+    [
+     "Tofu, firm, made with calcium sulfate",
+     "½ cup (126 g)",
+     "Added calcium sulfate",
+     "≈ 253 mg"
+    ]
+   ],
+   "note": "Approximate values from NIH ODS (Calcium fact sheet, based on USDA FoodData Central). Dairy calcium is largely bound to casein as calcium phosphate; about 30 % of the calcium in dairy is absorbed."
+  },
+  "scores_note": "Evidence 7.5: a 5-year RCT on this form (1471 women, 1 g Ca/day), a meta-analysis of 15 absorption studies and isotope studies. Bioavailability 6.0 = solubility 2 (tetrahydrate about 0.9–1.0 g/L in water at 25 °C, vs about 0.014 g/L for carbonate, about 43 g/L for gluconate and about 105 g/L for lactate; does not need gastric acid, and at pH 7.5 differs little from carbonate) + absorption 4 (20–27 % higher than carbonate in a meta-analysis, 0.452 vs 0.042 fasting in achlorhydria, but equal to carbonate with food in two studies; solubility tracks absorption only weakly). Benefits 5.0: hip BMD +1.6 % (ITT) at 5 years, no reduction in symptomatic fractures (HR 0.90), unexplained excess of hip fractures (HR 3.55, few events). Safety 6.5: EFSA UL 2500 mg/day total calcium is reachable with diet plus high-dose supplements, constipation more common than placebo, interactions with levothyroxine, quinolones and dolutegravir; less gastric upset than carbonate per NIH. Pricing 2.0: median 3.32 CZK per 100 mg Ca over 4 products vs 0.40 for carbonate (ratio 8.31; 2026-10-14, CZK, EUR/USD at ECB rates), confidence high."
+ },
+ "cs": {
+  "subtitle": "Organická sůl vápníku · Minerály · Kosti",
+  "about": [
+   "Citrát vápenatý je vápenatá sůl kyseliny citronové, kyseliny citrusových plodů, a prodává se jako jemný bílý prášek, který z asi jedné pětiny hmotnosti tvoří vápník. Vápník je hlavním minerálem kostí a zubů a je potřeba také pro stah svalů, přenos nervových signálů a srážení krve. Citrát je běžným produktem lidského metabolismu a obvyklou potravinářskou přídatnou látkou a v dávkách z doplňků se u něj neprokázal vlastní zdravotní účinek kromě toho, že pomáhá soli rozpustit se. Na rozdíl od uhličitanu nepotřebuje žaludeční kyselinu, takže se dobře vstřebává i nalačno nebo při užívání léků snižujících kyselost, a metaanalýza zjistila asi o 20–27 % lepší vstřebávání než u uhličitanu, i když některé přímé srovnávací studie s jídlem rozdíl nenašly. V pětileté studii u starších žen zpomalil úbytek kostní hmoty, ale jasně nesnížil počet zlomenin."
+  ],
+  "structure_alt": "Citrát vápenatý znázorněný jako tři ionty Ca²⁺ a dva citrátové ionty; v krystalu karboxylové a hydroxylové skupiny citrátu vážou vápník do vrstevnaté sítě, kterou jednoduchý nákres nezachytí.",
+  "form_labels": {
+   "tetrahydrate": "tetrahydrát (polymorf podle Kaduka 2018)",
+   "tetrahydrate-earlandite": "tetrahydrát, triklinický (typ earlanditu)",
+   "anhydrous": "bezvodý",
+   "hexahydrate": "hexahydrát"
+  },
+  "forms_note": "Čtyři formy mají publikovanou krystalovou strukturu; doplňky se prodávají jako tetrahydrát a existuje i bezvodá surovina, zatímco tetrahydrát typu earlanditu a hexahydrát nejsou potvrzeny v žádném přípravku.",
+  "dosing": [
+   [
+    "S jídlem i bez něj",
+    "Lze užívat nalačno, proto se hodí pro lidi s nízkou žaludeční kyselostí nebo užívající léky snižující kyselost (PPI, H2 blokátory)."
+   ],
+   [
+    "Velikost dávky",
+    "Vstřebávání je nejvyšší při 500 mg vápníku nebo méně na dávku; při obsahu asi 21 % vápníku je na 500 mg vápníku potřeba asi 2,4 g soli, často několik kapslí."
+   ],
+   [
+    "Interakce",
+    "Levothyroxin užívejte s odstupem alespoň 4 hodin a chinolonová antibiotika s odstupem 2 hodin; dolutegravir 2 hodiny před nebo 6 hodin po."
+   ]
+  ],
+  "positives": [
+   "Vstřebává se bez žaludeční kyseliny, i nalačno",
+   "V metaanalýze se vstřebával lépe než uhličitan",
+   "Vhodný při užívání léků snižujících kyselost, např. PPI",
+   "V pětileté studii zpomalil úbytek kostní hmoty"
+  ],
+  "negatives": [
+   "Jen asi 21 % vápníku, proto více tablet na dávku",
+   "Asi osmkrát dražší než uhličitan na mg vápníku",
+   "Ve velké studii jasně nesnížil počet zlomenin",
+   "Zácpa byla častější než u placeba"
+  ],
+  "foods": {
+   "title": "Hlavní potravinové zdroje vápníku",
+   "warning": "Tyto potraviny obsahují přirozený vápník, **nikoli citrát vápenatý**. Jsou alternativou nebo doplňkem k doplňku stravy, ne zdrojem této látky.",
+   "columns": [
+    "Potravina",
+    "Přirozená forma Ca",
+    "Elementární Ca na porci"
+   ],
+   "rows": [
+    [
+     "Jogurt bílý nízkotučný",
+     "8 oz (227 g)",
+     "Fosforečnan vápenatý vázaný na kasein",
+     "≈ 415 mg"
+    ],
+    [
+     "Mozzarella, polotučná",
+     "1,5 oz (42 g)",
+     "Fosforečnan vápenatý vázaný na kasein",
+     "≈ 333 mg"
+    ],
+    [
+     "Sardinky v konzervě i s kostmi",
+     "3 oz (85 g)",
+     "Kostní minerál (fosforečnan vápenatý)",
+     "≈ 325 mg"
+    ],
+    [
+     "Mléko odtučněné",
+     "1 hrnek (240 ml)",
+     "Fosforečnan vápenatý vázaný na kasein",
+     "≈ 299 mg"
+    ],
+    [
+     "Tofu pevné, srážené síranem vápenatým",
+     "½ hrnku (126 g)",
+     "Přidaný síran vápenatý",
+     "≈ 253 mg"
+    ]
+   ],
+   "note": "Přibližné hodnoty podle NIH ODS (přehled o vápníku, na základě USDA FoodData Central). Vápník v mléčných výrobcích je z velké části vázán na kasein jako fosforečnan vápenatý; vstřebá se ho asi 30 %."
+  },
+  "scores_note": "Důkazy 7,5: pětiletá RCT s touto formou (1471 žen, 1 g Ca/den), metaanalýza 15 studií vstřebávání a izotopové studie. Biologická dostupnost 6,0 = rozpustnost 2 (tetrahydrát asi 0,9–1,0 g/l ve vodě při 25 °C oproti asi 0,014 g/l u uhličitanu, asi 43 g/l u glukonátu a asi 105 g/l u laktátu; nepotřebuje žaludeční kyselinu a při pH 7,5 se od uhličitanu liší málo) + vstřebávání 4 (o 20–27 % vyšší než u uhličitanu v metaanalýze, 0,452 oproti 0,042 nalačno při achlorhydrii, ale se stravou ve dvou studiích stejné jako u uhličitanu; rozpustnost se vstřebáváním souvisí jen slabě). Přínosy 5,0: hustota kosti v kyčli +1,6 % (ITT) po 5 letech, bez snížení symptomatických zlomenin (HR 0,90), nevysvětlený nadbytek zlomenin kyčle (HR 3,55, málo případů). Bezpečnost 6,5: horní limit EFSA 2500 mg/den celkového vápníku lze se stravou a vysokými dávkami doplňků dosáhnout, zácpa častější než u placeba, interakce s levothyroxinem, chinolony a dolutegravirem; podle NIH méně žaludečních potíží než u uhličitanu. Cena 2,0: medián 3,32 Kč za 100 mg Ca u 4 přípravků oproti 0,40 Kč u uhličitanu (poměr 8,31; 14. 10. 2026, Kč, EUR/USD podle kurzů ECB), jistota vysoká."
+ }
+}
