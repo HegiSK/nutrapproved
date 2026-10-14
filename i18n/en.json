@@ -162,6 +162,13 @@
  "card.dose": "Daily dose",
  "card.upper": "Upper limit",
  "card.per_day": "/ day",
+ "review.fact.upper": "Upper limit",
+ "review.spec.formula": "Formula",
+ "review.spec.mass": "Molar mass",
+ "review.spec.cas": "CAS",
+ "review.spec.form": "Form",
+ "review.forms.other": "Confirmed crystalline forms",
+ "review.dosing": "Dosage and timing",
  "review.fact.dose": "Typical dose",
  "review.fact.timing": "Best taken"
 }

@@ -179,48 +179,6 @@
    "Zinc supports immune function, wound healing, skin integrity and many enzymes. Picolinic acid is claimed to improve zinc uptake, but this rests mainly on one small 1987 crossover trial of tissue zinc markers; a later isotope-based absorption comparison covered citrate, gluconate and oxide, not picolinate."
   ],
   "structure_alt": "Structural formula of zinc picolinate: a central zinc atom bonded to two picolinate ligands, each through the pyridine nitrogen and a carboxylate oxygen, forming two five-membered chelate rings.",
-  "facts": [
-   [
-    "Formula",
-    "C₁₂H₈N₂O₄Zn"
-   ],
-   [
-    "Molar mass",
-    "309.6 g/mol"
-   ],
-   [
-    "Elemental Zn",
-    "≈ 21.1 % by weight"
-   ],
-   [
-    "CAS (anhydrate)",
-    "17949-65-4"
-   ],
-   [
-    "Diaqua (dihydrate) – formula",
-    "C₁₂H₈N₂O₄Zn·2H₂O (crystal form, not confirmed as sold)"
-   ],
-   [
-    "Diaqua – molar mass / CAS",
-    "345.62 g/mol / no separate CAS found"
-   ],
-   [
-    "Diaqua – elemental Zn",
-    "≈ 18.9 % by weight"
-   ],
-   [
-    "Tetrahydrate – formula",
-    "C₁₂H₈N₂O₄Zn·4H₂O (published crystal structure; sale unconfirmed)"
-   ],
-   [
-    "Tetrahydrate – molar mass / CAS",
-    "381.65 g/mol / no CAS found"
-   ],
-   [
-    "Tetrahydrate – elemental Zn",
-    "≈ 17.1 % by weight"
-   ]
-  ],
   "positives": [
    "Zinc picolinate raised hair, urine and red-cell zinc in a 4-week, double-blind crossover trial (n = 15, 50 mg Zn/day) where gluconate and citrate did not (Barrie 1987).",
    "About 21 % elemental zinc in the anhydrous form, so a 25 mg zinc capsule needs only about 120 mg of powder.",
@@ -276,7 +234,19 @@
    ],
    "note": "Approximate values from NIH ODS (Zinc fact sheet). Zinc from plant foods is partly bound to phytate, which lowers absorption."
   },
-  "scores_note": "Evidence 5.0: one small crossover trial on this form plus mixed single-dose data, none with isotopes; benefits 4.0: absorption advantage unproven, effects are those of zinc generally; safety 6.0: typical doses sit at the EU 25 mg UL, with GI upset and copper/antibiotic interactions; pricing 6.0: median 18.9 CZK per 100 mg Zn from 4 products vs 6.1 for gluconate (ratio 3.12), prices of 2026-10-13 in CZK, medium confidence."
+  "scores_note": "Evidence 5.0: one small crossover trial on this form plus mixed single-dose data, none with isotopes; benefits 4.0: absorption advantage unproven, effects are those of zinc generally; safety 6.0: typical doses sit at the EU 25 mg UL, with GI upset and copper/antibiotic interactions; pricing 6.0: median 18.9 CZK per 100 mg Zn from 4 products vs 6.1 for gluconate (ratio 3.12), prices of 2026-10-13 in CZK, medium confidence.",
+  "form_labels": {
+   "anhydrate": "anhydrate",
+   "diaqua": "Diaqua (dihydrate)",
+   "tetrahydrate": "Tetrahydrate"
+  },
+  "forms_note": "Crystal-structure forms from the literature; whether any product is sold as a hydrate is unconfirmed. No separate CAS found for either.",
+  "dosing": [
+   [
+    "Comment",
+    "Taking it with a meal lowers the chance of nausea; meals rich in phytate (whole grains, legumes) reduce absorption. Keep it a few hours apart from iron, calcium and tetracycline or quinolone antibiotics. Long-term intake of 50 mg or more can lower copper status."
+   ]
+  ]
  },
  "cs": {
   "subtitle": "Chelátovaný zinek · Minerály · Imunita a pokožka",
@@ -285,48 +255,6 @@
    "Zinek podporuje imunitu, hojení ran, zdraví pokožky a řadu enzymů. Kyselině pikolinové se přisuzuje lepší vstřebávání zinku, ale opírá se to hlavně o jednu malou zkříženou studii z roku 1987 s tkáňovými markery; novější izotopové srovnání vstřebávání zahrnovalo citrát, glukonát a oxid, nikoli pikolinát."
   ],
   "structure_alt": "Strukturní vzorec zinek pikolinátu: centrální atom zinku vázaný ke dvěma pikolinátovým ligandům, každý přes dusík pyridinu a karboxylátový kyslík, za vzniku dvou pětičlenných chelátových kruhů.",
-  "facts": [
-   [
-    "Vzorec",
-    "C₁₂H₈N₂O₄Zn"
-   ],
-   [
-    "Molární hmotnost",
-    "309,6 g/mol"
-   ],
-   [
-    "Elementární Zn",
-    "≈ 21,1 % hm,"
-   ],
-   [
-    "CAS (bezvodý)",
-    "17949-65-4"
-   ],
-   [
-    "Diaqua (dihydrát) – vzorec",
-    "C₁₂H₈N₂O₄Zn·2H₂O (krystalová forma, prodej nepotvrzen)"
-   ],
-   [
-    "Diaqua – molární hmotnost / CAS",
-    "345,62 g/mol / vlastní CAS nenalezen"
-   ],
-   [
-    "Diaqua – elementární Zn",
-    "≈ 18,9 % hm,"
-   ],
-   [
-    "Tetrahydrát – vzorec",
-    "C₁₂H₈N₂O₄Zn·4H₂O (publikovaná krystalová struktura; prodej nepotvrzen)"
-   ],
-   [
-    "Tetrahydrát – molární hmotnost / CAS",
-    "381,65 g/mol / CAS nenalezen"
-   ],
-   [
-    "Tetrahydrát – elementární Zn",
-    "≈ 17,1 % hm,"
-   ]
-  ],
   "positives": [
    "Zinek pikolinát zvýšil obsah zinku ve vlasech, moči a červených krvinkách ve 4týdenní dvojitě zaslepené zkřížené studii (n = 15, 50 mg Zn/den), kde glukonát a citrát ne (Barrie 1987).",
    "Asi 21 % elementárního zinku v bezvodé formě, takže na kapsli s 25 mg zinku stačí asi 120 mg prášku.",
@@ -382,6 +310,18 @@
    ],
    "note": "Přibližné hodnoty z NIH ODS (informační list o zinku). Zinek z rostlinných potravin je částečně vázán na fytát, což snižuje vstřebávání."
   },
-  "scores_note": "Důkazy 5,0: jedna malá zkřížená studie této formy a smíšená jednorázová data, žádná izotopová; přínosy 4,0: výhoda ve vstřebávání nedoložena, účinky odpovídají zinku obecně; bezpečnost 6,0: typické dávky leží u limitu EU 25 mg, GI potíže a interakce s mědí a antibiotiky; cena 6,0: medián 18,9 Kč za 100 mg Zn ze 4 přípravků vs 6,1 u glukonátu (poměr 3,12), ceny z 13. 10. 2026 v Kč, střední jistota."
+  "scores_note": "Důkazy 5,0: jedna malá zkřížená studie této formy a smíšená jednorázová data, žádná izotopová; přínosy 4,0: výhoda ve vstřebávání nedoložena, účinky odpovídají zinku obecně; bezpečnost 6,0: typické dávky leží u limitu EU 25 mg, GI potíže a interakce s mědí a antibiotiky; cena 6,0: medián 18,9 Kč za 100 mg Zn ze 4 přípravků vs 6,1 u glukonátu (poměr 3,12), ceny z 13. 10. 2026 v Kč, střední jistota.",
+  "form_labels": {
+   "anhydrate": "bezvodý",
+   "diaqua": "Diaqua (dihydrát)",
+   "tetrahydrate": "Tetrahydrát"
+  },
+  "forms_note": "Formy známé z krystalových struktur v literatuře; zda se některý přípravek prodává jako hydrát, není potvrzeno. Pro žádnou nebyl nalezen vlastní CAS.",
+  "dosing": [
+   [
+    "Poznámka",
+    "S jídlem je menší riziko nevolnosti; jídla bohatá na fytáty (celozrnné produkty, luštěniny) vstřebávání snižují. Dodržte odstup několika hodin od železa, vápníku a tetracyklinových či chinolonových antibiotik. Dlouhodobý příjem 50 mg a více může snižovat hladinu mědi."
+   ]
+  ]
  }
 }

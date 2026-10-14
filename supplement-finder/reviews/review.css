@@ -58,3 +58,19 @@ dd { margin: 0; }
   .r-grid, .score-wrap { grid-template-columns: 1fr; }
   .bar-row { grid-template-columns: 110px 1fr 40px; }
 }
+
+/* Boxed chemistry facts, other forms and dosing (reviews with a `forms` list) */
+.specbox { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; }
+.specbox h3 { margin: 0 0 6px; font-size: 15px; color: var(--green-900); }
+.specbox h3 span { font-weight: 400; color: var(--muted); }
+.sub-h { margin: 28px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--green-700); }
+.spec, .forms-tbl, .dosing { width: 100%; border-collapse: collapse; font-size: 14px; }
+.spec td, .forms-tbl td, .dosing td { padding: 6px 8px 6px 0; border-bottom: 1px solid #eef2ee; vertical-align: top; }
+.spec tr:last-child td, .dosing tr:last-child td { border: 0; }
+.spec td:first-child, .dosing td:first-child { color: var(--muted); width: 38%; }
+.forms-tbl th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 600; padding: 0 8px 6px 0; border-bottom: 1px solid var(--border); }
+.forms-tbl td:first-child { font-weight: 600; }
+.forms-tbl tr:last-child td { border: 0; }
+.dosing { border: 1px solid var(--border); border-radius: var(--radius-sm); border-collapse: separate; border-spacing: 0; }
+.dosing td { padding: 8px 12px; }
+.dosing tr:last-child td { border: 0; }
