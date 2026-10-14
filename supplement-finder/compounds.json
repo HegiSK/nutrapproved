@@ -16,15 +16,16 @@
   {
     "id": "magnesium-oxide",
     "name": {"en": "Magnesium oxide", "cs": "Oxid hořečnatý"},
-    "aliases": ["MgO", "magnesia", "magnesium oxid", "hořčík oxid"],
+    "aliases": ["MgO", "magnesia", "periclase", "E530", "magnesium oxid", "hořčík oxid", "magnézie"],
     "type": "mineral",
     "form": "ionic",
     "active": "magnesium",
-    "goals": ["muscle", "digestion"],
+    "goals": ["digestion"],
     "dose": {"min": 200, "max": 400, "unit": "mg", "basis": "elemental magnesium", "per": "day"},
     "upper_limit": {"value": 250, "unit": "mg", "basis": "supplemental magnesium", "source": "EFSA"},
-    "timing": "with a meal",
-    "vegan": true
+    "timing": null,
+    "vegan": true,
+    "review": true
   },
   {
     "id": "zinc-picolinate",

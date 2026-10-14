@@ -1,0 +1,311 @@
+{
+ "id": "magnesium-oxide",
+ "compound": {
+  "name": {
+   "en": "Magnesium oxide",
+   "cs": "Oxid hořečnatý"
+  },
+  "aliases": [
+   "MgO",
+   "magnesia",
+   "periclase",
+   "E530",
+   "magnesium oxid",
+   "hořčík oxid",
+   "magnézie"
+  ],
+  "type": "mineral",
+  "form": "ionic",
+  "active": "magnesium",
+  "goals": [
+   "digestion"
+  ],
+  "dose": {
+   "min": 200,
+   "max": 400,
+   "unit": "mg",
+   "basis": "elemental magnesium",
+   "per": "day"
+  },
+  "upper_limit": {
+   "value": 250,
+   "unit": "mg",
+   "basis": "supplemental magnesium",
+   "source": "EFSA"
+  },
+  "timing": null,
+  "vegan": true
+ },
+ "smiles": "[Mg+2].[O-2]",
+ "forms": [
+  {
+   "key": "periclase",
+   "formula": "MgO",
+   "cas": "1309-48-4",
+   "molar_mass": 40.3,
+   "active_percent": 60.3,
+   "commercial": true,
+   "source": "Ph. Eur. monographs 0040/0041; COD 9007058 (Merli et al. 2002)",
+   "note": "Only solid form: cubic rock-salt structure (periclase), space group Fm-3m, a = 4.212 Å, Z = 4, Mg octahedrally coordinated by six O (COD 9007058). Light and heavy magnesium oxide (Ph. Eur. 0040/0041) are the same crystal phase and differ only in bulk density (≤ 0.15 vs ≥ 0.25 g/mL). No hydrate exists: MgO reacts with water to magnesium hydroxide (brucite), a different compound. 'Magnesium oxide monohydrate' in some product and trial descriptions is not a characterised crystalline hydrate. Checked: COD, Ph. Eur., American Mineralogist, Physics and Chemistry of Minerals."
+  }
+ ],
+ "scores": {
+  "evidence": 7.0,
+  "pricing": 10.0,
+  "benefits": 4.0,
+  "safety": 5.5
+ },
+ "pricing": {
+  "currency": "CZK",
+  "date": "2026-10-14",
+  "per": "100 mg elemental mineral",
+  "confidence": "medium",
+  "products": [
+   {
+    "shop": "kaufland.cz (apohealth)",
+    "name": "Vitaworld Magnesium 400, 120 capsules",
+    "url": "https://www.kaufland.cz/product/407178457/",
+    "form": "periclase",
+    "price": 437.33,
+    "units": 120,
+    "elemental_per_unit": 400,
+    "cost_per_100mg": 0.9111
+   },
+   {
+    "shop": "shop-apotheke.com",
+    "name": "Swanson Magnesium-Oxid 200 mg, 250 capsules",
+    "url": "https://www.shop-apotheke.com/arzneimittel/upmZKFFD7/swanson-magnesium-oxid-200-mg.htm",
+    "form": "periclase",
+    "price": 369.22,
+    "units": 250,
+    "elemental_per_unit": 200,
+    "cost_per_100mg": 0.7384
+   },
+   {
+    "shop": "knuspr.de",
+    "name": "Biolectra Magnesium 400 mg ultra, 20 capsules",
+    "url": "https://www.knuspr.de/en-DE/85504-biolectra-magnesium-400-mg-ultra-capsules",
+    "form": "periclase",
+    "price": 292.78,
+    "units": 20,
+    "elemental_per_unit": 400,
+    "cost_per_100mg": 3.6597
+   },
+   {
+    "shop": "aponeo.de",
+    "name": "Vitaworld Magnesium 400 Kapseln, 120 capsules",
+    "url": "https://www.aponeo.de/01389566-magnesium-400-kapseln.html",
+    "form": "periclase",
+    "price": 489.76,
+    "units": 120,
+    "elemental_per_unit": 400,
+    "cost_per_100mg": 1.0203
+   }
+  ],
+  "median_cost_per_100mg": 0.9657,
+  "reference": {
+   "form": "oxide",
+   "median_cost_per_100mg": 0.9657,
+   "products": [
+    {
+     "shop": "kaufland.cz (apohealth)",
+     "name": "Vitaworld Magnesium 400, 120 capsules",
+     "url": "https://www.kaufland.cz/product/407178457/",
+     "form": "oxide",
+     "price": 437.33,
+     "units": 120,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 0.9111
+    },
+    {
+     "shop": "shop-apotheke.com",
+     "name": "Swanson Magnesium-Oxid 200 mg, 250 capsules",
+     "url": "https://www.shop-apotheke.com/arzneimittel/upmZKFFD7/swanson-magnesium-oxid-200-mg.htm",
+     "form": "oxide",
+     "price": 369.22,
+     "units": 250,
+     "elemental_per_unit": 200,
+     "cost_per_100mg": 0.7384
+    },
+    {
+     "shop": "knuspr.de",
+     "name": "Biolectra Magnesium 400 mg ultra, 20 capsules",
+     "url": "https://www.knuspr.de/en-DE/85504-biolectra-magnesium-400-mg-ultra-capsules",
+     "form": "oxide",
+     "price": 292.78,
+     "units": 20,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 3.6597
+    },
+    {
+     "shop": "aponeo.de",
+     "name": "Vitaworld Magnesium 400 Kapseln, 120 capsules",
+     "url": "https://www.aponeo.de/01389566-magnesium-400-kapseln.html",
+     "form": "oxide",
+     "price": 489.76,
+     "units": 120,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 1.0203
+    }
+   ]
+  },
+  "ratio": 1.0,
+  "note": "Magnesium oxide is itself the cheapest common magnesium form and is the reference, so the ratio is 1.0 by definition and the reference list repeats the same products. Four single-ingredient MgO products; EUR prices converted at an approximate 24.5 CZK/EUR. Labels state Mg per capsule (Swanson: 400 mg Mg as oxide per 2 capsules); for Vitaworld and Biolectra the 400 mg is read as elemental Mg (capsule weights fit this), which is why confidence is medium. Prices read 2026-10-14; shipping excluded."
+ },
+ "references": [
+  "Merli M, Pavese A, Ranzini M. Thermal behaviour of periclase (MgO) and related crystal structure refinement. *Phys Chem Miner*. 2002;29:455–464. (COD 9007058)",
+  "European Pharmacopoeia. Magnesium oxide, light (monograph 0040) and Magnesium oxide, heavy (monograph 0041). *Ph. Eur.* 04/2009.",
+  "Firoz M, Graber M. Bioavailability of US commercial magnesium preparations. *Magnes Res*. 2001;14(4):257–262. PMID: 11794633.",
+  "Lindberg JS, Zobitz MM, Poindexter JR, Pak CYC. Magnesium bioavailability from magnesium citrate and magnesium oxide. *J Am Coll Nutr*. 1990;9(1):48–55. doi:10.1080/07315724.1990.10720349",
+  "Kappeler D, Heimbeck I, Herpich C, Naue N, Höfler J, Timmer W, Michalke B. Higher bioavailability of magnesium citrate as compared to magnesium oxide shown by evaluation of urinary excretion and serum levels after single-dose administration in a randomized cross-over study. *BMC Nutr*. 2017;3:7. doi:10.1186/s40795-016-0121-3",
+  "Morishita D, et al. Senna versus magnesium oxide for the treatment of chronic constipation: a randomized, placebo-controlled trial. *Am J Gastroenterol*. 2021;116(1):152–161.",
+  "Mori H, Tack J, Suzuki H. Magnesium oxide in constipation. *Nutrients*. 2021;13(2):421. doi:10.3390/nu13020421",
+  "Roguin Maor N, Alperin M, Shturman E, et al. Effect of magnesium oxide supplementation on nocturnal leg cramps: a randomized clinical trial. *JAMA Intern Med*. 2017;177(5):617–623.",
+  "Scientific Committee on Food. Opinion on the tolerable upper intake level of magnesium. SCF/CS/NUT/UPPLEV/54 Final, 2001. In: *Tolerable upper intake levels for vitamins and minerals*. EFSA; 2006.",
+  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+ ],
+ "en": {
+  "subtitle": "Inorganic magnesium salt · Minerals · Digestion",
+  "about": [
+   "Magnesium oxide (MgO, CAS 1309-48-4) is a simple ionic solid with the cubic rock-salt structure of the mineral periclase: each Mg²⁺ sits in an octahedron of six oxide ions. It is the only solid form; no hydrate exists, because water converts it slowly to magnesium hydroxide. With **60.3 % elemental magnesium** it is the most concentrated and usually the cheapest magnesium source, so a 400 mg Mg dose fits in one capsule. It is practically insoluble in water and dissolves only in stomach acid; even under simulated peak gastric acid only about 43 % dissolved, and in volunteers it raised urinary magnesium far less than citrate. Fractional absorption has been estimated at about 4 %.",
+   "Magnesium is a cofactor in hundreds of enzymes and is needed for muscle and nerve function, energy metabolism and bone. Because so little MgO is absorbed, the unabsorbed part stays in the gut and draws in water, which makes MgO an effective osmotic laxative: in a 28-day placebo-controlled trial, 1.5 g/day helped 68 % of patients with chronic constipation versus 12 % on placebo. For raising body magnesium, organic salts such as citrate perform better per mg, and a 4-week trial of 520 mg/day Mg as oxide did not reduce night-time leg cramps more than placebo."
+  ],
+  "structure_alt": "Magnesium oxide drawn as an Mg²⁺ ion and an O²⁻ ion; in the solid each ion is surrounded octahedrally by six of the other (rock-salt lattice).",
+  "form_labels": {
+   "periclase": "periclase, cubic"
+  },
+  "dosing": [
+   [
+    "Comment",
+    "Take with or after a meal: MgO needs stomach acid to dissolve, and acid-reducing drugs (PPIs, H2 blockers) weaken its effect. Keep at least 2 hours apart from tetracycline or quinolone antibiotics and bisphosphonates. Laxative doses (1–2 g MgO) exceed the EFSA limit and are used under medical advice; people with kidney disease need serum magnesium checks."
+   ]
+  ],
+  "positives": [
+   "Highest magnesium content of any common form (60.3 % w/w): one small capsule can deliver 400 mg of elemental magnesium",
+   "Cheapest magnesium form per mg of elemental magnesium (about 1 CZK per 100 mg Mg in single-ingredient products)",
+   "Well-characterised, single crystalline form (periclase) with pharmacopoeial quality standards, so products are chemically consistent",
+   "Effective osmotic laxative in randomised placebo-controlled trials: 68 % response versus 12 % on placebo for chronic constipation over 28 days"
+  ],
+  "negatives": [
+   "Poorly soluble and poorly absorbed: fractional absorption about 4 %, and lower urinary and serum magnesium rise than citrate in crossover studies",
+   "Laxative effect and diarrhoea are common at supplement doses, especially above the 250 mg/day EFSA limit for supplemental magnesium",
+   "Risk of hypermagnesaemia with daily use in kidney disease and at high doses; interacts with antibiotics, bisphosphonates and acid-reducing drugs",
+   "No benefit over placebo for nocturnal leg cramps in a randomised trial (520 mg/day Mg for 4 weeks), so muscle-related claims are not supported"
+  ],
+  "foods": {
+   "title": "Top dietary magnesium sources",
+   "warning": "These foods contain natural magnesium, **not magnesium oxide**. They are an alternative or complement to the supplement, not a source of this compound.",
+   "columns": [
+    "Food",
+    "Natural form of Mg",
+    "Elemental Mg per serving"
+   ],
+   "rows": [
+    [
+     "Pumpkin seeds, roasted",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 156 mg"
+    ],
+    [
+     "Chia seeds",
+     "28 g (1 oz)",
+     "Phytate- and fibre-bound",
+     "≈ 111 mg"
+    ],
+    [
+     "Almonds, dry roasted",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 80 mg"
+    ],
+    [
+     "Spinach, boiled",
+     "½ cup",
+     "Chlorophyll core and bound",
+     "≈ 78 mg"
+    ],
+    [
+     "Cashews, dry roasted",
+     "28 g (1 oz)",
+     "Phytate-bound",
+     "≈ 74 mg"
+    ]
+   ],
+   "note": "Approximate values from NIH ODS (Magnesium fact sheet). Magnesium in plant foods is largely bound to phytate and fibre, so absorption varies."
+  },
+  "scores_note": "Evidence 7.0: several RCTs on MgO itself (constipation positive, leg cramps negative) plus isotope/urinary absorption studies. Benefits 4.0: absorption is the lowest of common forms (0/4), strong laxative effect (3/4), narrow range of supported outcomes (1/2). Safety 5.5: usual doses reach or exceed the EFSA 250 mg limit, frequent GI effects, drug interactions, hypermagnesaemia risk in kidney disease. Pricing 10.0: MgO is the reference form (ratio 1.0); median ≈ 0.97 CZK per 100 mg Mg over 4 products, 2026-10-14, confidence medium."
+ },
+ "cs": {
+  "subtitle": "Anorganická sůl hořčíku · Minerály · Trávení",
+  "about": [
+   "Oxid hořečnatý (MgO, CAS 1309-48-4) je jednoduchá iontová pevná látka s kubickou strukturou kamenné soli, stejnou jako minerál periklas: každý iont Mg²⁺ je obklopen oktaedrem šesti oxidových iontů. Jde o jedinou pevnou formu; hydrát neexistuje, protože voda ho pomalu převádí na hydroxid hořečnatý. S **60,3 % elementárního hořčíku** je to nejkoncentrovanější a obvykle nejlevnější zdroj hořčíku, takže dávka 400 mg Mg se vejde do jedné kapsle. Ve vodě je prakticky nerozpustný a rozpouští se jen v žaludeční kyselině; i při simulované maximální kyselosti žaludku se rozpustilo jen asi 43 % a u dobrovolníků zvýšil vylučování hořčíku močí mnohem méně než citrát. Frakční vstřebávání bylo odhadnuto asi na 4 %.",
+   "Hořčík je kofaktorem stovek enzymů a je potřebný pro funkci svalů a nervů, energetický metabolismus a kosti. Protože se MgO vstřebá jen málo, nevstřebaná část zůstává ve střevě a váže vodu, což z něj dělá účinné osmotické projímadlo: ve 28denní studii s placebem pomohlo 1,5 g/den 68 % pacientů s chronickou zácpou oproti 12 % u placeba. Pro zvýšení zásob hořčíku v těle fungují lépe organické soli, například citrát, a čtyřtýdenní studie s 520 mg Mg/den ve formě oxidu nesnížila noční křeče v lýtkách více než placebo."
+  ],
+  "structure_alt": "Oxid hořečnatý zakreslený jako iont Mg²⁺ a iont O²⁻; v pevné látce je každý iont oktaedricky obklopen šesti ionty opačného náboje (mřížka kamenné soli).",
+  "form_labels": {
+   "periclase": "periklas, kubický"
+  },
+  "dosing": [
+   [
+    "Poznámka",
+    "Užívejte s jídlem nebo po jídle: MgO potřebuje k rozpuštění žaludeční kyselinu a léky snižující kyselost (PPI, H2 blokátory) jeho účinek oslabují. Dodržujte odstup alespoň 2 hodiny od tetracyklinových a chinolonových antibiotik a bisfosfonátů. Projímavé dávky (1–2 g MgO) překračují limit EFSA a užívají se po poradě s lékařem; lidé s onemocněním ledvin potřebují kontrolu hořčíku v séru."
+   ]
+  ],
+  "positives": [
+   "Nejvyšší obsah hořčíku ze všech běžných forem (60,3 % hmotnosti): jedna malá kapsle může dodat 400 mg elementárního hořčíku",
+   "Nejlevnější forma hořčíku v přepočtu na mg elementárního hořčíku (asi 1 Kč za 100 mg Mg u jednosložkových přípravků)",
+   "Dobře charakterizovaná jediná krystalická forma (periklas) s lékopisnými standardy kvality, takže přípravky jsou chemicky konzistentní",
+   "Účinné osmotické projímadlo v randomizovaných studiích s placebem: odpověď u 68 % oproti 12 % u placeba při chronické zácpě během 28 dnů"
+  ],
+  "negatives": [
+   "Špatně rozpustný a špatně vstřebatelný: frakční vstřebávání asi 4 % a v překřížených studiích nižší vzestup hořčíku v moči i séru než u citrátu",
+   "Projímavý účinek a průjem jsou při dávkách z doplňků časté, zejména nad limitem EFSA 250 mg/den hořčíku z doplňků",
+   "Riziko hypermagnezémie při denním užívání u onemocnění ledvin a ve vysokých dávkách; interaguje s antibiotiky, bisfosfonáty a léky snižujícími kyselost",
+   "V randomizované studii žádný přínos oproti placebu u nočních křečí v lýtkách (520 mg Mg/den po 4 týdny), takže tvrzení o svalech nejsou podložená"
+  ],
+  "foods": {
+   "title": "Nejlepší potravinové zdroje hořčíku",
+   "warning": "Tyto potraviny obsahují přirozený hořčík, **nikoli oxid hořečnatý**. Jsou alternativou nebo doplňkem, ne zdrojem této látky.",
+   "columns": [
+    "Potravina",
+    "Přirozená forma Mg",
+    "Elementární Mg v porci"
+   ],
+   "rows": [
+    [
+     "Dýňová semínka, pražená",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 156 mg"
+    ],
+    [
+     "Chia semínka",
+     "28 g (1 oz)",
+     "Vázaný na fytát a vlákninu",
+     "≈ 111 mg"
+    ],
+    [
+     "Mandle, pražené",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 80 mg"
+    ],
+    [
+     "Špenát, vařený",
+     "½ hrnku",
+     "Střed molekuly chlorofylu a vázaný",
+     "≈ 78 mg"
+    ],
+    [
+     "Kešu ořechy, pražené",
+     "28 g (1 oz)",
+     "Vázaný na fytát",
+     "≈ 74 mg"
+    ]
+   ],
+   "note": "Přibližné hodnoty podle NIH ODS (informační list o hořčíku). Hořčík v rostlinných potravinách je z velké části vázán na fytát a vlákninu, proto se vstřebávání liší."
+  },
+  "scores_note": "Důkazy 7,0: několik RCT přímo s MgO (zácpa pozitivní, křeče negativní) a studie vstřebávání z moči/izotopů. Přínosy 4,0: nejnižší vstřebávání z běžných forem (0/4), silný projímavý účinek (3/4), úzký rozsah podložených účinků (1/2). Bezpečnost 5,5: obvyklé dávky dosahují nebo překračují limit EFSA 250 mg, časté zažívací potíže, lékové interakce, riziko hypermagnezémie při onemocnění ledvin. Cena 10,0: MgO je referenční forma (poměr 1,0); medián ≈ 0,97 Kč za 100 mg Mg ze 4 přípravků, 14. 10. 2026, spolehlivost střední."
+ }
+}
