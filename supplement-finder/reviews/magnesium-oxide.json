@@ -33,7 +33,7 @@
    "basis": "supplemental magnesium",
    "source": "EFSA"
   },
-  "timing": null,
+  "timing": "with a meal",
   "vegan": true
  },
  "smiles": "[Mg+2].[O-2]",
@@ -46,14 +46,21 @@
    "active_percent": 60.3,
    "commercial": true,
    "source": "Ph. Eur. monographs 0040/0041; COD 9007058 (Merli et al. 2002)",
-   "note": "Only solid form: cubic rock-salt structure (periclase), space group Fm-3m, a = 4.212 Å, Z = 4, Mg octahedrally coordinated by six O (COD 9007058). Light and heavy magnesium oxide (Ph. Eur. 0040/0041) are the same crystal phase and differ only in bulk density (≤ 0.15 vs ≥ 0.25 g/mL). No hydrate exists: MgO reacts with water to magnesium hydroxide (brucite), a different compound. 'Magnesium oxide monohydrate' in some product and trial descriptions is not a characterised crystalline hydrate. Checked: COD, Ph. Eur., American Mineralogist, Physics and Chemistry of Minerals."
+   "note": "Only solid form: cubic rock-salt structure (periclase), space group Fm-3m, a = 4.212 Å, Z = 4, Mg octahedrally coordinated by six O (COD 9007058). Light and heavy magnesium oxide (Ph. Eur. 0040/0041) are the same crystal phase and differ only in bulk density (≤ 0.15 vs ≥ 0.25 g/mL). No hydrate exists: MgO reacts with water to magnesium hydroxide (brucite), a different compound. 'Magnesium oxide monohydrate' in some product and trial descriptions is not a characterised crystalline hydrate. Checked: COD, Ph. Eur., American Mineralogist, Physics and Chemistry of Minerals.",
+   "structure": {
+    "ref": "Merli M, Pavese A, Ranzini M. Phys Chem Miner 2002, 29, 455–464",
+    "id": "COD 9007058",
+    "system": "cubic",
+    "space_group": "Fm-3m"
+   }
   }
  ],
  "scores": {
   "evidence": 7.0,
   "pricing": 10.0,
   "benefits": 4.0,
-  "safety": 5.5
+  "safety": 5.5,
+  "bioavailability": 2.0
  },
  "pricing": {
   "currency": "CZK",
@@ -167,8 +174,7 @@
  "en": {
   "subtitle": "Inorganic magnesium salt · Minerals · Digestion",
   "about": [
-   "Magnesium oxide (MgO, CAS 1309-48-4) is a simple ionic solid with the cubic rock-salt structure of the mineral periclase: each Mg²⁺ sits in an octahedron of six oxide ions. It is the only solid form; no hydrate exists, because water converts it slowly to magnesium hydroxide. With **60.3 % elemental magnesium** it is the most concentrated and usually the cheapest magnesium source, so a 400 mg Mg dose fits in one capsule. It is practically insoluble in water and dissolves only in stomach acid; even under simulated peak gastric acid only about 43 % dissolved, and in volunteers it raised urinary magnesium far less than citrate. Fractional absorption has been estimated at about 4 %.",
-   "Magnesium is a cofactor in hundreds of enzymes and is needed for muscle and nerve function, energy metabolism and bone. Because so little MgO is absorbed, the unabsorbed part stays in the gut and draws in water, which makes MgO an effective osmotic laxative: in a 28-day placebo-controlled trial, 1.5 g/day helped 68 % of patients with chronic constipation versus 12 % on placebo. For raising body magnesium, organic salts such as citrate perform better per mg, and a 4-week trial of 520 mg/day Mg as oxide did not reduce night-time leg cramps more than placebo."
+   "Magnesium oxide is a simple mineral salt that occurs in nature as periclase and is the most concentrated common source of magnesium, with about 60 % of its weight being the mineral. It is almost insoluble in water and dissolves only in stomach acid, so very little of it is absorbed, roughly 4 % in one estimate. The unabsorbed part stays in the gut and draws water in, which is why oxide works as a laxative: in a 28-day trial 1.5 g a day helped 68 % of people with chronic constipation versus 12 % on placebo. For raising magnesium levels, organic salts such as citrate performed better per milligram, and oxide did not reduce night-time leg cramps in a placebo-controlled trial. It is also the cheapest form, so it suits constipation or a tight budget more than correcting a deficiency."
   ],
   "structure_alt": "Magnesium oxide drawn as an Mg²⁺ ion and an O²⁻ ion; in the solid each ion is surrounded octahedrally by six of the other (rock-salt lattice).",
   "form_labels": {
@@ -181,16 +187,16 @@
    ]
   ],
   "positives": [
-   "Highest magnesium content of any common form (60.3 % w/w): one small capsule can deliver 400 mg of elemental magnesium",
-   "Cheapest magnesium form per mg of elemental magnesium (about 1 CZK per 100 mg Mg in single-ingredient products)",
-   "Well-characterised, single crystalline form (periclase) with pharmacopoeial quality standards, so products are chemically consistent",
-   "Effective osmotic laxative in randomised placebo-controlled trials: 68 % response versus 12 % on placebo for chronic constipation over 28 days"
+   "Most magnesium per capsule of any common form",
+   "Cheapest form per milligram of magnesium",
+   "Effective laxative for chronic constipation",
+   "One well-defined crystal with pharmacopoeia standards"
   ],
   "negatives": [
-   "Poorly soluble and poorly absorbed: fractional absorption about 4 %, and lower urinary and serum magnesium rise than citrate in crossover studies",
-   "Laxative effect and diarrhoea are common at supplement doses, especially above the 250 mg/day EFSA limit for supplemental magnesium",
-   "Risk of hypermagnesaemia with daily use in kidney disease and at high doses; interacts with antibiotics, bisphosphonates and acid-reducing drugs",
-   "No benefit over placebo for nocturnal leg cramps in a randomised trial (520 mg/day Mg for 4 weeks), so muscle-related claims are not supported"
+   "Poorly absorbed, only about 4 % in one estimate",
+   "Often causes loose stools at supplement doses",
+   "No better than placebo for night leg cramps",
+   "Caution in kidney disease and with some antibiotics"
   ],
   "foods": {
    "title": "Top dietary magnesium sources",
@@ -234,13 +240,13 @@
    ],
    "note": "Approximate values from NIH ODS (Magnesium fact sheet). Magnesium in plant foods is largely bound to phytate and fibre, so absorption varies."
   },
-  "scores_note": "Evidence 7.0: several RCTs on MgO itself (constipation positive, leg cramps negative) plus isotope/urinary absorption studies. Benefits 4.0: absorption is the lowest of common forms (0/4), strong laxative effect (3/4), narrow range of supported outcomes (1/2). Safety 5.5: usual doses reach or exceed the EFSA 250 mg limit, frequent GI effects, drug interactions, hypermagnesaemia risk in kidney disease. Pricing 10.0: MgO is the reference form (ratio 1.0); median ≈ 0.97 CZK per 100 mg Mg over 4 products, 2026-10-14, confidence medium."
+  "scores_note": "Evidence 7.0: several RCTs on this form (constipation positive, leg cramps negative) plus absorption studies. Solubility & bioavailability 2.0: practically insoluble in water (solubility 1/4), fractional absorption about 4 % and below citrate in crossover studies (absorption 1/6). Benefits 4.0: laxative effect is proven, but little else is supported. Safety 5.5: usual doses reach the EFSA 250 mg limit, loose stools are common, and kidney disease needs care. Pricing 10.0: reference form, ratio 1.0, median 0.97 CZK per 100 mg Mg over 4 products (2026-10-14), confidence medium.",
+  "forms_note": "Only one solid form exists, so there is nothing to compare; light and heavy grades are the same crystal and differ only in bulk density."
  },
  "cs": {
   "subtitle": "Anorganická sůl hořčíku · Minerály · Trávení",
   "about": [
-   "Oxid hořečnatý (MgO, CAS 1309-48-4) je jednoduchá iontová pevná látka s kubickou strukturou kamenné soli, stejnou jako minerál periklas: každý iont Mg²⁺ je obklopen oktaedrem šesti oxidových iontů. Jde o jedinou pevnou formu; hydrát neexistuje, protože voda ho pomalu převádí na hydroxid hořečnatý. S **60,3 % elementárního hořčíku** je to nejkoncentrovanější a obvykle nejlevnější zdroj hořčíku, takže dávka 400 mg Mg se vejde do jedné kapsle. Ve vodě je prakticky nerozpustný a rozpouští se jen v žaludeční kyselině; i při simulované maximální kyselosti žaludku se rozpustilo jen asi 43 % a u dobrovolníků zvýšil vylučování hořčíku močí mnohem méně než citrát. Frakční vstřebávání bylo odhadnuto asi na 4 %.",
-   "Hořčík je kofaktorem stovek enzymů a je potřebný pro funkci svalů a nervů, energetický metabolismus a kosti. Protože se MgO vstřebá jen málo, nevstřebaná část zůstává ve střevě a váže vodu, což z něj dělá účinné osmotické projímadlo: ve 28denní studii s placebem pomohlo 1,5 g/den 68 % pacientů s chronickou zácpou oproti 12 % u placeba. Pro zvýšení zásob hořčíku v těle fungují lépe organické soli, například citrát, a čtyřtýdenní studie s 520 mg Mg/den ve formě oxidu nesnížila noční křeče v lýtkách více než placebo."
+   "Oxid hořečnatý je jednoduchá minerální sůl, která se v přírodě vyskytuje jako periklas, a je to nejkoncentrovanější běžný zdroj hořčíku, protože asi 60 % jeho hmotnosti tvoří samotný minerál. Ve vodě je téměř nerozpustný a rozpouští se jen v žaludeční kyselině, takže se ho vstřebá velmi málo, v jednom odhadu zhruba 4 %. Nevstřebaná část zůstává ve střevě a váže vodu, proto oxid působí jako projímadlo: ve 28denní studii pomohlo 1,5 g denně 68 % lidí s chronickou zácpou oproti 12 % u placeba. Ke zvýšení zásob hořčíku fungovaly lépe organické soli, například citrát, a oxid nesnížil noční křeče v lýtkách v placebem kontrolované studii. Je také nejlevnější, hodí se proto spíš na zácpu nebo při omezeném rozpočtu než k úpravě nedostatku."
   ],
   "structure_alt": "Oxid hořečnatý zakreslený jako iont Mg²⁺ a iont O²⁻; v pevné látce je každý iont oktaedricky obklopen šesti ionty opačného náboje (mřížka kamenné soli).",
   "form_labels": {
@@ -253,16 +259,16 @@
    ]
   ],
   "positives": [
-   "Nejvyšší obsah hořčíku ze všech běžných forem (60,3 % hmotnosti): jedna malá kapsle může dodat 400 mg elementárního hořčíku",
-   "Nejlevnější forma hořčíku v přepočtu na mg elementárního hořčíku (asi 1 Kč za 100 mg Mg u jednosložkových přípravků)",
-   "Dobře charakterizovaná jediná krystalická forma (periklas) s lékopisnými standardy kvality, takže přípravky jsou chemicky konzistentní",
-   "Účinné osmotické projímadlo v randomizovaných studiích s placebem: odpověď u 68 % oproti 12 % u placeba při chronické zácpě během 28 dnů"
+   "Nejvíce hořčíku v jedné kapsli ze všech běžných forem",
+   "Nejlevnější forma za miligram hořčíku",
+   "Účinné projímadlo při chronické zácpě",
+   "Jediný dobře definovaný krystal s lékopisnými standardy"
   ],
   "negatives": [
-   "Špatně rozpustný a špatně vstřebatelný: frakční vstřebávání asi 4 % a v překřížených studiích nižší vzestup hořčíku v moči i séru než u citrátu",
-   "Projímavý účinek a průjem jsou při dávkách z doplňků časté, zejména nad limitem EFSA 250 mg/den hořčíku z doplňků",
-   "Riziko hypermagnezémie při denním užívání u onemocnění ledvin a ve vysokých dávkách; interaguje s antibiotiky, bisfosfonáty a léky snižujícími kyselost",
-   "V randomizované studii žádný přínos oproti placebu u nočních křečí v lýtkách (520 mg Mg/den po 4 týdny), takže tvrzení o svalech nejsou podložená"
+   "Špatně se vstřebává, v jednom odhadu jen asi 4 %",
+   "Při dávkách z doplňků často způsobuje řidší stolici",
+   "Proti nočním křečím v lýtkách nepomohl víc než placebo",
+   "Opatrnost při onemocnění ledvin a s některými antibiotiky"
   ],
   "foods": {
    "title": "Nejlepší potravinové zdroje hořčíku",
@@ -306,6 +312,7 @@
    ],
    "note": "Přibližné hodnoty podle NIH ODS (informační list o hořčíku). Hořčík v rostlinných potravinách je z velké části vázán na fytát a vlákninu, proto se vstřebávání liší."
   },
-  "scores_note": "Důkazy 7,0: několik RCT přímo s MgO (zácpa pozitivní, křeče negativní) a studie vstřebávání z moči/izotopů. Přínosy 4,0: nejnižší vstřebávání z běžných forem (0/4), silný projímavý účinek (3/4), úzký rozsah podložených účinků (1/2). Bezpečnost 5,5: obvyklé dávky dosahují nebo překračují limit EFSA 250 mg, časté zažívací potíže, lékové interakce, riziko hypermagnezémie při onemocnění ledvin. Cena 10,0: MgO je referenční forma (poměr 1,0); medián ≈ 0,97 Kč za 100 mg Mg ze 4 přípravků, 14. 10. 2026, spolehlivost střední."
+  "scores_note": "Důkazy 7,0: několik RCT s touto formou (zácpa pozitivní, křeče negativní) a studie vstřebávání. Rozpustnost a biologická dostupnost 2,0: prakticky nerozpustný ve vodě (rozpustnost 1/4), frakční vstřebávání asi 4 % a pod citrátem v překřížených studiích (vstřebávání 1/6). Přínosy 4,0: projímavý účinek je prokázán, jiné účinky téměř ne. Bezpečnost 5,5: obvyklé dávky dosahují limitu EFSA 250 mg, řidší stolice je častá a při onemocnění ledvin je nutná opatrnost. Cena 10,0: referenční forma, poměr 1,0, medián 0,97 Kč za 100 mg Mg ze 4 přípravků (14. 10. 2026), spolehlivost střední.",
+  "forms_note": "Existuje jediná pevná forma, takže není co srovnávat; lehký a těžký oxid jsou stejný krystal a liší se jen sypnou hmotností."
  }
 }

@@ -4,7 +4,7 @@ const { t, lang, ready } = window.i18n;
 const root = document.getElementById('review');
 const num = (n, d = 1) => n.toLocaleString({ en: 'en-US', cs: 'cs-CZ' }[lang] ?? 'en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
 const mass = (n) => `${num(n, 2)} g/mol`;
-const SCORE_KEYS = ['evidence', 'pricing', 'benefits', 'safety'];
+const SCORE_KEYS = ['evidence', 'pricing', 'benefits', 'safety', 'bioavailability'];
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 // Text from the JSON is escaped first; only **bold** and *italic* are turned into markup.
@@ -50,8 +50,8 @@ function render(r) {
       ]) + `</div>` +
       (others.length ? `<h3 class="sub-h">${esc(t('review.forms.other'))}</h3>` +
         table('forms-tbl', [t('review.spec.form'), t('review.spec.formula'), t('review.spec.mass'), cap(tv(k.dose?.basis ?? 'elemental'))],
-          others.map((f) => [label(f), f.formula, mass(f.molar_mass), pct(f)])) +
-        (c.forms_note ? `<p class="note">${md(c.forms_note)}</p>` : '') : '');
+          others.map((f) => [label(f), f.formula, mass(f.molar_mass), pct(f)])) : '') +
+      (c.forms_note ? `<p class="note">${md(c.forms_note)}</p>` : '');
   } else {
     const facts = [...(c.facts ?? []), ...doseRows];
     specs = facts.length ? `<dl>${facts.map(([a, b]) => `<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join('')}</dl>` : '';

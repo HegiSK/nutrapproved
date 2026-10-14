@@ -31,62 +31,48 @@
    "basis": "supplemental magnesium",
    "source": "EFSA"
   },
-  "timing": null,
-  "vegan": null
+  "timing": "with a meal",
+  "vegan": true
  },
  "smiles": "[Mg+2].NCCS(=O)(=O)[O-].NCCS(=O)(=O)[O-]",
  "scores": {
   "evidence": 3.0,
-  "pricing": null,
+  "pricing": 4.0,
   "benefits": 2.0,
-  "safety": 7.0
+  "safety": 7.0,
+  "bioavailability": 4.0
  },
  "references": [
   "EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS). Scientific opinion on iron (II) taurate, magnesium taurate and magnesium acetyl taurate as sources of iron and magnesium added for nutritional purposes to food supplements. *EFSA J*. 2009;947.",
   "EFSA ANS Panel. Statement on the safety of magnesium taurinate as a source of magnesium added for nutritional purposes to food supplements. *EFSA J*. 2009; ej1118.",
   "Hasan HL, Majeed MJ. The promising role of magnesium taurate in managing hypertension. *Modern Sport*. 2024;23(1):134–142.",
   "The structure and antibacterial activity of taurine and its magnesium complex. *Adv Mater Res*. 2012;366:404–407.",
-  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/",
+  "Magnesium taurate and other mineral taurates. US patent 5,582,839."
  ],
  "en": {
   "subtitle": "Magnesium salt of taurine · Minerals · Stress",
   "about": [
-   "Magnesium taurate (magnesium bis(2-aminoethanesulfonate), CAS 334824-43-0) is a salt of one magnesium ion with two molecules of the amino-sulfonic acid taurine. EFSA describes it as readily soluble in water, so in the gut it is expected to behave like other soluble magnesium salts; no absorption study on this specific form was found.",
-   "Magnesium takes part in hundreds of enzymatic reactions, including muscle and nerve function and energy metabolism. Taurine is a conditionally essential amino-sulfonic acid, but claims for heart or calming effects of the combined salt rest mainly on animal data and one very small human study. Kidney disease and some antibiotics or bisphosphonates call for caution with any magnesium supplement."
+   "Magnesium taurate is magnesium combined with taurine, an amino-sulfonic acid found mainly in meat and seafood. EFSA describes it as readily soluble in water, so in the gut it is expected to behave like other soluble magnesium salts, but no absorption study on this form was found. Magnesium supports muscle and nerve function and energy metabolism, and taurine is often linked to the heart and to calm. Those claims for the combined salt rest mainly on animal data and one very small human pilot without a placebo group. It holds only about 9 % magnesium, so a dose takes several capsules, and caution applies in kidney disease."
   ],
   "structure_alt": "Structure of magnesium taurate: Mg2+ ion with two taurinate (2-aminoethanesulfonate) anions",
-  "facts": [
-   [
-    "Formula",
-    "C₄H₁₂MgN₂O₆S₂"
-   ],
-   [
-    "Molar mass",
-    "272.6 g/mol"
-   ],
-   [
-    "Elemental Mg",
-    "≈ 8.9 % by weight"
-   ]
-  ],
   "positives": [
-   "Readily soluble in water according to EFSA, so absorption is expected to be similar to other dissociable magnesium salts",
-   "Assessed by EFSA (2009): use within the 250 mg/day supplemental magnesium upper limit was not considered a safety concern",
-   "Defined 1:2 salt (Mg : taurine), so the dose of elemental magnesium is easy to calculate (≈ 89 mg Mg per gram)",
-   "A small pilot in 20 hypertensive adults (500 mg/day for 30 days) reported changes in blood pressure, serum magnesium and cortisol"
+   "Readily soluble in water, according to EFSA",
+   "EFSA judged use within the 250 mg limit safe",
+   "Defined salt of magnesium and taurine",
+   "A small pilot hinted at blood pressure benefits"
   ],
   "negatives": [
-   "No human bioavailability study on magnesium taurate was found; EFSA inferred absorption from solubility only",
-   "Low magnesium content (≈ 8.9 %): about 2.8 g of salt is needed for 250 mg of elemental magnesium",
-   "The only clinical data are one small uncontrolled study with no placebo group and no reported statistical tests; heart and anxiety claims are not backed by controlled trials",
-   "No single-crystal structure of magnesium taurate was found, so the solid form of marketed products is not well characterised"
+   "No human absorption study on this form was found",
+   "Only about 9 % magnesium, so several capsules per dose",
+   "Heart and calming claims lack controlled trials",
+   "Over five times pricier per mg than oxide"
   ],
   "foods": {
    "title": "Top dietary magnesium sources",
    "warning": "These foods contain natural magnesium, **not magnesium taurate**. Taurine itself comes mainly from meat and seafood. The foods are an alternative or complement, not a source of this compound.",
    "columns": [
     "Food",
-    "Serving",
     "Natural form of Mg",
     "Elemental Mg per serving"
    ],
@@ -124,47 +110,41 @@
    ],
    "note": "Approximate values from NIH ODS (Magnesium fact sheet). Magnesium in plant foods is largely bound to phytate and fibre, so absorption is typically lower than from soluble salts."
   },
-  "scores_note": "Evidence 3.0: no human data on this form beyond one small uncontrolled study. Benefits 2.0: absorption advantage unknown, clinical effect unproven (capped by low evidence). Safety 7.0: within EFSA limit, minus GI effects, drug interactions and kidney caution typical of magnesium. Pricing: not scored, no retail prices collected."
+  "scores_note": "Evidence 3.0: no controlled human data on this form, only one small uncontrolled pilot. Solubility & bioavailability 4.0: readily soluble per EFSA, not quantified (3/4); no absorption study (1/6). Benefits 2.0: clinical effect unproven and capped by the low evidence. Safety 7.0: within the EFSA limit, with the usual magnesium stomach, drug and kidney cautions. Pricing 4.0: median 5.34 CZK per 100 mg Mg over 4 products (2026-10-14) against 0.97 for oxide (ratio 5.53), confidence medium.",
+  "form_labels": {
+   "taurate": "Taurate (anhydrous salt)"
+  },
+  "forms_note": "No crystal structure of magnesium taurate was found, so only the salt as sold is listed. Labels show 7.5 to 8 % magnesium per powder weight, slightly below the 8.9 % calculated for the anhydrous salt.",
+  "dosing": [
+   [
+    "Comment",
+    "Take with a meal if it upsets the stomach. Keep it a few hours apart from quinolone or tetracycline antibiotics and bisphosphonates, and take care in kidney disease."
+   ]
+  ]
  },
  "cs": {
   "subtitle": "Hořečnatá sůl taurinu · Minerály · Stres",
   "about": [
-   "Hořčík taurát (hořčík bis(2-aminoethansulfonát), CAS 334824-43-0) je sůl jednoho iontu hořčíku se dvěma molekulami aminosulfonové kyseliny taurinu. EFSA ji popisuje jako snadno rozpustnou ve vodě, proto se v trávicím traktu očekává chování podobné jiným rozpustným hořečnatým solím; studie vstřebávání právě této formy nebyla nalezena.",
-   "Hořčík se podílí na stovkách enzymatických reakcí, včetně funkce svalů a nervů a energetického metabolismu. Taurin je podmíněně esenciální aminosulfonová kyselina, ale tvrzení o účincích kombinované soli na srdce či uklidnění vycházejí hlavně ze zvířecích dat a jedné velmi malé studie na lidech. U onemocnění ledvin a při užívání některých antibiotik nebo bisfosfonátů je u každého hořčíkového doplňku nutná opatrnost."
+   "Hořčík taurát je hořčík spojený s taurinem, amino-sulfonovou kyselinou, která pochází hlavně z masa a mořských plodů. EFSA ho popisuje jako snadno rozpustný ve vodě, takže se ve střevě očekává chování jako u jiných rozpustných solí hořčíku, studie vstřebávání této formy však nalezena nebyla. Hořčík podporuje funkci svalů a nervů a energetický metabolismus a taurin se často spojuje se srdcem a klidem. Tato tvrzení o kombinované soli se opírají hlavně o data ze zvířat a jednu velmi malou pilotní studii u lidí bez skupiny s placebem. Obsahuje jen asi 9 % hořčíku, takže na dávku je třeba několik kapslí, a při onemocnění ledvin je namístě opatrnost."
   ],
   "structure_alt": "Struktura hořčík taurátu: iont Mg2+ se dvěma taurinátovými (2-aminoethansulfonátovými) anionty",
-  "facts": [
-   [
-    "Vzorec",
-    "C₄H₁₂MgN₂O₆S₂"
-   ],
-   [
-    "Molární hmotnost",
-    "272,6 g/mol"
-   ],
-   [
-    "Elementární Mg",
-    "≈ 8,9 % hmotnosti"
-   ]
-  ],
   "positives": [
-   "Podle EFSA snadno rozpustný ve vodě, proto se očekává vstřebávání podobné jiným disociujícím hořečnatým solím",
-   "Posouzen EFSA (2009): užití v rámci horního limitu 250 mg/den hořčíku z doplňků nebylo považováno za bezpečnostní riziko",
-   "Definovaná sůl 1:2 (Mg : taurin), takže dávku elementárního hořčíku lze snadno spočítat (≈ 89 mg Mg na gram)",
-   "Malá pilotní studie na 20 dospělých s hypertenzí (500 mg/den po 30 dní) uvádí změny krevního tlaku, sérového hořčíku a kortizolu"
+   "Podle EFSA snadno rozpustný ve vodě",
+   "EFSA shledala užití v rámci limitu 250 mg bezpečným",
+   "Definovaná sůl hořčíku a taurinu",
+   "Malá pilotní studie naznačila vliv na krevní tlak"
   ],
   "negatives": [
-   "Nebyla nalezena žádná studie biologické dostupnosti hořčík taurátu u lidí; EFSA vstřebávání odvodila pouze z rozpustnosti",
-   "Nízký obsah hořčíku (≈ 8,9 %): na 250 mg elementárního hořčíku je potřeba asi 2,8 g soli",
-   "Jedinými klinickými daty je jedna malá studie bez kontrolní skupiny s placebem a bez uvedených statistických testů; tvrzení o srdci a úzkosti nepodporují kontrolované studie",
-   "Nebyla nalezena monokrystalová struktura hořčík taurátu, takže pevná forma prodávaných přípravků není dobře charakterizována"
+   "Studie vstřebávání této formy u lidí nalezena nebyla",
+   "Jen asi 9 % hořčíku, na dávku několik kapslí",
+   "Tvrzení o srdci a klidu nemají kontrolované studie",
+   "Za mg přes pětkrát dražší než oxid"
   ],
   "foods": {
    "title": "Nejlepší potravinové zdroje hořčíku",
    "warning": "Tyto potraviny obsahují přirozený hořčík, **nikoli hořčík taurát**. Taurin pochází hlavně z masa a mořských plodů. Potraviny jsou alternativou nebo doplňkem, ne zdrojem této látky.",
    "columns": [
     "Potravina",
-    "Porce",
     "Přirozená forma Mg",
     "Elementární Mg v porci"
    ],
@@ -202,6 +182,126 @@
    ],
    "note": "Přibližné hodnoty podle NIH ODS (informační list o hořčíku). Hořčík v rostlinných potravinách je z velké části vázán na fytát a vlákninu, proto je vstřebávání obvykle nižší než z rozpustných solí."
   },
-  "scores_note": "Důkazy 3,0: kromě jedné malé studie bez kontroly nejsou data u lidí pro tuto formu. Přínosy 2,0: výhoda ve vstřebávání neznámá, klinický účinek neprokázán (omezeno nízkými důkazy). Bezpečnost 7,0: v rámci limitu EFSA, minus trávicí obtíže, interakce s léky a opatrnost při onemocnění ledvin typické pro hořčík. Cena: nehodnoceno, ceny z obchodů nebyly shromážděny."
+  "scores_note": "Důkazy 3,0: žádná kontrolovaná data u lidí s touto formou, jen jedna malá nekontrolovaná pilotní studie. Rozpustnost a biologická dostupnost 4,0: podle EFSA snadno rozpustný, bez čísel (3/4); studie vstřebávání chybí (1/6). Přínosy 2,0: klinický účinek není prokázán a je omezen nízkými důkazy. Bezpečnost 7,0: v rámci limitu EFSA, s obvyklými upozorněními u hořčíku (žaludek, léky, ledviny). Cena 4,0: medián 5,34 Kč za 100 mg Mg ze 4 přípravků (14. 10. 2026) proti 0,97 u oxidu (poměr 5,53), spolehlivost střední.",
+  "form_labels": {
+   "taurate": "Taurát (bezvodá sůl)"
+  },
+  "forms_note": "Krystalová struktura hořčík taurátu nalezena nebyla, proto je uvedena jen sůl, jak se prodává. Štítky uvádějí 7,5 až 8 % hořčíku z hmotnosti prášku, mírně pod 8,9 % vypočtenými pro bezvodou sůl.",
+  "dosing": [
+   [
+    "Poznámka",
+    "Pokud dráždí žaludek, užívejte s jídlem. Dodržte odstup několika hodin od chinolonových či tetracyklinových antibiotik a bisfosfonátů a při onemocnění ledvin buďte opatrní."
+   ]
+  ]
+ },
+ "forms": [
+  {
+   "key": "taurate",
+   "formula": "C₄H₁₂MgN₂O₆S₂",
+   "cas": "334824-43-0",
+   "molar_mass": 272.57,
+   "active_percent": 8.9,
+   "commercial": true,
+   "source": "EFSA ANS Panel 2009 (identity); molar mass computed from formula",
+   "note": "No crystal structure of magnesium taurate was found. A 2012 paper reports a single-crystal structure of taurine itself but only the synthesis and antibacterial testing of the magnesium complex, and the related patent describes preparation, not a structure. Listed because it is the compound sold; hydration of marketed products is not stated on labels. Labels show 7.5 to 8 % Mg per powder weight, a little below the 8.9 % calculated for the anhydrous salt.",
+   "structure": null
+  }
+ ],
+ "pricing": {
+  "currency": "CZK",
+  "date": "2026-10-14",
+  "per": "100 mg elemental mineral",
+  "confidence": "medium",
+  "products": [
+   {
+    "shop": "shop-apotheke.com",
+    "name": "TAURAPRO Magnesiumtaurat Kapseln, 100 capsules",
+    "url": "https://www.shop-apotheke.com/arzneimittel/upmWEFRCU/taurapro-magnesiumtaurat-magnesium-taurate-kapseln.htm",
+    "form": "taurate",
+    "price": 611.28,
+    "units": 100,
+    "elemental_per_unit": 60,
+    "cost_per_100mg": 10.188
+   },
+   {
+    "shop": "sunday.de",
+    "name": "Sunday Natural Magnesium Taurate, 90 capsules",
+    "url": "https://www.sunday.de/en/magnesium-taurate-capsules.html",
+    "form": "taurate",
+    "price": 242.55,
+    "units": 90,
+    "elemental_per_unit": 67,
+    "cost_per_100mg": 4.0224
+   },
+   {
+    "shop": "bono.nl",
+    "name": "Swanson Magnesiumtauraat 100 mg, 120 tablets",
+    "url": "https://bono.nl/product/swanson-vitamins-magnesium-tauraat-100mg-120-tabletten",
+    "form": "taurate",
+    "price": 414.05,
+    "units": 120,
+    "elemental_per_unit": 100,
+    "cost_per_100mg": 3.4504
+   },
+   {
+    "shop": "shop-apotheke.at",
+    "name": "RAIBU Magnesium Taurat, 180 capsules",
+    "url": "https://www.shop-apotheke.at/arzneimittel/upm3RPHZD/raibu-magnesium-taurat-2750-mg-pro-tag-fuer-muskeln-nerven.htm",
+    "form": "taurate",
+    "price": 538.76,
+    "units": 180,
+    "elemental_per_unit": 45,
+    "cost_per_100mg": 6.6514
+   }
+  ],
+  "median_cost_per_100mg": 5.3369,
+  "reference": {
+   "form": "oxide",
+   "median_cost_per_100mg": 0.9657,
+   "products": [
+    {
+     "shop": "kaufland.cz (apohealth)",
+     "name": "Vitaworld Magnesium 400, 120 capsules",
+     "url": "https://www.kaufland.cz/product/407178457/",
+     "form": "oxide",
+     "price": 437.33,
+     "units": 120,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 0.9111
+    },
+    {
+     "shop": "shop-apotheke.com",
+     "name": "Swanson Magnesium-Oxid 200 mg, 250 capsules",
+     "url": "https://www.shop-apotheke.com/arzneimittel/upmZKFFD7/swanson-magnesium-oxid-200-mg.htm",
+     "form": "oxide",
+     "price": 369.22,
+     "units": 250,
+     "elemental_per_unit": 200,
+     "cost_per_100mg": 0.7384
+    },
+    {
+     "shop": "knuspr.de",
+     "name": "Biolectra Magnesium 400 mg ultra, 20 capsules",
+     "url": "https://www.knuspr.de/en-DE/85504-biolectra-magnesium-400-mg-ultra-capsules",
+     "form": "oxide",
+     "price": 292.78,
+     "units": 20,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 3.6597
+    },
+    {
+     "shop": "aponeo.de",
+     "name": "Vitaworld Magnesium 400 Kapseln, 120 capsules",
+     "url": "https://www.aponeo.de/01389566-magnesium-400-kapseln.html",
+     "form": "oxide",
+     "price": 489.76,
+     "units": 120,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 1.0203
+    }
+   ]
+  },
+  "ratio": 5.53,
+  "note": "4 magnesium taurate products (shop-apotheke.com, sunday.de, bono.nl, shop-apotheke.at) and 4 oxide reference products, prices read from product pages on 2026-10-14. EUR converted at an assumed 1 EUR = 24.5 CZK (rate not looked up). Two labels give less elemental Mg than the powder weight implies (60 mg vs 71 mg, 67 mg vs 76 mg); label values were used. Confidence medium."
  }
 }

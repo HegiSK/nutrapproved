@@ -23,7 +23,7 @@
     "goals": ["digestion"],
     "dose": {"min": 200, "max": 400, "unit": "mg", "basis": "elemental magnesium", "per": "day"},
     "upper_limit": {"value": 250, "unit": "mg", "basis": "supplemental magnesium", "source": "EFSA"},
-    "timing": null,
+    "timing": "with a meal",
     "vegan": true,
     "review": true
   },
@@ -51,8 +51,8 @@
     "goals": ["stress"],
     "dose": {"min": 100, "max": 250, "unit": "mg", "basis": "elemental magnesium", "per": "day"},
     "upper_limit": {"value": 250, "unit": "mg", "basis": "supplemental magnesium", "source": "EFSA"},
-    "timing": null,
-    "vegan": null,
+    "timing": "with a meal",
+    "vegan": true,
     "review": true
   }
 ]

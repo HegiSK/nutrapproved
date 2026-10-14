@@ -36,50 +36,36 @@
  },
  "smiles": "O=C1CN->[Mg]2(O1)OC(=O)CN->2",
  "scores": {
-  "evidence": 7.0,
-  "pricing": 6.0,
-  "benefits": 8.5,
-  "safety": 9.0
+  "evidence": 4.5,
+  "pricing": 5.0,
+  "benefits": 4.0,
+  "safety": 8.5,
+  "bioavailability": 4.5
  },
  "references": [
-  "Schuette SA, Lashner BA, Janghorbani M. Bioavailability of magnesium diglycinate vs magnesium oxide in patients with ileal resection. *JPEN*. 1994;18(5):430–435.",
-  "Abbasi B, et al. The effect of magnesium supplementation on primary insomnia in elderly: a double-blind placebo-controlled clinical trial. *J Res Med Sci*. 2012;17(12):1161–1169.",
+  "Schuster J, Cycelskij I, Lopresti A, Hahn A. Magnesium bisglycinate supplementation in healthy adults reporting poor sleep: a randomized, placebo-controlled trial. *Nat Sci Sleep*. 2025;17:2027–2040. doi:10.2147/NSS.S524348",
+  "Blancquaert L, Vervaet C, Derave W. Predicting and testing bioavailability of magnesium supplements. *Nutrients*. 2019;11(7):1663. doi:10.3390/nu11071663. PMID 31330811.",
   "Boyle NB, Lawton C, Dye L. The effects of magnesium supplementation on subjective anxiety and stress: a systematic review. *Nutrients*. 2017;9(5):429.",
-  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov"
+  "Crystal polymorph of magnesium glycinate dihydrate and process for its preparation. US patent 9,394,318.",
+  "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
  ],
  "en": {
   "subtitle": "Chelated magnesium · Minerals · Sleep, stress & muscle function",
   "about": [
-   "Magnesium bisglycinate (magnesium glycinate) is a chelate in which one magnesium ion is bound to two molecules of the amino acid glycine. The chelated form is absorbed well and is generally gentle on the gut, unlike magnesium oxide or citrate.",
-   "Magnesium supports hundreds of enzymatic reactions, including muscle and nerve function, energy metabolism and sleep regulation. Glycine itself has a calming effect on the nervous system."
+   "Magnesium bisglycinate, also sold as magnesium glycinate, is magnesium bound to two molecules of the amino acid glycine, a form made for supplements rather than found in food. Magnesium supports muscle and nerve function, energy metabolism and sleep regulation. In a four-week placebo-controlled trial of 155 adults with poor sleep, 250 mg of magnesium a day improved insomnia scores slightly more than placebo, a small and borderline effect. Whether the glycine adds anything at this dose has not been shown, and human absorption data for this exact form are limited, so the idea that it beats oxide rests mostly on chemistry. It is generally well tolerated but costs about five times more per milligram of magnesium than oxide."
   ],
   "structure_alt": "Structure of magnesium bisglycinate: Mg2+ chelated by two glycinate ligands",
-  "facts": [
-   [
-    "Formula",
-    "C₄H₈MgN₂O₄"
-   ],
-   [
-    "Molar mass",
-    "172.4 g/mol"
-   ],
-   [
-    "Elemental Mg",
-    "≈ 14 % by weight"
-   ]
-  ],
   "positives": [
-   "High bioavailability compared with magnesium oxide",
-   "Gentle on the stomach, with a low laxative effect",
-   "May improve sleep quality and reduce subjective stress",
-   "Helps with muscle cramps and recovery when intake is low",
-   "Glycine adds a mild calming effect"
+   "Well tolerated: 93 % had no side effects in a trial",
+   "Small sleep improvement in adults with poor sleep",
+   "Chelate form, expected to dissolve better than oxide",
+   "Provides magnesium for muscles, nerves and energy"
   ],
   "negatives": [
-   "More expensive per mg of elemental magnesium than oxide or citrate",
-   "Low elemental Mg per capsule, so several capsules per dose",
-   "Direct clinical evidence for the glycinate form is still limited",
-   "Caution in kidney disease and with some medications (antibiotics, bisphosphonates)"
+   "Costs about five times more per mg than oxide",
+   "Low magnesium per capsule, so several capsules per dose",
+   "Sleep effect was small and borderline in the main trial",
+   "Better absorption than oxide is not confirmed here"
   ],
   "foods": {
    "title": "Top dietary magnesium sources",
@@ -123,41 +109,35 @@
    ],
    "note": "Approximate values based on NIH ODS data. Bisglycinate is a glycine chelate made for supplements and is not found in foods. Magnesium in plant foods is mostly bound to phytate and fibre, so absorption is typically lower."
   },
-  "scores_note": "Scores are illustrative sample values for this layout, not a validated rating."
+  "scores_note": "Evidence 4.5: one placebo-controlled trial on this form (small, borderline effect, partly industry-linked), the rest is general magnesium evidence. Solubility & bioavailability 4.5: organic chelate, solubility figures conflict and none was confirmed in a primary source (2.5/4); no verified human absorption study of this form, so absorption is capped at 2/6. Benefits 4.0: small sleep effect (2/7), mainly the general roles of magnesium (2/3 breadth); capped by evidence. Safety 8.5: well tolerated, EFSA 250 mg limit and kidney caution apply. Pricing 5.0: median 4.79 CZK per 100 mg Mg over 3 products (2026-10-14) against 0.97 for oxide (ratio 4.96), confidence medium. A 1994 study in ileal-resection patients is known only from a manufacturer summary and was not scored.",
+  "form_labels": {
+   "dihydrate": "Dihydrate (assumed main form)"
+  },
+  "forms_note": "No crystal structure of magnesium bisglycinate was found; only a patent describes a dihydrate by its powder pattern. It is listed as the likely main form, but the actual hydration and magnesium content (about 12 to 14 %) differ between labels.",
+  "dosing": [
+   [
+    "Comment",
+    "Evening use is common; it can be taken with or apart from a meal. The sleep trial used 250 mg of elemental magnesium a day. Keep it a few hours apart from iron, zinc and quinolone or tetracycline antibiotics, and take care in kidney disease."
+   ]
+  ]
  },
  "cs": {
   "subtitle": "Chelátový hořčík · Minerály · Spánek, stres a funkce svalů",
   "about": [
-   "Hořčík bisglycinát (hořčík glycinát) je chelát, ve kterém je jeden iont hořčíku vázán na dvě molekuly aminokyseliny glycinu. Chelátová forma se dobře vstřebává a na rozdíl od oxidu nebo citrátu hořečnatého je obvykle šetrná k trávicímu traktu.",
-   "Hořčík podporuje stovky enzymatických reakcí, včetně funkce svalů a nervů, energetického metabolismu a regulace spánku. Samotný glycin má uklidňující účinek na nervový systém."
+   "Hořčík bisglycinát, prodávaný také jako hořčík glycinát, je hořčík vázaný na dvě molekuly aminokyseliny glycinu, tedy forma vyrobená pro doplňky, která se v potravě nevyskytuje. Hořčík podporuje funkci svalů a nervů, energetický metabolismus a regulaci spánku. Ve čtyřtýdenní studii s placebem u 155 dospělých se špatným spánkem zlepšilo 250 mg hořčíku denně skóre nespavosti o něco víc než placebo, jde o malý a hraniční efekt. Zda glycin při této dávce přidává něco navíc, nebylo prokázáno, a údaje o vstřebávání této konkrétní formy u lidí jsou omezené, takže představa, že předčí oxid, se opírá hlavně o chemii. Je obvykle dobře snášen, ale za miligram hořčíku stojí asi pětkrát víc než oxid."
   ],
   "structure_alt": "Struktura hořčík bisglycinátu: iont Mg2+ vázaný dvěma glycinátovými ligandy",
-  "facts": [
-   [
-    "Vzorec",
-    "C₄H₈MgN₂O₄"
-   ],
-   [
-    "Molární hmotnost",
-    "172,4 g/mol"
-   ],
-   [
-    "Elementární Mg",
-    "≈ 14 % hmotnosti"
-   ]
-  ],
   "positives": [
-   "Vysoká biologická dostupnost ve srovnání s oxidem hořečnatým",
-   "Šetrný k žaludku, s nízkým projímavým účinkem",
-   "Může zlepšit kvalitu spánku a snížit subjektivní stres",
-   "Pomáhá při svalových křečích a regeneraci při nízkém příjmu",
-   "Glycin přidává mírný uklidňující účinek"
+   "Dobře snášen: 93 % bez nežádoucích účinků ve studii",
+   "Malé zlepšení spánku u dospělých se špatným spánkem",
+   "Chelátová forma, očekává se lepší rozpustnost než u oxidu",
+   "Dodává hořčík pro svaly, nervy a energii"
   ],
   "negatives": [
-   "Dražší na mg elementárního hořčíku než oxid nebo citrát",
-   "Nízký obsah elementárního Mg v kapsli, proto je na dávku potřeba více kapslí",
-   "Přímé klinické důkazy pro glycinátovou formu jsou stále omezené",
-   "Opatrnost při onemocnění ledvin a s některými léky (antibiotika, bisfosfonáty)"
+   "Za mg stojí asi pětkrát víc než oxid",
+   "Málo hořčíku v kapsli, na dávku je třeba několik kapslí",
+   "Vliv na spánek byl v hlavní studii malý a hraniční",
+   "Lepší vstřebávání než u oxidu zde není potvrzeno"
   ],
   "foods": {
    "title": "Hlavní potravinové zdroje hořčíku",
@@ -201,6 +181,116 @@
    ],
    "note": "Přibližné hodnoty podle dat NIH ODS. Bisglycinát je glycinový chelát vyráběný pro doplňky stravy a v potravinách se nevyskytuje. Hořčík v rostlinných potravinách je většinou vázán na fytát a vlákninu, proto je jeho vstřebávání obvykle nižší."
   },
-  "scores_note": "Skóre jsou ilustrační ukázkové hodnoty pro toto rozvržení, nejde o ověřené hodnocení."
+  "scores_note": "Důkazy 4,5: jedna studie s placebem přímo s touto formou (malý, hraniční efekt, částečně spojená s průmyslem), zbytek jsou obecné důkazy o hořčíku. Rozpustnost a biologická dostupnost 4,5: organický chelát, údaje o rozpustnosti si odporují a žádný nebyl potvrzen v primárním zdroji (2,5/4); ověřená studie vstřebávání této formy u lidí chybí, vstřebávání je proto omezeno na 2/6. Přínosy 4,0: malý vliv na spánek (2/7), jinak obecné role hořčíku (rozsah 2/3); omezeno důkazy. Bezpečnost 8,5: dobře snášen, platí limit EFSA 250 mg a opatrnost při onemocnění ledvin. Cena 5,0: medián 4,79 Kč za 100 mg Mg ze 3 přípravků (14. 10. 2026) proti 0,97 u oxidu (poměr 4,96), spolehlivost střední. Studie z roku 1994 u pacientů po resekci ilea je známa jen z výtahu výrobce a nebyla bodována.",
+  "form_labels": {
+   "dihydrate": "Dihydrát (předpokládaná hlavní forma)"
+  },
+  "forms_note": "Krystalová struktura hořčík bisglycinátu nalezena nebyla; dihydrát popisuje jen patent podle práškového difraktogramu. Je uveden jako pravděpodobná hlavní forma, ale skutečná hydratace a obsah hořčíku (asi 12 až 14 %) se mezi štítky liší.",
+  "dosing": [
+   [
+    "Poznámka",
+    "Běžné je užívání večer, s jídlem i bez něj. Studie spánku použila 250 mg elementárního hořčíku denně. Dodržte odstup několika hodin od železa, zinku a chinolonových či tetracyklinových antibiotik a při onemocnění ledvin buďte opatrní."
+   ]
+  ]
+ },
+ "forms": [
+  {
+   "key": "dihydrate",
+   "formula": "C₄H₈MgN₂O₄·2H₂O",
+   "cas": null,
+   "molar_mass": 208.45,
+   "active_percent": 11.7,
+   "commercial": true,
+   "source": "US patent 9,394,318 (crystalline dihydrate, powder diffraction only); molar mass computed from formula",
+   "note": "No single-crystal or refined crystal structure of magnesium bisglycinate was found in COD or the journal literature searched; the only crystallographic description is the powder pattern of a dihydrate in a patent, which is not a structure. The dihydrate is listed because the patent and a retail label (625 mg of powder for 75 mg Mg, about 12 %) point to it, but this is an inference. Other labels do not agree with each other (20 % Mg per powder weight on two EU products), so the hydration of a given product is unknown. No CAS for the dihydrate was confirmed; 14783-68-7 on supplier sheets is the anhydrous formula.",
+   "structure": null
+  }
+ ],
+ "pricing": {
+  "currency": "CZK",
+  "date": "2026-10-14",
+  "per": "100 mg elemental mineral",
+  "confidence": "medium",
+  "products": [
+   {
+    "shop": "kaufland.cz (GymBeam)",
+    "name": "GymBeam Chelát hořčíku (bisglycinát), 90 capsules",
+    "url": "https://www.kaufland.cz/product/532172839/",
+    "form": "dihydrate",
+    "price": 472.7,
+    "units": 90,
+    "elemental_per_unit": 75,
+    "cost_per_100mg": 7.003
+   },
+   {
+    "shop": "shop-apotheke.com",
+    "name": "allcura Magnesiumbisglycinat Kapseln, 90 capsules",
+    "url": "https://www.shop-apotheke.com/arzneimittel/19505777/allcura-magnesiumbisglycinat-kapseln.htm",
+    "form": "dihydrate",
+    "price": 430.96,
+    "units": 90,
+    "elemental_per_unit": 100,
+    "cost_per_100mg": 4.7884
+   },
+   {
+    "shop": "shop-apotheke.at",
+    "name": "APOrtha Magnesiumbisglycinat vegan Kapseln, 180 capsules",
+    "url": "https://www.shop-apotheke.at/arzneimittel/D19430111/aportha-magnesiumbisglycinat-vegan-kapseln.htm",
+    "form": "dihydrate",
+    "price": 562.28,
+    "units": 180,
+    "elemental_per_unit": 83.3,
+    "cost_per_100mg": 3.7487
+   }
+  ],
+  "median_cost_per_100mg": 4.7884,
+  "reference": {
+   "form": "oxide",
+   "median_cost_per_100mg": 0.9657,
+   "products": [
+    {
+     "shop": "kaufland.cz (apohealth)",
+     "name": "Vitaworld Magnesium 400, 120 capsules",
+     "url": "https://www.kaufland.cz/product/407178457/",
+     "form": "oxide",
+     "price": 437.33,
+     "units": 120,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 0.9111
+    },
+    {
+     "shop": "shop-apotheke.com",
+     "name": "Swanson Magnesium-Oxid 200 mg, 250 capsules",
+     "url": "https://www.shop-apotheke.com/arzneimittel/upmZKFFD7/swanson-magnesium-oxid-200-mg.htm",
+     "form": "oxide",
+     "price": 369.22,
+     "units": 250,
+     "elemental_per_unit": 200,
+     "cost_per_100mg": 0.7384
+    },
+    {
+     "shop": "knuspr.de",
+     "name": "Biolectra Magnesium 400 mg ultra, 20 capsules",
+     "url": "https://www.knuspr.de/en-DE/85504-biolectra-magnesium-400-mg-ultra-capsules",
+     "form": "oxide",
+     "price": 292.78,
+     "units": 20,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 3.6597
+    },
+    {
+     "shop": "aponeo.de",
+     "name": "Vitaworld Magnesium 400 Kapseln, 120 capsules",
+     "url": "https://www.aponeo.de/01389566-magnesium-400-kapseln.html",
+     "form": "oxide",
+     "price": 489.76,
+     "units": 120,
+     "elemental_per_unit": 400,
+     "cost_per_100mg": 1.0203
+    }
+   ]
+  },
+  "ratio": 4.96,
+  "note": "3 magnesium bisglycinate products (kaufland.cz, shop-apotheke.com, shop-apotheke.at) and 4 oxide reference products, prices read from product pages on 2026-10-14. EUR converted at an assumed 1 EUR = 24.5 CZK (rate not looked up). Two labels (allcura, APOrtha) state more elemental Mg per capsule than their powder weight allows for the dihydrate (100 mg vs 58 mg, 83 mg vs 49 mg); the label values were used, so those two prices are probably flattering. Confidence medium: only 3 products."
  }
 }
