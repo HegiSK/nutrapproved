@@ -42,45 +42,6 @@
     "review": true
   },
   {
-    "id": "vitamin-d3",
-    "name": {"en": "Vitamin D3 (cholecalciferol)", "cs": "Vitamin D3 (cholekalciferol)"},
-    "aliases": ["cholecalciferol", "vitamin D", "cholekalciferol"],
-    "type": "vitamin",
-    "form": "free molecule",
-    "active": "vitamin D",
-    "goals": ["bones", "immunity"],
-    "dose": {"min": 25, "max": 50, "unit": "µg", "basis": "vitamin D3 (1000–2000 IU)", "per": "day"},
-    "upper_limit": {"value": 100, "unit": "µg", "basis": "vitamin D3 (4000 IU)", "source": "EFSA"},
-    "timing": "with a fat-containing meal",
-    "vegan": false
-  },
-  {
-    "id": "creatine-monohydrate",
-    "name": {"en": "Creatine monohydrate", "cs": "Kreatin monohydrát"},
-    "aliases": ["creatine", "kreatin"],
-    "type": "amino acid derivative",
-    "form": "hydrate",
-    "active": "creatine",
-    "goals": ["performance", "muscle"],
-    "dose": {"min": 3, "max": 5, "unit": "g", "basis": "creatine monohydrate", "per": "day"},
-    "upper_limit": null,
-    "timing": "any time, consistently",
-    "vegan": true
-  },
-  {
-    "id": "ashwagandha-root-extract",
-    "name": {"en": "Ashwagandha root extract", "cs": "Extrakt z kořene ašvagandhy"},
-    "aliases": ["withania somnifera", "ashwagandha", "KSM-66", "ašvagandha"],
-    "type": "herbal extract",
-    "form": "extract",
-    "active": "withanolides",
-    "goals": ["stress", "sleep"],
-    "dose": {"min": 300, "max": 600, "unit": "mg", "basis": "standardised extract", "per": "day"},
-    "upper_limit": null,
-    "timing": "evening",
-    "vegan": true
-  },
-  {
     "id": "magnesium-taurate",
     "name": {"en": "Magnesium taurate", "cs": "Hořčík taurát"},
     "aliases": ["magnesium taurinate", "magnesium bis(2-aminoethanesulfonate)", "magnesium taurine", "hořčík taurinát", "taurát hořečnatý"],
