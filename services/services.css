@@ -1,10 +1,10 @@
-/* Services pages (overview, consulting, measurements). Tokens and header/nav come from ../site.css. */
+/* Services pages (consulting, measurements). Tokens and header/nav come from ../site.css. */
 .svc { max-width: 1100px; margin: 24px auto 40px; padding: 0 16px; display: grid; gap: 16px; }
 .svc h1 { margin: 0; font-size: 32px; line-height: 1.2; color: var(--green-900); }
 .svc h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.3; color: var(--green-900); }
 .svc p { margin: 0 0 10px; }
 .crumb { margin: 0; font-size: 14px; }
-.crumb a { color: var(--green-700); font-weight: 600; }
+.crumb a { color: var(--muted); font-weight: 600; }
 .crumb a:hover { text-decoration: underline; }
 .lead { font-size: 17px; color: #333; max-width: 760px; }
 .note { font-size: 13px; color: var(--muted); }
@@ -12,10 +12,10 @@
 .panel { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; }
 .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .tile { display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-.tile:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(31,77,46,.16); border-color: var(--green-500); }
+.tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #d6d6d6; }
 .tile .btn { margin-top: auto; align-self: flex-start; }
 
-.badge { width: 48px; height: 48px; flex: none; display: grid; place-items: center; margin-bottom: 12px; border-radius: 14px; background: var(--green-100); color: var(--green-700); }
+.badge { width: 48px; height: 48px; flex: none; display: grid; place-items: center; margin-bottom: 12px; border-radius: 14px; background: var(--veil); color: var(--text); }
 .title-row { display: flex; align-items: center; gap: 14px; }
 .title-row .badge { margin-bottom: 0; }
 .ico-lg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -29,13 +29,13 @@
 .steps li::before { content: counter(step); position: absolute; left: 14px; top: 14px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--green-700); color: #fff; font-weight: 700; }
 .steps span { font-size: 14px; color: #444; }
 
-.btn { display: inline-block; padding: 10px 20px; border-radius: 999px; background: var(--green-700); color: #fff; font-weight: 600; font-size: 14px; transition: background .2s, transform .2s, box-shadow .2s; }
-.btn:hover { background: var(--green-900); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(31,77,46,.3); }
+.btn { display: inline-block; padding: 12px 20px; border-radius: var(--radius); background: var(--grad-action); box-shadow: var(--shadow-action); color: #fff; font-weight: 600; font-size: 14px; transition: transform .2s, box-shadow .2s, filter .2s; }
+.btn:hover { filter: brightness(1.05); transform: translateY(-2px); box-shadow: var(--shadow-action-hover); }
 
-.cta { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: var(--radius); color: #fff; background: linear-gradient(135deg, var(--green-700), var(--green-900)); }
+.cta { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: var(--radius); color: #fff; background: var(--text); }
 .cta h2 { color: #fff; margin-bottom: 4px; }
-.cta p { margin: 0; color: #d6ecdc; }
-.cta .btn { background: #fff; color: var(--green-900); }
+.cta p { margin: 0; color: #d6d6d6; }
+.cta .btn { background: #fff; color: var(--green-900); box-shadow: none; }
 .cta .btn:hover { background: var(--green-100); }
 
 @media (max-width: 800px) {

@@ -7,40 +7,109 @@
 <script src="i18n.js"></script>
 <script src="site.js" defer></script>
 <script type="module" src="suggest.js"></script>
+<script type="module" src="featured.js"></script>
 <link rel="stylesheet" href="site.css">
 <style>
-  main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
-  .layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 16px; align-items: start; }
-  .stack { display: grid; gap: 16px; }
+  main { max-width: 1200px; margin: 48px auto 0; padding: 0 24px; }
+  .layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: start; }
+  .stack { display: grid; gap: 24px; }
   .card {
     background: var(--card); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 18px 20px;
+    border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm);
   }
   .card > h2 {
-    margin: 0 0 12px; font-size: 13px; text-transform: uppercase;
-    letter-spacing: .08em; color: var(--green-700);
+    margin: 0 0 16px; font-size: 18px; font-weight: 600; line-height: 1.5; color: var(--text);
     display: flex; justify-content: space-between; align-items: baseline;
   }
-  .card > h2 a { font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--muted); }
-  .card > h2 a:hover { color: var(--green-700); }
+  .card > h2 a { font-size: 13px; font-weight: 500; letter-spacing: -0.02em; color: var(--muted); }
+  .card > h2 a:hover { color: var(--text); text-decoration: underline; }
+
+  /* Hero: text + search left, framed score card right */
+  .home-hero { background: linear-gradient(114deg, rgba(30,229,146,.15), rgba(0,128,74,.05) 60%, rgba(250,250,250,0)); border-bottom: 1px solid var(--border); padding: 56px max(24px, calc((100% - 1200px) / 2 + 24px)) 72px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: stretch; }
+  .home-hero .intro { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .home-hero .intro > div > :last-child { margin-bottom: 0; }
+    .home-hero h1 { margin: 0 0 12px; font-size: 44px; line-height: 1.15; font-weight: 600; letter-spacing: -0.04em; }
+  .home-hero .lead { margin: 0; font-size: 18px; line-height: 1.5; color: var(--muted); max-width: 30em; }
+  .home-hero .search { margin: 0; max-width: 560px; }
+  .mock { background: var(--card); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-md); padding: 24px; }
+  .mock { display: block; min-height: 230px; color: inherit; transition: box-shadow .2s ease; }
+  .mock:hover { box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+  .mock-score strong.lo { color: #d64545; } .mock-score strong.mid { color: #f0932b; } .mock-score strong.hi { color: var(--green-700); }
+  .mock-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--veil); }
+  .mock-top b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.3; }
+  .mock-top small { color: var(--faint); font-size: 13px; }
+  .mock-score { text-align: right; flex: none; }
+  .mock-score strong { display: block; font-size: 36px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .mock-score small { display: block; margin-top: 4px; }
+  .mock-rows { display: grid; gap: 16px; padding-top: 20px; }
+  .mock-row { display: grid; grid-template-columns: 190px 1fr 32px; align-items: center; gap: 12px; font-size: 14px; color: var(--muted); }
+  .mock-row i { display: block; height: 6px; border-radius: 999px; background: var(--veil); overflow: hidden; }
+  .mock-row i::after { content: ""; display: block; height: 100%; width: var(--v); background: var(--c, var(--text)); border-radius: 999px; }
+  /* Score bands: up to 3 red, above 3 up to 7 orange, above 7 green */
+  .mock-row.lo { --c: #d64545; } .mock-row.mid { --c: #f0932b; } .mock-row.hi { --c: var(--green-700); }
+  .mock-row span:last-child { text-align: right; color: var(--text); font-weight: 600; }
+  @media (max-width: 900px) { .mock-row { grid-template-columns: 1fr 1fr 32px; } .home-hero { grid-template-columns: 1fr; gap: 32px; padding: 40px 16px 48px; } .home-hero h1 { font-size: 34px; } }
+
+  /* How we score: white band, centered Poppins title, five criteria cards */
+  .band { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 48px; padding: 48px 24px; }
+  .band-in { max-width: 1200px; margin: 0 auto; }
+  .criteria { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-top: 32px; }
+  .crit { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); }
+  .crit { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease; }
+  .crit:hover { transform: translateY(-4px); background: linear-gradient(160deg, rgba(30,229,146,.10), rgba(255,255,255,1) 55%); border-color: #d6d6d6; box-shadow: var(--shadow-md); }
+  .crit .ic { transition: background .2s ease, box-shadow .2s ease; }
+  .crit .ic svg { transition: stroke .2s ease; }
+  .crit:hover .ic { background: var(--grad-action); box-shadow: var(--shadow-action); }
+  .crit:hover .ic svg { stroke: #fff; }
+  @media (prefers-reduced-motion: reduce) { .crit, .crit .ic, .crit .ic svg { transition: none; } .crit:hover { transform: none; } }
+  .crit .ic { width: 48px; height: 48px; display: grid; place-items: center; background: var(--veil); border-radius: var(--radius); margin-bottom: 16px; }
+  .crit .ic svg { width: 24px; height: 24px; fill: none; stroke: var(--text); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .crit h3 { margin: 0 0 8px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .crit p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+  @media (max-width: 1100px) { .criteria { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 700px) { .band { padding: 32px 16px; } .criteria { grid-template-columns: 1fr; margin-top: 32px; } main { margin-top: 32px; } }
+
+  /* Services: same band and card treatment as "How we score" */
+  .svc { scroll-margin-top: 80px; }
+  .svc + footer { margin-top: 0; border-top: 0; }
+  .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+  .tile { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease; }
+  .tile:hover { transform: translateY(-4px); background: linear-gradient(160deg, rgba(30,229,146,.10), rgba(255,255,255,1) 55%); border-color: #d6d6d6; box-shadow: var(--shadow-md); }
+  .tile h2 { margin: 0 0 8px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .tile p { margin: 0 0 10px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+  .tile .btn { margin-top: auto; align-self: flex-start; }
+  .tile .badge { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 16px; border-radius: var(--radius); background: var(--veil); color: var(--text); transition: background .2s ease, box-shadow .2s ease, color .2s ease; }
+  .tile:hover .badge { background: var(--grad-action); box-shadow: var(--shadow-action); color: #fff; }
+  .ico-lg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .ticks { list-style: none; margin: 4px 0 20px; padding: 0; display: grid; gap: 8px; font-size: 14px; color: var(--muted); }
+  .ticks li { position: relative; padding-left: 26px; }
+  .ticks li::before { content: ""; position: absolute; left: 2px; top: .38em; width: 12px; height: 7px; border-left: 2.5px solid var(--green-700); border-bottom: 2.5px solid var(--green-700); transform: rotate(-45deg); }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: var(--radius); background: var(--grad-action); box-shadow: var(--shadow-action); color: #fff; font-weight: 600; font-size: 14px; transition: transform .2s, box-shadow .2s, filter .2s; }
+  .btn:hover { filter: brightness(1.05); transform: translateY(-2px); box-shadow: var(--shadow-action-hover); }
+  .cta { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: var(--radius); color: #fff; background: var(--text); }
+  .cta h2 { margin: 0 0 4px; font-size: 20px; color: #fff; }
+  .cta p { margin: 0; color: #d6d6d6; }
+  .cta .btn { background: #fff; color: var(--text); box-shadow: none; }
+  .cta .btn:hover { background: var(--veil); }
+  @media (max-width: 800px) { .svc-grid { grid-template-columns: 1fr; margin-top: 32px; } }
+  @media (prefers-reduced-motion: reduce) { .tile, .tile .badge, .btn { transition: none; } .tile:hover, .btn:hover { transform: none; } }
 
   /* Search strip */
   .search { display: flex; gap: 8px; margin-bottom: 16px; }
   .search input {
-    flex: 1; padding: 12px 14px; font: inherit; border: 1px solid var(--border);
-    border-radius: var(--radius); background: #fff;
+    flex: 1; padding: 12px 16px; font: inherit; letter-spacing: -0.02em; border: 1px solid var(--border);
+    border-radius: var(--radius); background: #fff; min-width: 0;
   }
-  .search input:focus { outline: 2px solid var(--green-500); border-color: var(--green-500); }
-  /* Same look as the highlighted item in the main bar (site.css .nav-indicator) */
+  .search input:focus { outline: 2px solid var(--text); outline-offset: -1px; border-color: var(--text); }
+  /* The one filled green control on the page */
   .search button {
-    padding: 0 26px; font: inherit; font-weight: 600; letter-spacing: .02em; color: #fff; border: 0; border-radius: 999px; cursor: pointer;
-    background: linear-gradient(135deg, var(--green-500), var(--green-700) 60%, var(--green-900));
-    box-shadow: 0 4px 12px rgba(47,122,69,.45);
+    padding: 12px 22px; font: inherit; font-size: 14px; font-weight: 500; letter-spacing: -0.02em; color: #fff; border: 0; border-radius: var(--radius); cursor: pointer;
+    background: var(--grad-action); box-shadow: var(--shadow-action);
     transition: transform .2s cubic-bezier(.3,1.3,.5,1), box-shadow .2s ease, filter .2s ease;
   }
-  .search button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(47,122,69,.5); filter: brightness(1.06); }
-  .search button:active { transform: scale(.96); box-shadow: 0 2px 6px rgba(47,122,69,.4); }
-  .search button:focus-visible { outline: 2px solid var(--green-700); outline-offset: 2px; }
+  .search button:hover { transform: translateY(-2px); box-shadow: var(--shadow-action-hover); filter: brightness(1.05); }
+  .search button:active { transform: translateY(0) scale(.97); box-shadow: 0 1px 0 rgba(255,255,255,.2) inset, 0 2px 6px rgba(0,153,89,.3); }
+  .search button:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { .search button { transition: none; } .search button:hover, .search button:active { transform: none; } }
 
 
@@ -49,58 +118,58 @@
   .suggest {
     position: absolute; z-index: 20; top: calc(100% + 6px); left: 0; right: 0; margin: 0; padding: 6px; list-style: none;
     background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
-    box-shadow: 0 16px 36px rgba(31,77,46,.22); max-height: 420px; overflow: auto; transform-origin: top center;
+    box-shadow: var(--shadow-md); max-height: 420px; overflow: auto; transform-origin: top center;
     animation: pop .16s ease-out;
   }
   .suggest[hidden] { display: none; }
   @keyframes pop { from { opacity: 0; transform: translateY(-6px) scale(.985); } }
   .suggest a { display: flex; align-items: center; gap: 12px; padding: 8px 10px; border-radius: var(--radius-sm); }
-  .suggest a.on { background: var(--green-100); }
-  .suggest img { width: 40px; height: 40px; border-radius: var(--radius-sm); object-fit: cover; background: #eef3ee; flex: none; }
+  .suggest a.on { background: var(--veil); }
+  .suggest img { width: 40px; height: 40px; border-radius: var(--radius-sm); object-fit: cover; background: var(--veil); flex: none; }
   .suggest .txt { display: grid; min-width: 0; flex: 1; line-height: 1.3; }
   .suggest .txt b { font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .suggest .txt small { color: var(--muted); font-size: 12.5px; }
-  .suggest .rv { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--green-900); background: var(--green-100); border-radius: 999px; padding: 2px 8px; }
-  .suggest .pr { font-weight: 700; font-size: 14px; color: var(--green-900); }
-  .suggest a.all { justify-content: center; color: var(--green-700); font-weight: 600; font-size: 14px; margin-top: 4px; border-top: 1px solid #eef2ee; border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+  .suggest .rv { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--veil); border-radius: 999px; padding: 2px 8px; }
+  .suggest .pr { font-weight: 700; font-size: 14px; color: var(--text); }
+  .suggest a.all { justify-content: center; color: var(--text); font-weight: 600; font-size: 14px; margin-top: 4px; border-top: 1px solid var(--veil); border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
   .suggest .none { padding: 14px; text-align: center; color: var(--muted); }
   @media (prefers-reduced-motion: reduce) { .suggest { animation: none; } }
 
   /* Posts */
-  .post { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid #eef2ee; }
+  .post { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--veil); }
   .post:first-of-type { padding-top: 0; }
   .post:last-child { border: 0; padding-bottom: 0; }
-  .thumb { background: var(--green-100); border-radius: var(--radius-sm); height: 72px; display: grid; place-items: center; color: var(--green-700); font-size: 12px; font-weight: 700; letter-spacing: .06em; }
-  .meta { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
-  .tag { display: inline-block; background: var(--green-100); color: var(--green-900); border-radius: var(--radius-sm); padding: 1px 7px; margin-right: 6px; font-weight: 600; }
+  .meta { font-size: 12px; color: var(--faint); margin-bottom: 2px; }
+  .tag { display: inline-block; background: var(--veil); color: var(--muted); border-radius: var(--radius-sm); padding: 1px 7px; margin-right: 6px; font-weight: 600; }
+  .thumb { background: var(--veil); border-radius: var(--radius-sm); height: 72px; display: grid; place-items: center; color: var(--faint); font-size: 12px; font-weight: 600; letter-spacing: .06em; }
   .post h3 { margin: 0 0 3px; font-size: 16px; line-height: 1.3; }
-  .post h3 a:hover { color: var(--green-700); }
-  .post p { margin: 0; font-size: 13.5px; color: #444; }
+  .post h3 a:hover { text-decoration: underline; }
+  .post p { margin: 0; font-size: 14px; color: var(--muted); }
 
   /* News */
-  .news li { list-style: none; padding: 10px 0; border-bottom: 1px solid #eef2ee; }
+  .news li { list-style: none; padding: 10px 0; border-bottom: 1px solid var(--veil); }
   .news li:last-child { border: 0; padding-bottom: 0; }
   .news li:first-child { padding-top: 0; }
   .news ul { margin: 0; padding: 0; }
   .news a { font-weight: 600; font-size: 14.5px; display: block; line-height: 1.35; }
-  .news a:hover { color: var(--green-700); }
+  .news a:hover { text-decoration: underline; }
 
   /* Video */
   .video-main {
-    position: relative; aspect-ratio: 16 / 9; background: var(--green-900); border-radius: var(--radius);
+    position: relative; aspect-ratio: 16 / 9; background: #313232; border-radius: var(--radius);
     display: grid; place-items: center; color: #fff; margin-bottom: 10px;
   }
   .video-main iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: var(--radius); }
   .play { width: 54px; height: 38px; background: #fff; border-radius: var(--radius-sm); display: grid; place-items: center; }
-  .play::after { content: ""; border-left: 14px solid var(--green-700); border-top: 8px solid transparent; border-bottom: 8px solid transparent; margin-left: 3px; }
+  .play::after { content: ""; border-left: 14px solid var(--text); border-top: 8px solid transparent; border-bottom: 8px solid transparent; margin-left: 3px; }
   .video-title { font-weight: 600; font-size: 14.5px; margin: 0 0 12px; }
   .video-list { display: grid; gap: 8px; }
   .video-item { display: grid; grid-template-columns: 80px 1fr; gap: 10px; align-items: center; font-size: 13.5px; line-height: 1.3; }
-  .video-item .t { background: var(--green-500); border-radius: var(--radius-sm); height: 45px; display: grid; place-items: center; }
+  .video-item .t { background: #313232; border-radius: var(--radius-sm); height: 45px; display: grid; place-items: center; }
   .video-item .t::after { content: ""; border-left: 9px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
-  .video-item:hover b { color: var(--green-700); }
+  .video-item:hover b { text-decoration: underline; }
 
-  .note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .note { font-size: 12px; color: var(--faint); margin-top: 10px; }
 
   @media (max-width: 800px) {
     .layout { grid-template-columns: 1fr; }
@@ -110,12 +179,18 @@
 </head>
 <body>
 
-<header class="hero hero--logo">
-  <img class="logo" src="assets/logo.png" alt="" width="322" height="268">
-  <div class="hero-text">
+<header class="home-hero">
+  <div class="intro">
+    <div>
     <h1 data-i18n="hero.title">Know your supplements!</h1>
-    <p data-i18n="hero.sub">Independent, evidence-based scoring of ingredients and products</p>
+    <p class="lead" data-i18n="hero.sub">Independent, evidence-based scoring of ingredients and products</p>
+    </div>
+    <form class="search" id="search" action="supplement-finder/index.html" method="get">
+    <input type="search" name="q" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.aria" placeholder="Search an ingredient, e.g. magnesium bisglycinate, piperine, creatine…" aria-label="Search ingredients">
+    <button type="submit" data-i18n="search.button">Search</button>
+  </form>
   </div>
+  <a class="mock" id="featured" aria-busy="true" href="supplement-finder/index.html"></a>
 </header>
 
 <nav class="nav">
@@ -124,16 +199,25 @@
     <a href="#about"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><span class="lbl" data-i18n="nav.about">About us</span></a>
     <a href="supplement-finder/index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl" data-i18n="nav.search">Search elements</span></a>
     <a href="#verified"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span class="lbl" data-i18n="nav.verified">Verified products</span></a>
-    <a href="services/index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg><span class="lbl" data-i18n="nav.services">Services</span></a>
+    <a href="#services"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg><span class="lbl" data-i18n="nav.services">Services</span></a>
   </div>
 </nav>
 
-<main>
-  <form class="search" id="search" action="supplement-finder/index.html" method="get">
-    <input type="search" name="q" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.aria" placeholder="Search an ingredient, e.g. magnesium bisglycinate, piperine, creatine…" aria-label="Search ingredients">
-    <button type="submit" data-i18n="search.button">Search</button>
-  </form>
+<section class="band" id="about">
+  <div class="band-in">
+    <h2 class="section-title" data-i18n="how.title">Every compound scored on five criteria</h2>
+    <p class="section-sub" data-i18n="how.sub">Scores run from 0 to 10: red is weak, orange is moderate, green is strong.</p>
+    <div class="criteria">
+      <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 15h9"/></svg></div><h3 data-i18n="review.score.evidence">evidence</h3><p data-i18n="how.evidence">evidence</p></article>
+      <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div><h3 data-i18n="review.score.benefits">benefits</h3><p data-i18n="how.benefits">benefits</p></article>
+      <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></div><h3 data-i18n="review.score.safety">safety</h3><p data-i18n="how.safety">safety</p></article>
+      <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11Z"/></svg></div><h3 data-i18n="review.score.bioavailability">bioavailability</h3><p data-i18n="how.bioavailability">bioavailability</p></article>
+      <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.500-1.500-2.500-1.500-1.500 0-2.500.8-2.500 2s1 1.700 2.500 2 2.500.8 2.500 2-1 2-2.500 2c-1 0-2-.5-2.500-1.500M12 6.500V8m0 8v1.500"/></svg></div><h3 data-i18n="review.score.pricing">pricing</h3><p data-i18n="how.pricing">pricing</p></article>
+    </div>
+  </div>
+</section>
 
+<main>
   <div class="layout">
     <!-- LEFT: blog -->
     <section class="card">
@@ -200,6 +284,36 @@
     </div>
   </div>
 </main>
+
+<section class="band svc" id="services">
+  <div class="band-in">
+    <h2 class="section-title" data-i18n="svc.h1">Services</h2>
+    <p class="section-sub" data-i18n="svc.sub">We help you to deliver high quality supplements</p>
+    <div class="svc-grid">
+      <article class="panel tile">
+        <div class="badge"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h2 data-i18n="svc.con.title">Consulting</h2>
+        <p data-i18n="svc.con.text">Straight answers before you commit money or put a product on the market.</p>
+        <ul class="ticks"><li data-i18n="svc.con.b.1">Is this supplier and compound worth buying?</li><li data-i18n="svc.con.b.2">How to avoid regulatory problems</li><li data-i18n="svc.con.b.3">Documentation and claims review</li></ul>
+        <a class="btn" href="services/consulting.html" data-i18n="svc.con.link">Explore consulting →</a>
+      </article>
+      <article class="panel tile">
+        <div class="badge"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2.2h12.4a1.5 1.5 0 0 0 1.3-2.2L14 9V3"/><path d="M7.5 15h9"/></svg></div>
+        <h2 data-i18n="svc.mea.title">Measurements</h2>
+        <p data-i18n="svc.mea.text">Unbiased laboratory data on what is really in your sample, with a clear written report.</p>
+        <ul class="ticks"><li data-i18n="svc.mea.b.1">Powder X-ray diffraction (XRD)</li><li data-i18n="svc.mea.b.2">HPLC assay and purity</li><li data-i18n="svc.mea.b.3">Written reports with raw data</li></ul>
+        <a class="btn" href="services/measurements.html" data-i18n="svc.mea.link">Explore measurements →</a>
+      </article>
+    </div>
+    <section class="cta">
+      <div>
+        <h2 data-i18n="cta.title">Have a supplier, compound or sample in mind?</h2>
+        <p data-i18n="cta.text">Tell us what you are considering and we will suggest the right next step.</p>
+      </div>
+      <a class="btn" href="mailto:info@example.com" data-i18n="cta.button">Get in touch</a>
+    </section>
+  </div>
+</section>
 
 <footer data-i18n="footer">© 2026 Know your supplements! · For information only, not medical advice.</footer>
 </body>
