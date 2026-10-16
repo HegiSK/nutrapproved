@@ -104,3 +104,7 @@ html.i18n-loading body { visibility: hidden; }
 .nav .lang button:hover { background: var(--veil); }
 .nav .lang button[aria-pressed="true"] { background: var(--text); color: #fff; }
 @media (max-width: 640px) { .nav .lang { margin-left: 2px; padding-left: 4px; } .nav .lang button { padding: 6px 7px; } }
+
+/* Scroll reveals (site.js): hidden start state, then fade + rise; the classes are removed once finished */
+.reveal { opacity: 0; transform: translateY(28px); }
+.reveal.in { opacity: 1; transform: none; transition: opacity 1.3s cubic-bezier(.2,.7,.2,1), transform 1.3s cubic-bezier(.2,.7,.2,1); }
