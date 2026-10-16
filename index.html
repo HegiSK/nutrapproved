@@ -11,8 +11,11 @@
 <link rel="stylesheet" href="site.css">
 <style>
   main { max-width: 1200px; margin: 48px auto 0; padding: 0 24px; }
-  .layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: start; }
-  .stack { display: grid; gap: 24px; }
+  .layout { display: block; }
+  #blog { scroll-margin-top: 80px; }
+  #blog .card { background: var(--bg); box-shadow: none; }
+  .posts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; }
+  .posts .post { padding: 0; border: 0; }
   .card {
     background: var(--card); border: 1px solid var(--border);
     border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm);
@@ -26,6 +29,7 @@
 
   /* Hero: text + search left, framed score card right */
   .home-hero { background: linear-gradient(114deg, rgba(30,229,146,.15), rgba(0,128,74,.05) 60%, rgba(250,250,250,0)); border-bottom: 1px solid var(--border); padding: 56px max(24px, calc((100% - 1200px) / 2 + 24px)) 72px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: stretch; }
+  .brand-mark { display: block; height: 40px; width: auto; margin: 0 0 16px -2px; }
   .home-hero .intro { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
   .home-hero .intro > div > :last-child { margin-bottom: 0; }
     .home-hero h1 { margin: 0 0 12px; font-size: 44px; line-height: 1.15; font-weight: 600; letter-spacing: -0.04em; }
@@ -70,7 +74,47 @@
   @media (max-width: 700px) { .band { padding: 32px 16px; } .criteria { grid-template-columns: 1fr; margin-top: 32px; } main { margin-top: 32px; } }
 
   /* Services: same band and card treatment as "How we score" */
+  /* Logo underline (dark + green bar) under the section titles, exactly as wide as the text */
+  .section-title { width: fit-content; max-width: 100%; margin-left: auto; margin-right: auto; }
+  .section-title::after, .card > h2 > span:first-child::after {
+    content: ""; display: block; width: 100%; height: 1px; border-radius: 1px;
+    background: linear-gradient(90deg, rgba(20,20,20,.7) 0 38%, transparent 38% 42%, rgba(18,184,114,.75) 42%, rgba(0,153,89,.75) 100%);
+  }
+  .section-title::after { margin-top: 2px; }
+  .card > h2 > span:first-child { position: relative; }
+  .card > h2 > span:first-child::after { position: absolute; left: 0; bottom: -2px; }
+  #blog .section-title { margin-bottom: 32px; }
+  .all-posts { margin: 24px 0 0; text-align: right; font-size: 14px; font-weight: 500; letter-spacing: -0.02em; }
+  .all-posts a { color: var(--muted); }
+  .all-posts a:hover { color: var(--text); text-decoration: underline; }
+
+  /* Decorative capsule motif filling the gaps between sections: 1px light-grey outlines */
+  .deco { height: 48px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent); }
+  .deco svg { display: block; width: 100%; height: 100%; fill: none; stroke: #d2d2d2; stroke-width: 1; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .deco svg * { vector-effect: non-scaling-stroke; }
+  .deco + .band { margin-top: 0; }
+  @media (max-width: 700px) { .deco { height: 40px; } }
+
+  /* About us: two people, photo left then right */
+  .about { scroll-margin-top: 80px; }
+  .about .section-sub { max-width: none; white-space: pre-line; text-align: center; }
+  .people { display: grid; margin-top: 40px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+  .person { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: center; padding: 32px; }
+  .person + .person { padding-top: 0; }
+  .person--flip { grid-template-columns: 1fr 200px; }
+  .person--flip .photo { order: 2; }
+  .person .photo { aspect-ratio: 1; border-radius: var(--radius); background: linear-gradient(180deg, #fff, var(--veil)); border: 1px dashed #cfcfcf; display: grid; place-items: center; }
+  .person .photo svg { width: 44%; fill: none; stroke: #b5b5b5; stroke-width: 1.4; stroke-linecap: round; }
+  .person h3 { margin: 0 0 2px; font-size: 22px; font-weight: 600; letter-spacing: -0.03em; }
+  .person h3 .deg { font-weight: 500; color: var(--muted); }
+  .person .role { margin: 0 0 12px; font-size: 14px; font-weight: 500; color: var(--faint); }
+  .person p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+  .person .in { font-size: 14px; font-weight: 600; }
+  .person .in:hover { text-decoration: underline; }
+  @media (max-width: 700px) { .person, .person--flip { grid-template-columns: 1fr; gap: 20px; } .person--flip .photo { order: 0; } .person .photo { max-width: 200px; } }
+
   .svc { scroll-margin-top: 80px; }
+  .svc .section-sub { max-width: none; white-space: pre-line; }
   .svc + footer { margin-top: 0; border-top: 0; }
   .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
   .tile { display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease; }
@@ -86,11 +130,13 @@
   .ticks li::before { content: ""; position: absolute; left: 2px; top: .38em; width: 12px; height: 7px; border-left: 2.5px solid var(--green-700); border-bottom: 2.5px solid var(--green-700); transform: rotate(-45deg); }
   .btn { display: inline-block; padding: 12px 20px; border-radius: var(--radius); background: var(--grad-action); box-shadow: var(--shadow-action); color: #fff; font-weight: 600; font-size: 14px; transition: transform .2s, box-shadow .2s, filter .2s; }
   .btn:hover { filter: brightness(1.05); transform: translateY(-2px); box-shadow: var(--shadow-action-hover); }
-  .cta { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: var(--radius); color: #fff; background: var(--text); }
-  .cta h2 { margin: 0 0 4px; font-size: 20px; color: #fff; }
-  .cta p { margin: 0; color: #d6d6d6; }
-  .cta .btn { background: #fff; color: var(--text); box-shadow: none; }
-  .cta .btn:hover { background: var(--veil); }
+  /* Call to action: light green wash like the page header, the primary green button stands out */
+  .cta { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 28px 32px; border-radius: var(--radius); color: var(--text);
+    background: linear-gradient(114deg, rgba(30,229,146,.15), rgba(0,128,74,.05) 60%, rgba(250,250,250,0)), var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+  .cta h2 { margin: 0 0 4px; font-size: 20px; color: var(--text); }
+  .cta p { margin: 0; color: var(--muted); }
+  .cta .cta-sla { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; font-weight: 600; color: var(--green-700); }
+  .cta-sla svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   @media (max-width: 800px) { .svc-grid { grid-template-columns: 1fr; margin-top: 32px; } }
   @media (prefers-reduced-motion: reduce) { .tile, .tile .badge, .btn { transition: none; } .tile:hover, .btn:hover { transform: none; } }
 
@@ -146,42 +192,25 @@
   .post h3 a:hover { text-decoration: underline; }
   .post p { margin: 0; font-size: 14px; color: var(--muted); }
 
-  /* News */
-  .news li { list-style: none; padding: 10px 0; border-bottom: 1px solid var(--veil); }
-  .news li:last-child { border: 0; padding-bottom: 0; }
-  .news li:first-child { padding-top: 0; }
-  .news ul { margin: 0; padding: 0; }
-  .news a { font-weight: 600; font-size: 14.5px; display: block; line-height: 1.35; }
-  .news a:hover { text-decoration: underline; }
-
-  /* Video */
-  .video-main {
-    position: relative; aspect-ratio: 16 / 9; background: #313232; border-radius: var(--radius);
-    display: grid; place-items: center; color: #fff; margin-bottom: 10px;
-  }
-  .video-main iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: var(--radius); }
-  .play { width: 54px; height: 38px; background: #fff; border-radius: var(--radius-sm); display: grid; place-items: center; }
-  .play::after { content: ""; border-left: 14px solid var(--text); border-top: 8px solid transparent; border-bottom: 8px solid transparent; margin-left: 3px; }
-  .video-title { font-weight: 600; font-size: 14.5px; margin: 0 0 12px; }
-  .video-list { display: grid; gap: 8px; }
-  .video-item { display: grid; grid-template-columns: 80px 1fr; gap: 10px; align-items: center; font-size: 13.5px; line-height: 1.3; }
-  .video-item .t { background: #313232; border-radius: var(--radius-sm); height: 45px; display: grid; place-items: center; }
-  .video-item .t::after { content: ""; border-left: 9px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
-  .video-item:hover b { text-decoration: underline; }
-
   .note { font-size: 12px; color: var(--faint); margin-top: 10px; }
 
   @media (max-width: 800px) {
-    .layout { grid-template-columns: 1fr; }
+    .posts { grid-template-columns: 1fr; }
     .post { grid-template-columns: 72px 1fr; }
   }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="p-cap" viewBox="-14 -6 28 12" overflow="visible"><rect x="-14" y="-5.5" width="28" height="11" rx="5.5"/><path d="M0-5.5v11"/></symbol>
+<symbol id="p-cap2" viewBox="-14 -6 28 12" overflow="visible"><rect x="-14" y="-5.5" width="28" height="11" rx="5.5"/></symbol>
+<symbol id="p-tab" viewBox="-8 -8 16 16" overflow="visible"><circle r="7"/><path d="M-7 0h14"/></symbol>
+</defs></svg>
 
 <header class="home-hero">
   <div class="intro">
     <div>
+    <img class="brand-mark" src="assets/logo-wordmark-site.svg" alt="Nutrapproved" width="278" height="40">
     <h1 data-i18n="hero.title">Know your supplements!</h1>
     <p class="lead" data-i18n="hero.sub">Independent, evidence-based scoring of ingredients and products</p>
     </div>
@@ -199,14 +228,15 @@
     <a href="#about"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><span class="lbl" data-i18n="nav.about">About us</span></a>
     <a href="supplement-finder/index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl" data-i18n="nav.search">Search elements</span></a>
     <a href="#verified"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span class="lbl" data-i18n="nav.verified">Verified products</span></a>
+    <a href="#blog"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 13h7"/><path d="M9 17h5"/></svg><span class="lbl" data-i18n="nav.blog">Blog</span></a>
     <a href="#services"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg><span class="lbl" data-i18n="nav.services">Services</span></a>
   </div>
 </nav>
 
-<section class="band" id="about">
+<section class="band" id="scoring">
   <div class="band-in">
     <h2 class="section-title" data-i18n="how.title">Every compound scored on five criteria</h2>
-    <p class="section-sub" data-i18n="how.sub">Scores run from 0 to 10, no compromises, weighting system included.</p>
+    <p class="section-sub" data-i18n="how.sub">We do not define the score. The science and math do.</p>
     <div class="criteria">
       <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 15h9"/></svg></div><h3 data-i18n="review.score.evidence">evidence</h3><p data-i18n="how.evidence">evidence</p></article>
       <article class="crit"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div><h3 data-i18n="review.score.benefits">benefits</h3><p data-i18n="how.benefits">benefits</p></article>
@@ -217,11 +247,43 @@
   </div>
 </section>
 
-<main>
+<div class="deco" aria-hidden="true"><svg viewBox="0 0 1200 48" preserveAspectRatio="xMidYMid slice"><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(600 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(672 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(528 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(744 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(456 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(816 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(384 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(888 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(312 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(960 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(240 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(1032 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(168 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(1104 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(96 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(1176 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(24 24) rotate(-40)"/></svg></div>
+
+<section class="band about" id="about">
+  <div class="band-in">
+    <h2 class="section-title" data-i18n="about.title">About us</h2>
+    <p class="section-sub" data-i18n="about.intro">Nutrapproved exists to make supplement science clear and trustworthy. We help end users understand the chemistry behind what they take, so they can choose with confidence. We help businesses provide high quality supplements, with consulting and laboratory measurements they can rely on.</p>
+    <div class="people">
+      <article class="person">
+        <div class="photo" role="img" aria-label="Photo placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.5 20c.8-4 4-6 7.5-6s6.7 2 7.5 6"/></svg></div>
+        <div class="bio">
+          <h3>Michal Hegedus, <span class="deg">MSc., Ph.D.</span></h3>
+          <p class="role" data-i18n="about.mh.role">Role</p>
+          <p data-i18n="about.mh.bio">Short bio</p>
+          <a class="in" href="https://www.linkedin.com/in/michal-hegedues/" target="_blank" rel="noopener" data-i18n="about.linkedin">LinkedIn →</a>
+        </div>
+      </article>
+      <article class="person person--flip">
+        <div class="photo" role="img" aria-label="Photo placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.5 20c.8-4 4-6 7.5-6s6.7 2 7.5 6"/></svg></div>
+        <div class="bio">
+          <h3>Martin Dominik, <span class="deg">MSc., Ph.D.</span></h3>
+          <p class="role" data-i18n="about.md.role">Role</p>
+          <p data-i18n="about.md.bio">Short bio</p>
+          <a class="in" href="https://www.linkedin.com/in/martin-dominik-6b3691136/" target="_blank" rel="noopener" data-i18n="about.linkedin">LinkedIn →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="deco" aria-hidden="true"><svg viewBox="0 0 1200 48" preserveAspectRatio="xMidYMid slice"><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(600 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(672 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(528 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(744 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(456 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(816 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(384 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(888 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(312 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(960 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(240 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(1032 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(168 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(1104 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(96 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(1176 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(24 24) rotate(-40)"/></svg></div>
+
+<section class="band" id="blog"><div class="band-in">
+  <h2 class="section-title" data-i18n="blog.title">Blog</h2>
   <div class="layout">
-    <!-- LEFT: blog -->
+    <!-- Blog (full width) -->
     <section class="card">
-      <h2><span data-i18n="blog.title">Blog</span> <a href="#" data-i18n="blog.all">All posts →</a></h2>
+            <div class="posts">
 
       <article class="post">
         <div class="thumb">IMG</div>
@@ -255,35 +317,13 @@
           <p data-i18n="post4.text">Our criteria for lab testing, label accuracy and contaminant screening.</p>
         </div>
       </article>
+      </div>
+      <p class="all-posts"><a href="#" data-i18n="blog.all">All posts →</a></p>
     </section>
-
-    <!-- RIGHT: news + video -->
-    <div class="stack">
-      <section class="card news">
-        <h2><span data-i18n="news.title">News</span> <a href="#" data-i18n="news.more">More →</a></h2>
-        <ul>
-          <li><div class="meta" data-i18n="news1.date">5 Oct 2026</div><a href="#" data-i18n="news1.title">New review links higher magnesium intake to better sleep quality</a></li>
-          <li><div class="meta" data-i18n="news2.date">2 Oct 2026</div><a href="#" data-i18n="news2.title">Regulators tighten labelling rules for botanical extracts</a></li>
-          <li><div class="meta" data-i18n="news3.date">28 Sep 2026</div><a href="#" data-i18n="news3.title">Recall: three protein powders pulled over heavy metal levels</a></li>
-          <li><div class="meta" data-i18n="news4.date">20 Sep 2026</div><a href="#" data-i18n="news4.title">Study: chelated minerals show mixed results versus standard salts</a></li>
-        </ul>
-        <p class="note" data-i18n="news.note">Sample headlines for layout purposes.</p>
-      </section>
-
-      <section class="card">
-        <h2><span data-i18n="videos.title">Videos</span> <a href="#" data-i18n="videos.channel">YouTube channel →</a></h2>
-        <!-- Replace the placeholder below with:
-             <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
-        <div class="video-main"><div class="play"></div></div>
-        <p class="video-title" data-i18n="video.main">Magnesium forms explained in 5 minutes</p>
-        <div class="video-list">
-          <a href="#" class="video-item"><div class="t"></div><b data-i18n="video.2">Piperine: does black pepper really boost absorption?</b></a>
-          <a href="#" class="video-item"><div class="t"></div><b data-i18n="video.3">How we score supplements</b></a>
-        </div>
-      </section>
-    </div>
   </div>
-</main>
+</div></section>
+
+<div class="deco" aria-hidden="true"><svg viewBox="0 0 1200 48" preserveAspectRatio="xMidYMid slice"><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(600 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(672 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(528 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(744 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(456 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(816 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(384 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(888 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(312 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(960 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(240 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(1032 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(168 24) rotate(-40)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(1104 24) rotate(0)"/><use href="#p-tab" width="16" height="16" x="-8.0" y="-8.0" transform="translate(96 24) rotate(0)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(1176 24) rotate(40)"/><use href="#p-cap" width="28" height="12" x="-14.0" y="-6.0" transform="translate(24 24) rotate(-40)"/></svg></div>
 
 <section class="band svc" id="services">
   <div class="band-in">
@@ -309,6 +349,7 @@
       <div>
         <h2 data-i18n="cta.title">Have a supplier, compound or sample in mind?</h2>
         <p data-i18n="cta.text">Tell us what you are considering and we will suggest the right next step.</p>
+        <p class="cta-sla"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="cta.sla">Response guaranteed within 24 hours</span></p>
       </div>
       <a class="btn" href="mailto:info@example.com" data-i18n="cta.button">Get in touch</a>
     </section>

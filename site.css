@@ -50,9 +50,9 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .hero p { margin: 0; color: var(--muted); font-size: 16px; }
 
 /* Header with logo (opt-in via class hero--logo): upright logo beside the title, no cropping or tilt. */
-.hero--logo { display: flex; align-items: center; justify-content: center; gap: 24px; padding-top: 32px; padding-bottom: 40px; }
-.hero--logo .logo { height: 96px; width: auto; flex: none; }
-.hero--logo .hero-text { text-align: left; }
+.hero--logo { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding-top: 32px; padding-bottom: 40px; }
+.hero--logo .logo { height: 44px; width: auto; flex: none; }
+.hero--logo .hero-text { text-align: center; }
 @media (max-width: 800px) {
   .hero--logo { flex-direction: column; gap: 12px; }
   .hero--logo .hero-text { text-align: center; }
@@ -68,7 +68,10 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 }
 .nav-indicator {
   position: absolute; top: 6px; bottom: 6px; left: 0; width: 0; border-radius: 999px; z-index: 0; pointer-events: none;
-  background: var(--veil); opacity: 0;
+  /* Glossy pill: bright top half, softer lower half, hairline rim and a soft neutral shadow */
+  background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 48%, #ececec 52%, #e2e2e2 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 -1px 0 rgba(0,0,0,.05) inset, 0 0 0 1px rgba(0,0,0,.06), 0 3px 8px rgba(0,0,0,.08);
+  opacity: 0;
 }
 .nav-indicator.ready { opacity: 1; transition: transform .3s cubic-bezier(.3,1.1,.5,1), width .3s cubic-bezier(.3,1.1,.5,1), opacity .2s; }
 .nav a {
@@ -78,8 +81,8 @@ h1, h2, h3 { letter-spacing: -0.03em; }
 .nav a .ico { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .nav a.active .lbl { font-weight: 600; }
 .nav a:focus-visible { outline: 2px solid var(--text); outline-offset: 1px; }
-.nav.no-js a.active { background: var(--veil); } /* before site.js positions the indicator */
-@media (max-width: 640px) { /* phones: icons only, the name is still read by screen readers */
+.nav.no-js a.active { background: linear-gradient(180deg, #fff 0%, #f6f6f6 48%, #e2e2e2 100%); } /* before site.js positions the indicator */
+@media (max-width: 820px) { /* phones and small tablets: icons only, the name is still read by screen readers */
   .nav a { padding: 10px 13px; }
   .nav a .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
