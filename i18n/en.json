@@ -24,6 +24,7 @@
  "how.bioavailability": "How well the body dissolves and absorbs it.",
  "how.pricing": "What you pay for a useful daily dose, compared with alternatives.",
  "mock.score": "Overall score",
+ "mock.cta": "Click to see review",
  "search.placeholder": "Search an ingredient, e.g. magnesium bisglycinate, piperine, creatine…",
  "search.aria": "Search ingredients",
  "search.button": "Search",

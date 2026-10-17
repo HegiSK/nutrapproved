@@ -28,6 +28,7 @@ async function run() {
       <div><b>${esc(c.name[lang] ?? c.name.en)}</b><small>${esc([c.type, c.form].filter(Boolean).map(value).join(' · '))}</small></div>
       <div class="mock-score"><strong class="${band(total)}">${fmt(total)}</strong><small>${esc(t('mock.score'))}</small></div>
     </div>
+    <span class="mock-cta" aria-hidden="true">${esc(t('mock.cta'))}</span>
     <div class="mock-rows">${scores.map((k) => `
       <div class="mock-row ${band(r.scores[k])}"><span>${esc(t(`review.score.${k}`))}</span><i style="--v:${r.scores[k] * 10}%"></i><span>${fmt(r.scores[k])}</span></div>`).join('')}
     </div>`;
